@@ -1,5 +1,5 @@
 ﻿
-using DAL.Models;
+//using DAL.Models;
 using PlaneraAdmin._Models;
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ using WebAPICode.Helpers;
 namespace BAL.Repositories
 {
 
-    public class loginDB : baseDB
+    public class loginDB
     {
         public static LoginBLL repo;
         public static DataTable _dt;

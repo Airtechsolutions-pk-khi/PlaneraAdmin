@@ -10,7 +10,7 @@
 
     <!-- Set this to true if you enable server-side prerendering -->
     <BuildServerSideRenderer>false</BuildServerSideRenderer>
-    <RootNamespace>MohsinFoodAdmin</RootNamespace>
+    <RootNamespace>PlaneraAdmin</RootNamespace>
     <UserSecretsId>5ccfc529-0dda-4101-8419-761032993cff</UserSecretsId>
     <AssemblyName>PlaneraAdmin</AssemblyName>
   </PropertyGroup>
@@ -26,12 +26,132 @@
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\src\app\admin\customer\**" />
+    <Compile Remove="ClientApp\src\app\admin\menu\**" />
+    <Compile Remove="ClientApp\src\app\admin\report\**" />
+    <Compile Remove="ClientApp\src\app\admin\sales\**" />
+    <Compile Remove="ClientApp\src\app\admin\settings\appsettings\**" />
+    <Compile Remove="ClientApp\src\app\admin\settings\banner\**" />
+    <Compile Remove="ClientApp\src\app\admin\settings\delivery\**" />
+    <Compile Remove="ClientApp\src\app\admin\settings\offers\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\src\app\admin\customer\**" />
+    <Content Remove="ClientApp\src\app\admin\menu\**" />
+    <Content Remove="ClientApp\src\app\admin\report\**" />
+    <Content Remove="ClientApp\src\app\admin\sales\**" />
+    <Content Remove="ClientApp\src\app\admin\settings\appsettings\**" />
+    <Content Remove="ClientApp\src\app\admin\settings\banner\**" />
+    <Content Remove="ClientApp\src\app\admin\settings\delivery\**" />
+    <Content Remove="ClientApp\src\app\admin\settings\offers\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\admin\customer\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\admin\menu\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\admin\report\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\admin\sales\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\admin\settings\appsettings\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\admin\settings\banner\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\admin\settings\delivery\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\admin\settings\offers\**" />
     <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\src\app\admin\customer\**" />
+    <None Remove="ClientApp\src\app\admin\menu\**" />
+    <None Remove="ClientApp\src\app\admin\report\**" />
+    <None Remove="ClientApp\src\app\admin\sales\**" />
+    <None Remove="ClientApp\src\app\admin\settings\appsettings\**" />
+    <None Remove="ClientApp\src\app\admin\settings\banner\**" />
+    <None Remove="ClientApp\src\app\admin\settings\delivery\**" />
+    <None Remove="ClientApp\src\app\admin\settings\offers\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\admin\customer\customers\addcustomers\addcustomer.component.css" />
+    <None Remove="ClientApp\src\app\admin\customer\customers\addcustomers\addcustomer.component.html" />
+    <None Remove="ClientApp\src\app\admin\customer\customers\addcustomers\addcustomer.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\customer\customers\addcustomers\addcustomer.component.ts" />
+    <None Remove="ClientApp\src\app\admin\customer\customers\customers.component.css" />
+    <None Remove="ClientApp\src\app\admin\customer\customers\customers.component.html" />
+    <None Remove="ClientApp\src\app\admin\customer\customers\customers.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\customer\customers\customers.component.ts" />
+    <None Remove="ClientApp\src\app\admin\menu\addons\addaddons\addaddons.component.css" />
+    <None Remove="ClientApp\src\app\admin\menu\addons\addaddons\addaddons.component.html" />
+    <None Remove="ClientApp\src\app\admin\menu\addons\addaddons\addaddons.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\menu\addons\addaddons\addaddons.component.ts" />
+    <None Remove="ClientApp\src\app\admin\menu\addons\addons.component.css" />
+    <None Remove="ClientApp\src\app\admin\menu\addons\addons.component.html" />
+    <None Remove="ClientApp\src\app\admin\menu\addons\addons.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\menu\addons\addons.component.ts" />
+    <None Remove="ClientApp\src\app\admin\menu\category\addcategory\addcategory.component.css" />
+    <None Remove="ClientApp\src\app\admin\menu\category\addcategory\addcategory.component.html" />
+    <None Remove="ClientApp\src\app\admin\menu\category\addcategory\addcategory.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\menu\category\addcategory\addcategory.component.ts" />
+    <None Remove="ClientApp\src\app\admin\menu\category\category.component.css" />
+    <None Remove="ClientApp\src\app\admin\menu\category\category.component.html" />
+    <None Remove="ClientApp\src\app\admin\menu\category\category.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\menu\category\category.component.ts" />
+    <None Remove="ClientApp\src\app\admin\menu\items\additem\additem.component.css" />
+    <None Remove="ClientApp\src\app\admin\menu\items\additem\additem.component.html" />
+    <None Remove="ClientApp\src\app\admin\menu\items\additem\additem.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\menu\items\additem\additem.component.ts" />
+    <None Remove="ClientApp\src\app\admin\menu\items\items.component.css" />
+    <None Remove="ClientApp\src\app\admin\menu\items\items.component.html" />
+    <None Remove="ClientApp\src\app\admin\menu\items\items.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\menu\items\items.component.ts" />
+    <None Remove="ClientApp\src\app\admin\menu\items\itemsettings\itemsettings.component.css" />
+    <None Remove="ClientApp\src\app\admin\menu\items\itemsettings\itemsettings.component.html" />
+    <None Remove="ClientApp\src\app\admin\menu\items\itemsettings\itemsettings.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\menu\items\itemsettings\itemsettings.component.ts" />
+    <None Remove="ClientApp\src\app\admin\menu\modifiers\addmodifier\addmodifier.component.css" />
+    <None Remove="ClientApp\src\app\admin\menu\modifiers\addmodifier\addmodifier.component.html" />
+    <None Remove="ClientApp\src\app\admin\menu\modifiers\addmodifier\addmodifier.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\menu\modifiers\addmodifier\addmodifier.component.ts" />
+    <None Remove="ClientApp\src\app\admin\menu\modifiers\modifiers.component.css" />
+    <None Remove="ClientApp\src\app\admin\menu\modifiers\modifiers.component.html" />
+    <None Remove="ClientApp\src\app\admin\menu\modifiers\modifiers.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\menu\modifiers\modifiers.component.ts" />
+    <None Remove="ClientApp\src\app\admin\sales\orderdetails\orderdetails.component.css" />
+    <None Remove="ClientApp\src\app\admin\sales\orderdetails\orderdetails.component.html" />
+    <None Remove="ClientApp\src\app\admin\sales\orderdetails\orderdetails.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\sales\orderdetails\orderdetails.component.ts" />
+    <None Remove="ClientApp\src\app\admin\sales\orders\modal-content\modal-OrderDetail.component.html" />
+    <None Remove="ClientApp\src\app\admin\sales\orders\modal-content\modal-OrderDetail.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\sales\orders\modal-content\modal-OrderDetail.component.ts" />
+    <None Remove="ClientApp\src\app\admin\sales\orders\modal-content\ngbd-OrderDetail-content.component.ts" />
+    <None Remove="ClientApp\src\app\admin\sales\orders\orders.component.css" />
+    <None Remove="ClientApp\src\app\admin\sales\orders\orders.component.html" />
+    <None Remove="ClientApp\src\app\admin\sales\orders\orders.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\sales\orders\orders.component.ts" />
+    <None Remove="ClientApp\src\app\admin\settings\appsettings\appsettings.component.css" />
+    <None Remove="ClientApp\src\app\admin\settings\appsettings\appsettings.component.html" />
+    <None Remove="ClientApp\src\app\admin\settings\appsettings\appsettings.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\settings\appsettings\appsettings.component.ts" />
+    <None Remove="ClientApp\src\app\admin\settings\banner\addbanner\addbanner.component.css" />
+    <None Remove="ClientApp\src\app\admin\settings\banner\addbanner\addbanner.component.html" />
+    <None Remove="ClientApp\src\app\admin\settings\banner\addbanner\addbanner.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\settings\banner\addbanner\addbanner.component.ts" />
+    <None Remove="ClientApp\src\app\admin\settings\banner\banner.component.css" />
+    <None Remove="ClientApp\src\app\admin\settings\banner\banner.component.html" />
+    <None Remove="ClientApp\src\app\admin\settings\banner\banner.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\settings\banner\banner.component.ts" />
+    <None Remove="ClientApp\src\app\admin\settings\delivery\adddelivery\adddelivery.component.css" />
+    <None Remove="ClientApp\src\app\admin\settings\delivery\adddelivery\adddelivery.component.html" />
+    <None Remove="ClientApp\src\app\admin\settings\delivery\adddelivery\adddelivery.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\settings\delivery\adddelivery\adddelivery.component.ts" />
+    <None Remove="ClientApp\src\app\admin\settings\delivery\delivery.component.css" />
+    <None Remove="ClientApp\src\app\admin\settings\delivery\delivery.component.html" />
+    <None Remove="ClientApp\src\app\admin\settings\delivery\delivery.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\settings\delivery\delivery.component.ts" />
+    <None Remove="ClientApp\src\app\admin\settings\offers\addoffers\addoffers.component.css" />
+    <None Remove="ClientApp\src\app\admin\settings\offers\addoffers\addoffers.component.html" />
+    <None Remove="ClientApp\src\app\admin\settings\offers\addoffers\addoffers.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\settings\offers\addoffers\addoffers.component.ts" />
+    <None Remove="ClientApp\src\app\admin\settings\offers\offers.component.css" />
+    <None Remove="ClientApp\src\app\admin\settings\offers\offers.component.html" />
+    <None Remove="ClientApp\src\app\admin\settings\offers\offers.component.spec.ts" />
+    <None Remove="ClientApp\src\app\admin\settings\offers\offers.component.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\src\app\admin\settings\" />
     <Folder Include="Upload\Offers\" />
   </ItemGroup>
 
@@ -48,8 +168,8 @@
   <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
     <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
-    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build -- --prod" />
-    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build:ssr -- --prod" Condition=" '$(BuildServerSideRenderer)' == 'true' " />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build --prod" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build:ssr --prod" Condition=" '$(BuildServerSideRenderer)' == 'true' " />
 
     <!-- Include the newly-built files in the publish output -->
     <ItemGroup>

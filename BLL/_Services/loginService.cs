@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PlaneraAdmin.BLL._Services
 {
-    public class loginService : baseService
+    public class loginService
     {
         loginDB _service;
         public loginService()

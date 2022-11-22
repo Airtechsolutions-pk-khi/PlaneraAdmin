@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BAL.Repositories;
-using DAL.Models;
+//using DAL.Models;
 using PlaneraAdmin._Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

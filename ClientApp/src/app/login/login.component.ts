@@ -27,15 +27,12 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.invalid) {
       return;
     }
-
-    debugger
     this.service.login(this.f.username.value, this.f.password.value)    
       .pipe(first())
       .subscribe(
         data => {
           
           if (data != null) {
-            debugger
             this.loadLocations();
             //this.ls.setSelectedBrand(data);           
           }
@@ -60,7 +57,6 @@ export class LoginComponent implements OnInit {
     });
   }
   private loadLocations() {
-    debugger
     this.router.navigate(["/admin/dashboard"]);
     // this.service.getAllLocations(bid).subscribe((res: any) => {
       

@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment.prod';
 // import { DashboardService } from '../services/dashboard.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
-import { LocationsService } from '../_services/locations.service';
+/*import { LocationsService } from '../_services/locations.service';*/
 import { LocalStorageService } from '../_services/local-storage.service';
 
 @Component({
@@ -34,7 +34,7 @@ export class LayoutComponent implements OnInit {
 
   }
   constructor(private router: Router
-    , public service: LocationsService
+/*    , public service: LocationsService*/
     , public ls: LocalStorageService) {
     //this.branchname = this.ls.getSelectedBrand().userName;
     //this.email = this.ls.getSelectedBrand().email;
