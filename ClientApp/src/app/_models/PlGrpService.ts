@@ -7,4 +7,5 @@ export class Service {
   arabicDescription: string;
   statusID: number;
   displayOrder: number;
+  imagePath: string;
 }

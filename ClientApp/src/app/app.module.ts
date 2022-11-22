@@ -38,6 +38,13 @@ import { AddGalleryComponent } from '././admin/planerainterior/gallery/add/addga
 
 import { ActBahGalleryComponent } from './admin/activarbahrain/gallery/gallery.component';
 import { AddGalleryActBahComponent } from './admin/activarbahrain/gallery/add/addgallery.component';
+
+import { ActBahServiceComponent } from './admin/activarbahrain/service/service.component';
+import { AddServiceActBahComponent } from './admin/activarbahrain/service/add/addservice.component';
+
+import { ActDubServiceComponent } from './admin/activardubai/service/service.component';
+import { AddServiceActDubComponent } from './admin/activardubai/service/add/addservice.component';
+
 import { ActDubGalleryComponent } from './admin/activardubai/gallery/gallery.component';
 import { AddGalleryActDubComponent } from './admin/activardubai/gallery/add/addgallery.component';
 
@@ -68,8 +75,11 @@ import { AddGalleryActDubComponent } from './admin/activardubai/gallery/add/addg
     ActDubGalleryComponent,
     AddGalleryActDubComponent,
     HrCntGalleryComponent,
-    AddGalleryHrCntComponent
-    
+    AddGalleryHrCntComponent,
+    ActBahServiceComponent,
+    AddServiceActBahComponent,
+    ActDubServiceComponent,
+    AddServiceActDubComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -106,9 +116,17 @@ import { AddGalleryActDubComponent } from './admin/activardubai/gallery/add/addg
           { path: 'activarbahrain/gallery/add', component: AddGalleryActBahComponent },
           { path: 'activarbahrain/gallery/edit/:id', component: AddGalleryActBahComponent },
 
+          { path: 'activarbahrain/service', component: ActBahServiceComponent },
+          { path: 'activarbahrain/service/add', component: AddServiceActBahComponent },
+          { path: 'activarbahrain/service/edit/:id', component: AddServiceActBahComponent },
+
           { path: 'activardubai/gallery', component: ActDubGalleryComponent },
           { path: 'activardubai/gallery/add', component: AddGalleryActDubComponent },
           { path: 'activardubai/gallery/edit/:id', component: AddGalleryActDubComponent },
+
+          { path: 'activardubai/service', component: ActDubServiceComponent },
+          { path: 'activardubai/service/add', component: AddServiceActDubComponent },
+          { path: 'activardubai/service/edit/:id', component: AddServiceActDubComponent },
 
           { path: 'harmanocontract/gallery', component: HrCntGalleryComponent },
           { path: 'harmanocontract/gallery/add', component: AddGalleryHrCntComponent },

@@ -235,6 +235,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activarbahrain/service/add/addservice.component.html":
+/*!******************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activarbahrain/service/add/addservice.component.html ***!
+  \******************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Activar Bahrain</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"serviceForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Add Service</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Title</label>\r\n                <input type=\"text\" class=\"form-control\" id=title placeholder=\"\" formControlName=\"title\">\r\n                <div *ngIf=\"f.title.invalid && (f.title.dirty || f.title.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.title.errors.required\">\r\n                    Title is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Arabic Title</label>\r\n                <input type=\"text\" class=\"form-control\" id=arabicTitle placeholder=\"\" formControlName=\"arabicTitle\">\r\n                <div *ngIf=\"f.arabicTitle.invalid && (f.arabicTitle.dirty || f.arabicTitle.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.arabicTitle.errors.required\">\r\n                    Arabic Title is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Description</label>\r\n                <input type=\"text\" class=\"form-control\" id=description placeholder=\"\" formControlName=\"description\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Arabic Description</label>\r\n                <input type=\"text\" class=\"form-control\" id=arabicDescription placeholder=\"\" formControlName=\"arabicDescription\">\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLocation\">Display Order</label>\r\n                  <input class=\"form-control\" formControlName=\"displayOrder\" type=\"number\">\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activarbahrain/service/service.component.html":
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activarbahrain/service/service.component.html ***!
+  \***********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Activar Bahrain</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Services</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n           \r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add \r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                  <tr class=\"table-header\">\r\n                    <th width=\"10%\">IMAGE</th>\r\n                    <th width=\"20%\" sortable=\"Title\" (sort)=\"onSort($event)\"> Title </th>\r\n                    <th width=\"20%\" sortable=\"ArabicTitle\" (sort)=\"onSort($event)\"> Arabic Title </th>\r\n                    <th width=\"20%\" sortable=\"Description\" (sort)=\"onSort($event)\"> Description </th>\r\n                    <th width=\"20%\" sortable=\"ArabicDescription\" (sort)=\"onSort($event)\"> Arabic Description </th>\r\n                    <th width=\"20%\" sortable=\"DisplayOrder\" (sort)=\"onSort($event)\"> Display Order </th>\r\n                    <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n                    <th width=\"10%\">Action</th>\r\n                  </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.title}} </td>\r\n                        <td> {{item.arabicTitle}} </td>                        \r\n                        <td> {{item.description}} </td>                        \r\n                        <td> {{item.arabicDescription}} </td>                        \r\n                        <td> {{item.displayOrder}} </td>                        \r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID !==1?'InActive':'Active'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.serviceID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activardubai/gallery/add/addgallery.component.html":
 /*!****************************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activardubai/gallery/add/addgallery.component.html ***!
@@ -258,6 +284,32 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Activar Dubai</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Gallery</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n           \r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add \r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"20%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Title </th>\r\n                        <th width=\"20%\" sortable=\"ArabicName\" (sort)=\"onSort($event)\"> Arabic Title </th>\r\n                        <th width=\"20%\" sortable=\"DisplayOrder\" (sort)=\"onSort($event)\"> Display Order </th>\r\n                        <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.title}} </td>\r\n                        <td> {{item.arabicTitle}} </td>                        \r\n                        <td> {{item.displayOrder}} </td>                        \r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID !==1?'InActive':'Active'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.galleryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activardubai/service/add/addservice.component.html":
+/*!****************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activardubai/service/add/addservice.component.html ***!
+  \****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Activar Dubai</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"serviceForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Add Service</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Title</label>\r\n                <input type=\"text\" class=\"form-control\" id=title placeholder=\"\" formControlName=\"title\">\r\n                <div *ngIf=\"f.title.invalid && (f.title.dirty || f.title.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.title.errors.required\">\r\n                    Title is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Arabic Title</label>\r\n                <input type=\"text\" class=\"form-control\" id=arabicTitle placeholder=\"\" formControlName=\"arabicTitle\">\r\n                <div *ngIf=\"f.arabicTitle.invalid && (f.arabicTitle.dirty || f.arabicTitle.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.arabicTitle.errors.required\">\r\n                    Arabic Title is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Description</label>\r\n                <input type=\"text\" class=\"form-control\" id=description placeholder=\"\" formControlName=\"description\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Arabic Description</label>\r\n                <input type=\"text\" class=\"form-control\" id=arabicDescription placeholder=\"\" formControlName=\"arabicDescription\">\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLocation\">Display Order</label>\r\n                  <input class=\"form-control\" formControlName=\"displayOrder\" type=\"number\">\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activardubai/service/service.component.html":
+/*!*********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activardubai/service/service.component.html ***!
+  \*********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Activar Dubai</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Services</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n           \r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add \r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                  <tr class=\"table-header\">\r\n                    <th width=\"10%\">IMAGE</th>\r\n                    <th width=\"20%\" sortable=\"Title\" (sort)=\"onSort($event)\"> Title </th>\r\n                    <th width=\"20%\" sortable=\"ArabicTitle\" (sort)=\"onSort($event)\"> Arabic Title </th>\r\n                    <th width=\"20%\" sortable=\"Description\" (sort)=\"onSort($event)\"> Description </th>\r\n                    <th width=\"20%\" sortable=\"ArabicDescription\" (sort)=\"onSort($event)\"> Arabic Description </th>\r\n                    <th width=\"20%\" sortable=\"DisplayOrder\" (sort)=\"onSort($event)\"> Display Order </th>\r\n                    <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n                    <th width=\"10%\">Action</th>\r\n                  </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.title}} </td>\r\n                        <td> {{item.arabicTitle}} </td>                        \r\n                        <td> {{item.description}} </td>                        \r\n                        <td> {{item.arabicDescription}} </td>                        \r\n                        <td> {{item.displayOrder}} </td>                        \r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID !==1?'InActive':'Active'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.serviceID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -387,7 +439,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Planera Interior</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"galleryForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Add Gallery</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Title</label>\r\n                <input type=\"text\" class=\"form-control\" id=title placeholder=\"\" formControlName=\"title\">\r\n                <div *ngIf=\"f.title.invalid && (f.title.dirty || f.title.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.title.errors.required\">\r\n                    Title is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Arabic Title</label>\r\n                <input type=\"text\" class=\"form-control\" id=arabicTitle placeholder=\"\" formControlName=\"arabicTitle\">\r\n                <div *ngIf=\"f.arabicTitle.invalid && (f.arabicTitle.dirty || f.arabicTitle.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.arabicTitle.errors.required\">\r\n                    Arabic Title is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLocation\">Display Order</label>\r\n                  <input class=\"form-control\" formControlName=\"displayOrder\" type=\"number\">\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 class=\"h3 mb-2 text-gray-800\">Planera Interior</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"galleryForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Add Project</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Title</label>\r\n                <input type=\"text\" class=\"form-control\" id=title placeholder=\"\" formControlName=\"title\">\r\n                <div *ngIf=\"f.title.invalid && (f.title.dirty || f.title.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.title.errors.required\">\r\n                    Title is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Arabic Title</label>\r\n                <input type=\"text\" class=\"form-control\" id=arabicTitle placeholder=\"\" formControlName=\"arabicTitle\">\r\n                <div *ngIf=\"f.arabicTitle.invalid && (f.arabicTitle.dirty || f.arabicTitle.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.arabicTitle.errors.required\">\r\n                    Arabic Title is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLocation\">Display Order</label>\r\n                  <input class=\"form-control\" formControlName=\"displayOrder\" type=\"number\">\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n");
 
 /***/ }),
 
@@ -400,7 +452,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Planera Interior</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Gallery</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n           \r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add \r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"20%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Title </th>\r\n                        <th width=\"20%\" sortable=\"ArabicName\" (sort)=\"onSort($event)\"> Arabic Title </th>\r\n                        <th width=\"20%\" sortable=\"DisplayOrder\" (sort)=\"onSort($event)\"> Display Order </th>\r\n                        <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.title}} </td>\r\n                        <td> {{item.arabicTitle}} </td>                        \r\n                        <td> {{item.displayOrder}} </td>                        \r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID !==1?'InActive':'Active'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.galleryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Planera Interior</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Projects</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n           \r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add \r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"20%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Title </th>\r\n                        <th width=\"20%\" sortable=\"ArabicName\" (sort)=\"onSort($event)\"> Arabic Title </th>\r\n                        <th width=\"20%\" sortable=\"DisplayOrder\" (sort)=\"onSort($event)\"> Display Order </th>\r\n                        <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.title}} </td>\r\n                        <td> {{item.arabicTitle}} </td>                        \r\n                        <td> {{item.displayOrder}} </td>                        \r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID !==1?'InActive':'Active'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.galleryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -491,7 +543,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/FaviconLayout.png\" style=\"width: 40%;\" />\r\n        </div>\r\n      </a>\r\n\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Companies\r\n      </div>\r\n      <!-- Nav Item - Utilities Collapse Menu -->\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Planera Group</span>\r\n        </a>\r\n        <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/newsevent']\">News & Event</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/service']\">Services Page</a>\r\n\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseplaneraint\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Planera Interior</span>\r\n        </a>\r\n        <div id=\"collapseplaneraint\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planerainterior/gallery']\">Gallery Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseActivarBh\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Activar Bahrain</span>\r\n        </a>\r\n        <div id=\"collapseActivarBh\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/activarbahrain/gallery']\">Gallery Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseHarmanoCont\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Harmano Contracting</span>\r\n        </a>\r\n        <div id=\"collapseHarmanoCont\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/harmanocontract/gallery']\">Project Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#ActivarDB\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Activar Dubai</span>\r\n        </a>\r\n        <div id=\"ActivarDB\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/activardubai/gallery']\">Gallery Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#HarmanoRP\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Harmano Repair</span>\r\n        </a>\r\n        <div id=\"HarmanoRP\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/harmanorepair/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/harmanorepair/gallery']\">Gallery Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Sidebar Toggler (Sidebar) -->\r\n      <div class=\"text-center d-none d-md-inline\">\r\n        <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n      </div>\r\n    </ul>\r\n    <!-- End of Sidebar -->\r\n    <!-- Content Wrapper -->\r\n    <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n      <!-- Main Content -->\r\n      <div id=\"content\">\r\n        <!-- Topbar -->\r\n        <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n\r\n          <!-- Sidebar Toggle (Topbar) -->\r\n          <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n            <i class=\"fa fa-bars\"></i>\r\n          </button>\r\n          <!-- Topbar Search -->\r\n          <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n            <strong>Branch Name</strong> : {{branchname}} |\r\n            <strong>Email</strong> : {{email}}\r\n          </div>\r\n\r\n          <!-- Topbar Navbar -->\r\n          <ul class=\"navbar-nav ml-auto\">\r\n            <!-- Nav Item - User Information -->\r\n            <li class=\"nav-item dropdown no-arrow\">\r\n              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Administrator</span>\r\n                <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n              </a>\r\n              <!-- Dropdown - User Information -->\r\n              <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n                <div class=\"dropdown-divider\"></div>\r\n                <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                  <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n                </a>\r\n              </div>\r\n            </li>\r\n\r\n          </ul>\r\n\r\n        </nav>\r\n        <!-- End of Topbar -->\r\n        <!-- Begin Page Content -->\r\n        <div class=\"container-fluid\">\r\n          <router-outlet></router-outlet>\r\n        </div>\r\n      </div>\r\n      <!-- End of Main Content -->\r\n      <!-- Footer -->\r\n      <footer class=\"sticky-footer bg-white\">\r\n        <div class=\"container my-auto\">\r\n          <div class=\"copyright text-center my-auto\">\r\n            <span>Copyright &copy; PlaneraBH 2022</span>\r\n          </div>\r\n        </div>\r\n      </footer>\r\n      <!-- End of Footer -->\r\n\r\n    </div>\r\n    <!-- End of Content Wrapper -->\r\n\r\n  </div>\r\n</body>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/FaviconLayout.png\" style=\"width: 40%;\" />\r\n        </div>\r\n      </a>\r\n\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Companies\r\n      </div>\r\n      <!-- Nav Item - Utilities Collapse Menu -->\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Planera Group</span>\r\n        </a>\r\n        <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/newsevent']\">News & Event</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/service']\">Services Page</a>\r\n\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseplaneraint\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Planera Interior</span>\r\n        </a>\r\n        <div id=\"collapseplaneraint\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planerainterior/gallery']\">Project Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseActivarBh\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Activar Bahrain</span>\r\n        </a>\r\n        <div id=\"collapseActivarBh\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/activarbahrain/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/activarbahrain/gallery']\">Gallery Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseHarmanoCont\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Harmano Contracting</span>\r\n        </a>\r\n        <div id=\"collapseHarmanoCont\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/harmanocontract/gallery']\">Project Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#ActivarDB\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Activar Dubai</span>\r\n        </a>\r\n        <div id=\"ActivarDB\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/activardubai/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/activardubai/gallery']\">Gallery Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#HarmanoRP\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Harmano Repair</span>\r\n        </a>\r\n        <div id=\"HarmanoRP\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/harmanorepair/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/harmanorepair/gallery']\">Gallery Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Sidebar Toggler (Sidebar) -->\r\n      <div class=\"text-center d-none d-md-inline\">\r\n        <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n      </div>\r\n    </ul>\r\n    <!-- End of Sidebar -->\r\n    <!-- Content Wrapper -->\r\n    <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n      <!-- Main Content -->\r\n      <div id=\"content\">\r\n        <!-- Topbar -->\r\n        <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n\r\n          <!-- Sidebar Toggle (Topbar) -->\r\n          <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n            <i class=\"fa fa-bars\"></i>\r\n          </button>\r\n          <!-- Topbar Search -->\r\n          <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n            <strong>Branch Name</strong> : {{branchname}} |\r\n            <strong>Email</strong> : {{email}}\r\n          </div>\r\n\r\n          <!-- Topbar Navbar -->\r\n          <ul class=\"navbar-nav ml-auto\">\r\n            <!-- Nav Item - User Information -->\r\n            <li class=\"nav-item dropdown no-arrow\">\r\n              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Administrator</span>\r\n                <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n              </a>\r\n              <!-- Dropdown - User Information -->\r\n              <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n                <div class=\"dropdown-divider\"></div>\r\n                <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                  <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n                </a>\r\n              </div>\r\n            </li>\r\n\r\n          </ul>\r\n\r\n        </nav>\r\n        <!-- End of Topbar -->\r\n        <!-- Begin Page Content -->\r\n        <div class=\"container-fluid\">\r\n          <router-outlet></router-outlet>\r\n        </div>\r\n      </div>\r\n      <!-- End of Main Content -->\r\n      <!-- Footer -->\r\n      <footer class=\"sticky-footer bg-white\">\r\n        <div class=\"container my-auto\">\r\n          <div class=\"copyright text-center my-auto\">\r\n            <span>Copyright &copy; PlaneraBH 2022</span>\r\n          </div>\r\n        </div>\r\n      </footer>\r\n      <!-- End of Footer -->\r\n\r\n    </div>\r\n    <!-- End of Content Wrapper -->\r\n\r\n  </div>\r\n</body>\r\n");
 
 /***/ }),
 
@@ -825,6 +877,165 @@ ActBahGalleryService = __decorate([
 
 /***/ }),
 
+/***/ "./src/app/_services/actbahservice.ts":
+/*!********************************************!*\
+  !*** ./src/app/_services/actbahservice.ts ***!
+  \********************************************/
+/*! exports provided: ActBahServiceService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActBahServiceService", function() { return ActBahServiceService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+const compare = (v1, v2) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+function sort(data, column, direction) {
+    if (direction === '' || column === '') {
+        return data;
+    }
+    else {
+        return [...data].sort((a, b) => {
+            const res = compare(`${a[column]}`, `${b[column]}`);
+            return direction === 'asc' ? res : -res;
+        });
+    }
+}
+function matches(data, term) {
+    return data.title.toLowerCase().includes(term.toLowerCase());
+}
+let ActBahServiceService = class ActBahServiceService {
+    constructor(http) {
+        this.http = http;
+        this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+        this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    get total$() { return this._total$.asObservable(); }
+    get loading$() { return this._loading$.asObservable(); }
+    get page() { return this._state.page; }
+    get pageSize() { return this._state.pageSize; }
+    get searchTerm() { return this._state.searchTerm; }
+    set page(page) { this._set({ page }); }
+    set pageSize(pageSize) { this._set({ pageSize }); }
+    set searchTerm(searchTerm) { this._set({ searchTerm }); }
+    set sortColumn(sortColumn) { this._set({ sortColumn }); }
+    set sortDirection(sortDirection) { this._set({ sortDirection }); }
+    get data$() {
+        return this._data$.asObservable();
+    }
+    get allData$() {
+        return this._allData$.asObservable();
+    }
+    getById(id) {
+        return this.http.get(`api/activarbahrain/${id}`);
+    }
+    ExportList() {
+        return this.http.get(`api/activarbahrain/serviceall`);
+    }
+    getAllData() {
+        const url = `api/activarbahrain/serviceall`;
+        console.log(url);
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
+            this.http.get(url).subscribe(res => {
+                this.newsevent = res;
+                this._data$.next(this.newsevent);
+                this._allData$.next(this.newsevent);
+                this._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(() => this._search()), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(false))).subscribe(result => {
+                    this._data$.next(result.data);
+                    this._total$.next(result.total);
+                });
+                this._search$.next();
+            });
+    }
+    _set(patch) {
+        Object.assign(this._state, patch);
+        this._search$.next();
+    }
+    _search() {
+        const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
+        // 1. sort
+        let sortedData = sort(this.newsevent, sortColumn, sortDirection);
+        //// 2. filter
+        sortedData = sortedData.filter(data => matches(data, searchTerm));
+        const total = sortedData.length;
+        // 3. paginate
+        const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({ data, total });
+    }
+    clear() {
+        // clear by calling subject.next() without parameters
+        this._search$.next();
+        this._data$.next(null);
+        this._allData$.next(null);
+        this._total$.next(null);
+        this._loading$.next(null);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    insert(data) {
+        debugger;
+        return this.http.post(`api/activarbahrain/insertservice`, data)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    update(updateData) {
+        return this.http.post(`api/activarbahrain/updateservice`, updateData)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    delete(deleteData) {
+        debugger;
+        return this.http.post(`api/activarbahrain/deleteservice`, deleteData);
+    }
+};
+ActBahServiceService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+];
+ActBahServiceService = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+    }),
+    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+], ActBahServiceService);
+
+
+
+/***/ }),
+
 /***/ "./src/app/_services/actdubgallery.ts":
 /*!********************************************!*\
   !*** ./src/app/_services/actdubgallery.ts ***!
@@ -979,6 +1190,165 @@ ActDubGalleryService = __decorate([
     }),
     __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
 ], ActDubGalleryService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/_services/actdubservice.ts":
+/*!********************************************!*\
+  !*** ./src/app/_services/actdubservice.ts ***!
+  \********************************************/
+/*! exports provided: ActDubServiceService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActDubServiceService", function() { return ActDubServiceService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+const compare = (v1, v2) => v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+function sort(data, column, direction) {
+    if (direction === '' || column === '') {
+        return data;
+    }
+    else {
+        return [...data].sort((a, b) => {
+            const res = compare(`${a[column]}`, `${b[column]}`);
+            return direction === 'asc' ? res : -res;
+        });
+    }
+}
+function matches(data, term) {
+    return data.title.toLowerCase().includes(term.toLowerCase());
+}
+let ActDubServiceService = class ActDubServiceService {
+    constructor(http) {
+        this.http = http;
+        this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+        this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+        this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+        this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    get total$() { return this._total$.asObservable(); }
+    get loading$() { return this._loading$.asObservable(); }
+    get page() { return this._state.page; }
+    get pageSize() { return this._state.pageSize; }
+    get searchTerm() { return this._state.searchTerm; }
+    set page(page) { this._set({ page }); }
+    set pageSize(pageSize) { this._set({ pageSize }); }
+    set searchTerm(searchTerm) { this._set({ searchTerm }); }
+    set sortColumn(sortColumn) { this._set({ sortColumn }); }
+    set sortDirection(sortDirection) { this._set({ sortDirection }); }
+    get data$() {
+        return this._data$.asObservable();
+    }
+    get allData$() {
+        return this._allData$.asObservable();
+    }
+    getById(id) {
+        return this.http.get(`api/activardubai/${id}`);
+    }
+    ExportList() {
+        return this.http.get(`api/activardubai/serviceall`);
+    }
+    getAllData() {
+        const url = `api/activardubai/serviceall`;
+        console.log(url);
+        Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
+            this.http.get(url).subscribe(res => {
+                this.newsevent = res;
+                this._data$.next(this.newsevent);
+                this._allData$.next(this.newsevent);
+                this._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(() => this._search()), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(false))).subscribe(result => {
+                    this._data$.next(result.data);
+                    this._total$.next(result.total);
+                });
+                this._search$.next();
+            });
+    }
+    _set(patch) {
+        Object.assign(this._state, patch);
+        this._search$.next();
+    }
+    _search() {
+        const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
+        // 1. sort
+        let sortedData = sort(this.newsevent, sortColumn, sortDirection);
+        //// 2. filter
+        sortedData = sortedData.filter(data => matches(data, searchTerm));
+        const total = sortedData.length;
+        // 3. paginate
+        const data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({ data, total });
+    }
+    clear() {
+        // clear by calling subject.next() without parameters
+        this._search$.next();
+        this._data$.next(null);
+        this._allData$.next(null);
+        this._total$.next(null);
+        this._loading$.next(null);
+        this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+        };
+    }
+    insert(data) {
+        debugger;
+        return this.http.post(`api/activardubai/insertservice`, data)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    update(updateData) {
+        return this.http.post(`api/activardubai/updateservice`, updateData)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
+            console.log(res);
+            return res;
+        }));
+    }
+    delete(deleteData) {
+        debugger;
+        return this.http.post(`api/activardubai/deleteservice`, deleteData);
+    }
+};
+ActDubServiceService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }
+];
+ActDubServiceService = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+    }),
+    __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+], ActDubServiceService);
 
 
 
@@ -1717,7 +2087,6 @@ let PlnGrpServicesService = class PlnGrpServicesService {
         return this.http.get(`api/planeragroup/serviceall`);
     }
     getAllData() {
-        debugger;
         const url = `api/planeragroup/serviceall`;
         console.log(url);
         Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(() => this._loading$.next(true)),
@@ -2284,6 +2653,283 @@ ActBahGalleryComponent = __decorate([
 
 /***/ }),
 
+/***/ "./src/app/admin/activarbahrain/service/add/addservice.component.ts":
+/*!**************************************************************************!*\
+  !*** ./src/app/admin/activarbahrain/service/add/addservice.component.ts ***!
+  \**************************************************************************/
+/*! exports provided: AddServiceActBahComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddServiceActBahComponent", function() { return AddServiceActBahComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_app_services_actbahservice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/actbahservice */ "./src/app/_services/actbahservice.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+let AddServiceActBahComponent = class AddServiceActBahComponent {
+    constructor(formBuilder, router, route, ls, ts, galleryService) {
+        this.formBuilder = formBuilder;
+        this.router = router;
+        this.route = route;
+        this.ls = ls;
+        this.ts = ts;
+        this.galleryService = galleryService;
+        this.submitted = false;
+        this.loading = false;
+        this.loadingGallery = false;
+        this.ButtonText = "Save";
+        this.createForm();
+    }
+    ngOnInit() {
+        this.setSelectedGallery();
+    }
+    get f() { return this.serviceForm.controls; }
+    createForm() {
+        this.serviceForm = this.formBuilder.group({
+            title: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            arabicTitle: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            description: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            arabicDescription: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            statusID: [true],
+            serviceID: 0,
+            imagePath: [''],
+            displayOrder: [''],
+        });
+    }
+    editForm(obj) {
+        this.f.title.setValue(obj.title);
+        this.f.arabicTitle.setValue(obj.arabicTitle);
+        this.f.description.setValue(obj.description);
+        this.f.arabicDescription.setValue(obj.arabicDescription);
+        this.f.serviceID.setValue(obj.serviceID);
+        this.f.imagePath.setValue(obj.imagePath);
+        this.f.displayOrder.setValue(obj.displayOrder);
+        this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+        this.imgComp.imageUrl = obj.imagePath;
+    }
+    setSelectedGallery() {
+        this.route.paramMap.subscribe(param => {
+            const sid = +param.get('id');
+            if (sid) {
+                this.loadingGallery = true;
+                this.f.serviceID.setValue(sid);
+                this.galleryService.getById(sid).subscribe(res => {
+                    //Set Forms
+                    this.editForm(res);
+                    this.loadingGallery = false;
+                });
+            }
+        });
+    }
+    onSubmit() {
+        this.serviceForm.markAllAsTouched();
+        this.submitted = true;
+        if (this.serviceForm.invalid) {
+            return;
+        }
+        this.loading = true;
+        this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+        this.f.imagePath.setValue(this.imgComp.imageUrl);
+        if (parseInt(this.f.serviceID.value) === 0) {
+            //Insert category
+            this.galleryService.insert(this.serviceForm.value).subscribe(data => {
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record added successfully.");
+                    this.router.navigate(['/admin/activarbahrain/service']);
+                }
+                this.loading = false;
+            }, error => {
+                this.ts.showError("Error", "Failed to insert record.");
+                this.loading = false;
+            });
+        }
+        else {
+            //Update category
+            this.galleryService.update(this.serviceForm.value).subscribe(data => {
+                this.loading = false;
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record updated successfully.");
+                    this.router.navigate(['/admin/activarbahrain/service']);
+                }
+            }, error => {
+                this.ts.showError("Error", "Failed to update record.");
+                this.loading = false;
+            });
+        }
+    }
+};
+AddServiceActBahComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
+    { type: src_app_services_actbahservice__WEBPACK_IMPORTED_MODULE_6__["ActBahServiceService"] }
+];
+AddServiceActBahComponent.propDecorators = {
+    imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
+};
+AddServiceActBahComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addservice',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./addservice.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activarbahrain/service/add/addservice.component.html")).default,
+    }),
+    __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
+        src_app_services_actbahservice__WEBPACK_IMPORTED_MODULE_6__["ActBahServiceService"]])
+], AddServiceActBahComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/activarbahrain/service/service.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/app/admin/activarbahrain/service/service.component.ts ***!
+  \*******************************************************************/
+/*! exports provided: ActBahServiceComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActBahServiceComponent", function() { return ActBahServiceComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
+/* harmony import */ var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/ExportExcel/excel.service */ "./src/ExportExcel/excel.service.ts");
+/* harmony import */ var src_app_services_actbahservice__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/_services/actbahservice */ "./src/app/_services/actbahservice.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+let ActBahServiceComponent = class ActBahServiceComponent {
+    constructor(service, excelService, ls, ts, tss, router) {
+        this.service = service;
+        this.excelService = excelService;
+        this.ls = ls;
+        this.ts = ts;
+        this.tss = tss;
+        this.router = router;
+        this.gallery = [];
+        this.loading$ = service.loading$;
+        this.submit = false;
+    }
+    ngOnInit() {
+        this.getData();
+    }
+    exportAsXLSX() {
+        this.service.ExportList().subscribe((res) => {
+            this.excelService.exportAsExcelFile(res, 'Report_Export');
+        }, error => {
+            this.ts.showError("Error", "Failed to export");
+        });
+    }
+    getData() {
+        this.service.getAllData();
+        this.data$ = this.service.data$;
+        this.total$ = this.service.total$;
+        this.loading$ = this.service.loading$;
+    }
+    onSort({ column, direction }) {
+        this.headers.forEach(header => {
+            if (header.sortable !== column) {
+                header.direction = '';
+            }
+        });
+        this.service.sortColumn = column;
+        this.service.sortDirection = direction;
+    }
+    Edit(gallery) {
+        this.router.navigate(["admin/activarbahrain/service/edit", gallery]);
+    }
+    Delete(obj) {
+        this.service.delete(obj).subscribe((res) => {
+            if (res != 0) {
+                this.ts.showSuccess("Success", "Record deleted successfully.");
+                this.getData();
+            }
+            else {
+                this.ts.showError("Error", "Failed to delete record.");
+            }
+        }, error => {
+            this.ts.showError("Error", "Failed to delete record.");
+        });
+    }
+};
+ActBahServiceComponent.ctorParameters = () => [
+    { type: src_app_services_actbahservice__WEBPACK_IMPORTED_MODULE_7__["ActBahServiceService"] },
+    { type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"] },
+    { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+];
+ActBahServiceComponent.propDecorators = {
+    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }]
+};
+ActBahServiceComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-service',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./service.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activarbahrain/service/service.component.html")).default,
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]]
+    }),
+    __metadata("design:paramtypes", [src_app_services_actbahservice__WEBPACK_IMPORTED_MODULE_7__["ActBahServiceService"],
+        src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"],
+        ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+], ActBahServiceComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/admin/activardubai/gallery/add/addgallery.component.ts":
 /*!************************************************************************!*\
   !*** ./src/app/admin/activardubai/gallery/add/addgallery.component.ts ***!
@@ -2552,6 +3198,283 @@ ActDubGalleryComponent = __decorate([
         ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"],
         _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
 ], ActDubGalleryComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/activardubai/service/add/addservice.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/app/admin/activardubai/service/add/addservice.component.ts ***!
+  \************************************************************************/
+/*! exports provided: AddServiceActDubComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddServiceActDubComponent", function() { return AddServiceActDubComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/imageupload/imageupload.component */ "./src/app/imageupload/imageupload.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var src_app_services_actdubservice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/_services/actdubservice */ "./src/app/_services/actdubservice.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+let AddServiceActDubComponent = class AddServiceActDubComponent {
+    constructor(formBuilder, router, route, ls, ts, galleryService) {
+        this.formBuilder = formBuilder;
+        this.router = router;
+        this.route = route;
+        this.ls = ls;
+        this.ts = ts;
+        this.galleryService = galleryService;
+        this.submitted = false;
+        this.loading = false;
+        this.loadingGallery = false;
+        this.ButtonText = "Save";
+        this.createForm();
+    }
+    ngOnInit() {
+        this.setSelectedGallery();
+    }
+    get f() { return this.serviceForm.controls; }
+    createForm() {
+        this.serviceForm = this.formBuilder.group({
+            title: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            arabicTitle: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            description: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            arabicDescription: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            statusID: [true],
+            serviceID: 0,
+            imagePath: [''],
+            displayOrder: [''],
+        });
+    }
+    editForm(obj) {
+        this.f.title.setValue(obj.title);
+        this.f.arabicTitle.setValue(obj.arabicTitle);
+        this.f.description.setValue(obj.description);
+        this.f.arabicDescription.setValue(obj.arabicDescription);
+        this.f.serviceID.setValue(obj.serviceID);
+        this.f.imagePath.setValue(obj.imagePath);
+        this.f.displayOrder.setValue(obj.displayOrder);
+        this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+        this.imgComp.imageUrl = obj.imagePath;
+    }
+    setSelectedGallery() {
+        this.route.paramMap.subscribe(param => {
+            const sid = +param.get('id');
+            if (sid) {
+                this.loadingGallery = true;
+                this.f.serviceID.setValue(sid);
+                this.galleryService.getById(sid).subscribe(res => {
+                    //Set Forms
+                    this.editForm(res);
+                    this.loadingGallery = false;
+                });
+            }
+        });
+    }
+    onSubmit() {
+        this.serviceForm.markAllAsTouched();
+        this.submitted = true;
+        if (this.serviceForm.invalid) {
+            return;
+        }
+        this.loading = true;
+        this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+        this.f.imagePath.setValue(this.imgComp.imageUrl);
+        if (parseInt(this.f.serviceID.value) === 0) {
+            //Insert category
+            this.galleryService.insert(this.serviceForm.value).subscribe(data => {
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record added successfully.");
+                    this.router.navigate(['/admin/activardubai/service']);
+                }
+                this.loading = false;
+            }, error => {
+                this.ts.showError("Error", "Failed to insert record.");
+                this.loading = false;
+            });
+        }
+        else {
+            //Update category
+            this.galleryService.update(this.serviceForm.value).subscribe(data => {
+                this.loading = false;
+                if (data != 0) {
+                    this.ts.showSuccess("Success", "Record updated successfully.");
+                    this.router.navigate(['/admin/activardubai/service']);
+                }
+            }, error => {
+                this.ts.showError("Error", "Failed to update record.");
+                this.loading = false;
+            });
+        }
+    }
+};
+AddServiceActDubComponent.ctorParameters = () => [
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"] },
+    { type: src_app_services_actdubservice__WEBPACK_IMPORTED_MODULE_6__["ActDubServiceService"] }
+];
+AddServiceActDubComponent.propDecorators = {
+    imgComp: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"], args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], { static: true },] }]
+};
+AddServiceActDubComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addservice',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./addservice.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activardubai/service/add/addservice.component.html")).default,
+    }),
+    __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"],
+        src_app_services_actdubservice__WEBPACK_IMPORTED_MODULE_6__["ActDubServiceService"]])
+], AddServiceActDubComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/admin/activardubai/service/service.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/admin/activardubai/service/service.component.ts ***!
+  \*****************************************************************/
+/*! exports provided: ActDubServiceComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActDubServiceComponent", function() { return ActDubServiceComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/_directives/sortable.directive */ "./src/app/_directives/sortable.directive.ts");
+/* harmony import */ var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/_services/local-storage.service */ "./src/app/_services/local-storage.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/_services/toastservice */ "./src/app/_services/toastservice.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
+/* harmony import */ var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/ExportExcel/excel.service */ "./src/ExportExcel/excel.service.ts");
+/* harmony import */ var src_app_services_actdubservice__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/_services/actdubservice */ "./src/app/_services/actdubservice.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+
+
+
+
+
+
+
+let ActDubServiceComponent = class ActDubServiceComponent {
+    constructor(service, excelService, ls, ts, tss, router) {
+        this.service = service;
+        this.excelService = excelService;
+        this.ls = ls;
+        this.ts = ts;
+        this.tss = tss;
+        this.router = router;
+        this.gallery = [];
+        this.loading$ = service.loading$;
+        this.submit = false;
+    }
+    ngOnInit() {
+        this.getData();
+    }
+    exportAsXLSX() {
+        this.service.ExportList().subscribe((res) => {
+            this.excelService.exportAsExcelFile(res, 'Report_Export');
+        }, error => {
+            this.ts.showError("Error", "Failed to export");
+        });
+    }
+    getData() {
+        this.service.getAllData();
+        this.data$ = this.service.data$;
+        this.total$ = this.service.total$;
+        this.loading$ = this.service.loading$;
+    }
+    onSort({ column, direction }) {
+        this.headers.forEach(header => {
+            if (header.sortable !== column) {
+                header.direction = '';
+            }
+        });
+        this.service.sortColumn = column;
+        this.service.sortDirection = direction;
+    }
+    Edit(gallery) {
+        this.router.navigate(["admin/activardubai/service/edit", gallery]);
+    }
+    Delete(obj) {
+        this.service.delete(obj).subscribe((res) => {
+            if (res != 0) {
+                this.ts.showSuccess("Success", "Record deleted successfully.");
+                this.getData();
+            }
+            else {
+                this.ts.showError("Error", "Failed to delete record.");
+            }
+        }, error => {
+            this.ts.showError("Error", "Failed to delete record.");
+        });
+    }
+};
+ActDubServiceComponent.ctorParameters = () => [
+    { type: src_app_services_actdubservice__WEBPACK_IMPORTED_MODULE_7__["ActDubServiceService"] },
+    { type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"] },
+    { type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"] },
+    { type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"] },
+    { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+];
+ActDubServiceComponent.propDecorators = {
+    headers: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"], args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"],] }]
+};
+ActDubServiceComponent = __decorate([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-service',
+        template: __importDefault(__webpack_require__(/*! raw-loader!./service.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activardubai/service/service.component.html")).default,
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]]
+    }),
+    __metadata("design:paramtypes", [src_app_services_actdubservice__WEBPACK_IMPORTED_MODULE_7__["ActDubServiceService"],
+        src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"],
+        src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"],
+        src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"],
+        ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+], ActDubServiceComponent);
 
 
 
@@ -4173,14 +5096,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_planerainterior_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ././admin/planerainterior/gallery/add/addgallery.component */ "./src/app/admin/planerainterior/gallery/add/addgallery.component.ts");
 /* harmony import */ var _admin_activarbahrain_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./admin/activarbahrain/gallery/gallery.component */ "./src/app/admin/activarbahrain/gallery/gallery.component.ts");
 /* harmony import */ var _admin_activarbahrain_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./admin/activarbahrain/gallery/add/addgallery.component */ "./src/app/admin/activarbahrain/gallery/add/addgallery.component.ts");
-/* harmony import */ var _admin_activardubai_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./admin/activardubai/gallery/gallery.component */ "./src/app/admin/activardubai/gallery/gallery.component.ts");
-/* harmony import */ var _admin_activardubai_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./admin/activardubai/gallery/add/addgallery.component */ "./src/app/admin/activardubai/gallery/add/addgallery.component.ts");
+/* harmony import */ var _admin_activarbahrain_service_service_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./admin/activarbahrain/service/service.component */ "./src/app/admin/activarbahrain/service/service.component.ts");
+/* harmony import */ var _admin_activarbahrain_service_add_addservice_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./admin/activarbahrain/service/add/addservice.component */ "./src/app/admin/activarbahrain/service/add/addservice.component.ts");
+/* harmony import */ var _admin_activardubai_service_service_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./admin/activardubai/service/service.component */ "./src/app/admin/activardubai/service/service.component.ts");
+/* harmony import */ var _admin_activardubai_service_add_addservice_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./admin/activardubai/service/add/addservice.component */ "./src/app/admin/activardubai/service/add/addservice.component.ts");
+/* harmony import */ var _admin_activardubai_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./admin/activardubai/gallery/gallery.component */ "./src/app/admin/activardubai/gallery/gallery.component.ts");
+/* harmony import */ var _admin_activardubai_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./admin/activardubai/gallery/add/addgallery.component */ "./src/app/admin/activardubai/gallery/add/addgallery.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
 
 
 
@@ -4244,10 +5175,14 @@ AppModule = __decorate([
             _admin_planerainterior_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_31__["AddGalleryComponent"],
             _admin_activarbahrain_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_32__["ActBahGalleryComponent"],
             _admin_activarbahrain_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_33__["AddGalleryActBahComponent"],
-            _admin_activardubai_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_34__["ActDubGalleryComponent"],
-            _admin_activardubai_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_35__["AddGalleryActDubComponent"],
+            _admin_activardubai_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_38__["ActDubGalleryComponent"],
+            _admin_activardubai_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_39__["AddGalleryActDubComponent"],
             _admin_harmanocontract_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_28__["HrCntGalleryComponent"],
-            _admin_harmanocontract_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_29__["AddGalleryHrCntComponent"]
+            _admin_harmanocontract_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_29__["AddGalleryHrCntComponent"],
+            _admin_activarbahrain_service_service_component__WEBPACK_IMPORTED_MODULE_34__["ActBahServiceComponent"],
+            _admin_activarbahrain_service_add_addservice_component__WEBPACK_IMPORTED_MODULE_35__["AddServiceActBahComponent"],
+            _admin_activardubai_service_service_component__WEBPACK_IMPORTED_MODULE_36__["ActDubServiceComponent"],
+            _admin_activardubai_service_add_addservice_component__WEBPACK_IMPORTED_MODULE_37__["AddServiceActDubComponent"],
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"].withServerTransition({ appId: 'ng-cli-universal' }),
@@ -4279,9 +5214,15 @@ AppModule = __decorate([
                         { path: 'activarbahrain/gallery', component: _admin_activarbahrain_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_32__["ActBahGalleryComponent"] },
                         { path: 'activarbahrain/gallery/add', component: _admin_activarbahrain_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_33__["AddGalleryActBahComponent"] },
                         { path: 'activarbahrain/gallery/edit/:id', component: _admin_activarbahrain_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_33__["AddGalleryActBahComponent"] },
-                        { path: 'activardubai/gallery', component: _admin_activardubai_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_34__["ActDubGalleryComponent"] },
-                        { path: 'activardubai/gallery/add', component: _admin_activardubai_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_35__["AddGalleryActDubComponent"] },
-                        { path: 'activardubai/gallery/edit/:id', component: _admin_activardubai_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_35__["AddGalleryActDubComponent"] },
+                        { path: 'activarbahrain/service', component: _admin_activarbahrain_service_service_component__WEBPACK_IMPORTED_MODULE_34__["ActBahServiceComponent"] },
+                        { path: 'activarbahrain/service/add', component: _admin_activarbahrain_service_add_addservice_component__WEBPACK_IMPORTED_MODULE_35__["AddServiceActBahComponent"] },
+                        { path: 'activarbahrain/service/edit/:id', component: _admin_activarbahrain_service_add_addservice_component__WEBPACK_IMPORTED_MODULE_35__["AddServiceActBahComponent"] },
+                        { path: 'activardubai/gallery', component: _admin_activardubai_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_38__["ActDubGalleryComponent"] },
+                        { path: 'activardubai/gallery/add', component: _admin_activardubai_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_39__["AddGalleryActDubComponent"] },
+                        { path: 'activardubai/gallery/edit/:id', component: _admin_activardubai_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_39__["AddGalleryActDubComponent"] },
+                        { path: 'activardubai/service', component: _admin_activardubai_service_service_component__WEBPACK_IMPORTED_MODULE_36__["ActDubServiceComponent"] },
+                        { path: 'activardubai/service/add', component: _admin_activardubai_service_add_addservice_component__WEBPACK_IMPORTED_MODULE_37__["AddServiceActDubComponent"] },
+                        { path: 'activardubai/service/edit/:id', component: _admin_activardubai_service_add_addservice_component__WEBPACK_IMPORTED_MODULE_37__["AddServiceActDubComponent"] },
                         { path: 'harmanocontract/gallery', component: _admin_harmanocontract_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_28__["HrCntGalleryComponent"] },
                         { path: 'harmanocontract/gallery/add', component: _admin_harmanocontract_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_29__["AddGalleryHrCntComponent"] },
                         { path: 'harmanocontract/gallery/edit/:id', component: _admin_harmanocontract_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_29__["AddGalleryHrCntComponent"] },

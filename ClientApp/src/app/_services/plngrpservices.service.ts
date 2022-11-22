@@ -78,7 +78,6 @@ export class PlnGrpServicesService {
     return this.http.get<Service[]>(`api/planeragroup/serviceall`);
   }
   getAllData() {
-    debugger
     const url = `api/planeragroup/serviceall`;
     console.log(url);
     tap(() => this._loading$.next(true)),

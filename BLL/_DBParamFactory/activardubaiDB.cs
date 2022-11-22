@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using WebAPICode.Helpers;
 using static PlaneraAdmin._Models.GalleryViewModel;
+using static PlaneraAdmin._Models.ServiceViewModel;
 
 namespace BAL.Repositories
 {
@@ -132,6 +133,119 @@ namespace BAL.Repositories
                 return 0;
             }
         }
-        //HarmanoRepair Gallery
+        //Gallery
+        //Service
+        public List<ServiceBLL> GetService()
+        {
+            try
+            {
+                var lst = new List<ServiceBLL>();
+                SqlParameter[] p = new SqlParameter[0];
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetService_AcDub", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<ServiceBLL>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public ServiceBLL GetService(int id)
+        {
+            try
+            {
+                var _obj = new ServiceBLL();
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@id", id);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetServiceID_AcDub", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        _obj = _dt.DataTableToList<ServiceBLL>().FirstOrDefault();
+                    }
+                }
+                return _obj;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public int Insert(ServiceBLL data)
+        {
+            try
+            {
+                int rtn = 0;
+                SqlParameter[] p = new SqlParameter[8];
+
+                p[0] = new SqlParameter("@Title", data.Title);
+                p[1] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
+                p[2] = new SqlParameter("@Description", data.Description);
+                p[3] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
+                p[4] = new SqlParameter("@ImagePath", data.ImagePath);
+                p[5] = new SqlParameter("@StatusID", data.StatusID);
+                p[6] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
+                p[7] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_insertService_AcDub", p);
+
+                return rtn;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public int Update(ServiceBLL data)
+        {
+            try
+            {
+                int rtn = 0;
+                SqlParameter[] p = new SqlParameter[8];
+
+                p[0] = new SqlParameter("@Title", data.Title);
+                p[1] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
+                p[2] = new SqlParameter("@Description", data.Description);
+                p[3] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
+                p[4] = new SqlParameter("@ImagePath", data.ImagePath);
+                p[5] = new SqlParameter("@StatusID", data.StatusID);
+                p[6] = new SqlParameter("@CompanyID", data.CompanyID);
+                p[7] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
+                p[8] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[9] = new SqlParameter("@ServiceID", data.ServiceID);
+
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateService_AcDub", p);
+
+                return rtn;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public int DeleteService(ServiceBLL data)
+        {
+            try
+            {
+                int _obj = 0;
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@id", data.ServiceID);
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteService_AcDub", p);
+
+                return _obj;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        //Service
     }
 }

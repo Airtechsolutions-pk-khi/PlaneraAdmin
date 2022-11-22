@@ -5,6 +5,7 @@ using PlaneraAdmin.BLL._Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using static PlaneraAdmin._Models.GalleryViewModel;
+using static PlaneraAdmin._Models.ServiceViewModel;
 
 namespace PlaneraAdmin.Controllers
 {
@@ -50,5 +51,35 @@ namespace PlaneraAdmin.Controllers
             return _service.Delete(obj);
         }
         //Gallery
+        //Service
+        [HttpGet("serviceall")]
+        public List<ServiceBLL> GetService()
+        {
+            return _service.GetService();
+        }
+        [HttpGet("{id}")]
+        public ServiceBLL GetService(int id)
+        {
+            return _service.GetService(id);
+        }
+        [HttpPost]
+        [Route("insertservice")]
+        public int PostGallery([FromBody] ServiceBLL obj)
+        {
+            return _service.InsertService(obj, _env);
+        }
+        [HttpPost]
+        [Route("updateservice")]
+        public int UpdateGallery([FromBody] ServiceBLL obj)
+        {
+            return _service.UpdateService(obj, _env);
+        }
+        [HttpPost]
+        [Route("deleteservice")]
+        public int DeleteService([FromBody] ServiceBLL obj)
+        {
+            return _service.DeleteService(obj);
+        }
+        //Service
     }
 }

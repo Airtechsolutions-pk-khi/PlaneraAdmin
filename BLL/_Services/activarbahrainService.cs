@@ -7,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using static PlaneraAdmin._Models.GalleryViewModel;
+using static PlaneraAdmin._Models.ServiceViewModel;
 
 namespace PlaneraAdmin.BLL._Services
 {
@@ -17,6 +18,7 @@ namespace PlaneraAdmin.BLL._Services
         {
             _service = new activarbahrainDB();
         }
+        //Gallery
         public List<GalleryImageBLL> GetGallery()
         {
             try
@@ -83,6 +85,75 @@ namespace PlaneraAdmin.BLL._Services
                 return 0;
             }
         }
+        //Gallery
+        //Service
+        public List<ServiceBLL> GetService()
+        {
+            try
+            {
+                return _service.GetService();
+            }
+            catch (Exception ex)
+            {
+                return new List<ServiceBLL>();
+            }
+        }
+        public ServiceBLL GetService(int id)
+        {
+            try
+            {
+                return _service.GetService(id);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public int DeleteService(ServiceBLL data)
+        {
+            try
+            {
+
+                var result = _service.DeleteService(data);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public int InsertService(ServiceBLL data, IWebHostEnvironment _env)
+        {
+            try
+            {
+                data.ImagePath = UploadImage(data.ImagePath, "Service", _env);
+                data.LastUpdatedDate = _UTCDateTime_SA();
+                var result = _service.Insert(data);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public int UpdateService(ServiceBLL data, IWebHostEnvironment _env)
+        {
+            try
+            {
+                data.ImagePath = UploadImage(data.ImagePath, "Service", _env);
+                data.LastUpdatedDate = _UTCDateTime_SA();
+                var result = _service.Update(data);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        //Service
     }
 }
 

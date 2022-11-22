@@ -285,6 +285,46 @@
     },
 
     /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activarbahrain/service/add/addservice.component.html":
+    /*!******************************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activarbahrain/service/add/addservice.component.html ***!
+      \******************************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminActivarbahrainServiceAddAddserviceComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Activar Bahrain</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"serviceForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Add Service</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Title</label>\r\n                <input type=\"text\" class=\"form-control\" id=title placeholder=\"\" formControlName=\"title\">\r\n                <div *ngIf=\"f.title.invalid && (f.title.dirty || f.title.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.title.errors.required\">\r\n                    Title is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Arabic Title</label>\r\n                <input type=\"text\" class=\"form-control\" id=arabicTitle placeholder=\"\" formControlName=\"arabicTitle\">\r\n                <div *ngIf=\"f.arabicTitle.invalid && (f.arabicTitle.dirty || f.arabicTitle.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.arabicTitle.errors.required\">\r\n                    Arabic Title is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Description</label>\r\n                <input type=\"text\" class=\"form-control\" id=description placeholder=\"\" formControlName=\"description\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Arabic Description</label>\r\n                <input type=\"text\" class=\"form-control\" id=arabicDescription placeholder=\"\" formControlName=\"arabicDescription\">\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLocation\">Display Order</label>\r\n                  <input class=\"form-control\" formControlName=\"displayOrder\" type=\"number\">\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activarbahrain/service/service.component.html":
+    /*!***********************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activarbahrain/service/service.component.html ***!
+      \***********************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminActivarbahrainServiceServiceComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Activar Bahrain</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Services</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n           \r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add \r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                  <tr class=\"table-header\">\r\n                    <th width=\"10%\">IMAGE</th>\r\n                    <th width=\"20%\" sortable=\"Title\" (sort)=\"onSort($event)\"> Title </th>\r\n                    <th width=\"20%\" sortable=\"ArabicTitle\" (sort)=\"onSort($event)\"> Arabic Title </th>\r\n                    <th width=\"20%\" sortable=\"Description\" (sort)=\"onSort($event)\"> Description </th>\r\n                    <th width=\"20%\" sortable=\"ArabicDescription\" (sort)=\"onSort($event)\"> Arabic Description </th>\r\n                    <th width=\"20%\" sortable=\"DisplayOrder\" (sort)=\"onSort($event)\"> Display Order </th>\r\n                    <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n                    <th width=\"10%\">Action</th>\r\n                  </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.title}} </td>\r\n                        <td> {{item.arabicTitle}} </td>                        \r\n                        <td> {{item.description}} </td>                        \r\n                        <td> {{item.arabicDescription}} </td>                        \r\n                        <td> {{item.displayOrder}} </td>                        \r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID !==1?'InActive':'Active'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.serviceID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      /***/
+    },
+
+    /***/
     "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activardubai/gallery/add/addgallery.component.html":
     /*!****************************************************************************************************************!*\
       !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activardubai/gallery/add/addgallery.component.html ***!
@@ -321,6 +361,46 @@
 
 
       __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Activar Dubai</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Gallery</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n           \r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add \r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"20%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Title </th>\r\n                        <th width=\"20%\" sortable=\"ArabicName\" (sort)=\"onSort($event)\"> Arabic Title </th>\r\n                        <th width=\"20%\" sortable=\"DisplayOrder\" (sort)=\"onSort($event)\"> Display Order </th>\r\n                        <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.title}} </td>\r\n                        <td> {{item.arabicTitle}} </td>                        \r\n                        <td> {{item.displayOrder}} </td>                        \r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID !==1?'InActive':'Active'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.galleryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activardubai/service/add/addservice.component.html":
+    /*!****************************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activardubai/service/add/addservice.component.html ***!
+      \****************************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminActivardubaiServiceAddAddserviceComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Activar Dubai</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"serviceForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Add Service</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Title</label>\r\n                <input type=\"text\" class=\"form-control\" id=title placeholder=\"\" formControlName=\"title\">\r\n                <div *ngIf=\"f.title.invalid && (f.title.dirty || f.title.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.title.errors.required\">\r\n                    Title is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Arabic Title</label>\r\n                <input type=\"text\" class=\"form-control\" id=arabicTitle placeholder=\"\" formControlName=\"arabicTitle\">\r\n                <div *ngIf=\"f.arabicTitle.invalid && (f.arabicTitle.dirty || f.arabicTitle.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.arabicTitle.errors.required\">\r\n                    Arabic Title is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Description</label>\r\n                <input type=\"text\" class=\"form-control\" id=description placeholder=\"\" formControlName=\"description\">\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Arabic Description</label>\r\n                <input type=\"text\" class=\"form-control\" id=arabicDescription placeholder=\"\" formControlName=\"arabicDescription\">\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLocation\">Display Order</label>\r\n                  <input class=\"form-control\" formControlName=\"displayOrder\" type=\"number\">\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      /***/
+    },
+
+    /***/
+    "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activardubai/service/service.component.html":
+    /*!*********************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activardubai/service/service.component.html ***!
+      \*********************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function node_modulesRawLoaderDistCjsJsSrcAppAdminActivardubaiServiceServiceComponentHtml(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Activar Dubai</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Services</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n           \r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add \r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                  <tr class=\"table-header\">\r\n                    <th width=\"10%\">IMAGE</th>\r\n                    <th width=\"20%\" sortable=\"Title\" (sort)=\"onSort($event)\"> Title </th>\r\n                    <th width=\"20%\" sortable=\"ArabicTitle\" (sort)=\"onSort($event)\"> Arabic Title </th>\r\n                    <th width=\"20%\" sortable=\"Description\" (sort)=\"onSort($event)\"> Description </th>\r\n                    <th width=\"20%\" sortable=\"ArabicDescription\" (sort)=\"onSort($event)\"> Arabic Description </th>\r\n                    <th width=\"20%\" sortable=\"DisplayOrder\" (sort)=\"onSort($event)\"> Display Order </th>\r\n                    <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n                    <th width=\"10%\">Action</th>\r\n                  </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.title}} </td>\r\n                        <td> {{item.arabicTitle}} </td>                        \r\n                        <td> {{item.description}} </td>                        \r\n                        <td> {{item.arabicDescription}} </td>                        \r\n                        <td> {{item.displayOrder}} </td>                        \r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID !==1?'InActive':'Active'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.serviceID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -520,7 +600,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Planera Interior</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"galleryForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Add Gallery</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Title</label>\r\n                <input type=\"text\" class=\"form-control\" id=title placeholder=\"\" formControlName=\"title\">\r\n                <div *ngIf=\"f.title.invalid && (f.title.dirty || f.title.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.title.errors.required\">\r\n                    Title is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Arabic Title</label>\r\n                <input type=\"text\" class=\"form-control\" id=arabicTitle placeholder=\"\" formControlName=\"arabicTitle\">\r\n                <div *ngIf=\"f.arabicTitle.invalid && (f.arabicTitle.dirty || f.arabicTitle.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.arabicTitle.errors.required\">\r\n                    Arabic Title is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLocation\">Display Order</label>\r\n                  <input class=\"form-control\" formControlName=\"displayOrder\" type=\"number\">\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
+      __webpack_exports__["default"] = "<h1 class=\"h3 mb-2 text-gray-800\">Planera Interior</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<form [formGroup]=\"galleryForm\" class=\"form\" (ngSubmit)=\"onSubmit()\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-xl-12\">\r\n      <div class=\"card mb-4\">\r\n        <div class=\"card-header\">Add Project</div>\r\n        <div class=\"card-body\">\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-md-8\">\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Title</label>\r\n                <input type=\"text\" class=\"form-control\" id=title placeholder=\"\" formControlName=\"title\">\r\n                <div *ngIf=\"f.title.invalid && (f.title.dirty || f.title.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.title.errors.required\">\r\n                    Title is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div class=\"form-group\">\r\n                <label class=\"small mb-1\" for=\"inputUsername\">Arabic Title</label>\r\n                <input type=\"text\" class=\"form-control\" id=arabicTitle placeholder=\"\" formControlName=\"arabicTitle\">\r\n                <div *ngIf=\"f.arabicTitle.invalid && (f.arabicTitle.dirty || f.arabicTitle.touched)\" class=\"alert alert-danger\">\r\n                  <div *ngIf=\"f.arabicTitle.errors.required\">\r\n                    Arabic Title is required.\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- Form Row-->\r\n              <div class=\"form-row\">\r\n                <div class=\"form-group col-md-12\">\r\n                  <label class=\"small mb-1\" for=\"inputLocation\">Display Order</label>\r\n                  <input class=\"form-control\" formControlName=\"displayOrder\" type=\"number\">\r\n                </div>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group col-md-4 text-center\">\r\n              <app-imageupload></app-imageupload>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-row\">\r\n            <div class=\"form-group col-lg-12\">\r\n              <label for=\"Item Status\">Status</label>\r\n              <div class=\"custom-control custom-switch custom-switch-md\">\r\n                <input type=\"checkbox\" class=\"custom-control-input\" checked id=\"statusID\" formControlName=\"statusID\">\r\n                <label class=\"custom-control-label\" for=\"statusID\"></label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <!-- Save changes button-->\r\n          <button class=\"btn btn-primary\" type=\"submit\">Save changes</button>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>\r\n";
       /***/
     },
 
@@ -540,7 +620,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Planera Interior</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Gallery</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n           \r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add \r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"20%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Title </th>\r\n                        <th width=\"20%\" sortable=\"ArabicName\" (sort)=\"onSort($event)\"> Arabic Title </th>\r\n                        <th width=\"20%\" sortable=\"DisplayOrder\" (sort)=\"onSort($event)\"> Display Order </th>\r\n                        <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.title}} </td>\r\n                        <td> {{item.arabicTitle}} </td>                        \r\n                        <td> {{item.displayOrder}} </td>                        \r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID !==1?'InActive':'Active'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.galleryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+      __webpack_exports__["default"] = "<!-- Page Heading -->\r\n<h1 class=\"h3 mb-2 text-gray-800\">Planera Interior</h1>\r\n<p class=\"mb-4\"></p>\r\n\r\n<!-- DataTales Example -->\r\n<div class=\"card shadow mb-4\">\r\n    <div class=\"card-header py-3\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-5\">\r\n                <h6 class=\"m-0 font-weight-bold text-orange\">Projects</h6>\r\n            </div>\r\n            <div class=\" col-lg-4 input-group mb-3\" style=\"padding-top: 25px;\">\r\n                <div class=\"input-group-prepend\" style=\"height: 39px;\">\r\n                    <span class=\"input-group-text\"><i class=\"fa fa-search\"></i></span>\r\n                </div>\r\n                <input class=\"form-control search-filter\" placeholder=\"Filter by name\" type=\"text\" name=\"searchTerm\" [(ngModel)]=\"service.searchTerm\" />\r\n            </div>\r\n           \r\n            <div class=\"col-md-3 form-group text-right\">\r\n                <button type=\"submit\" class=\"btn btn-primary mt-4 mr-1\" (click)=\"exportAsXLSX()\">\r\n                    <span translate>Export</span>\r\n                </button>\r\n                <button [routerLink]=\"['add']\" class=\"btn btn-primary mt-4 mr-1\">\r\n                    Add \r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"card-body\">\r\n        <div class=\"tile-body p-0 table-responsive \">\r\n            <table class=\"table table-striped\">\r\n                <thead>\r\n                    <tr class=\"table-header\">\r\n                        <th width=\"10%\">IMAGE</th>\r\n                        <th width=\"20%\" sortable=\"Name\" (sort)=\"onSort($event)\"> Title </th>\r\n                        <th width=\"20%\" sortable=\"ArabicName\" (sort)=\"onSort($event)\"> Arabic Title </th>\r\n                        <th width=\"20%\" sortable=\"DisplayOrder\" (sort)=\"onSort($event)\"> Display Order </th>\r\n                        <th width=\"15%\" sortable=\"Status\" (sort)=\"onSort($event)\">Status </th>\r\n                        <th width=\"10%\">Action</th>\r\n                    </tr>\r\n                </thead>\r\n                <tbody>\r\n                    <tr *ngFor=\"let item of data$ | async \">\r\n                        <td>\r\n                            <img *ngIf=\"item.image !== ''\" [src]=\"item.image\" class=\"table-img\" alt=\"\" />\r\n                            <div *ngIf=\"item.image === ''\" class=\"image-replace\"></div>\r\n                        </td>\r\n                        <td> {{item.title}} </td>\r\n                        <td> {{item.arabicTitle}} </td>                        \r\n                        <td> {{item.displayOrder}} </td>                        \r\n                        <td>\r\n                            <ngb-highlight [ngClass]=\"{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }\" class=\"btn btn-sm\" [result]=\"item.statusID !==1?'InActive':'Active'\" [term]=\"service.searchTerm\">\r\n                            </ngb-highlight>\r\n                        </td>\r\n                        <td>\r\n                            <a (click)=\"Edit(item.galleryID)\"><i class=\"fas fa-fw fa-edit\"></i> </a>\r\n                            <a (click)=\"Delete(item)\"><i class=\"fas fa-fw fa-trash-alt\"></i> </a>\r\n                        </td>\r\n                    </tr>\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <p class=\"pagination-count\">\r\n                    Showing\r\n                    <strong>{{(service.pageSize * service.page)-9}}</strong> to\r\n                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of\r\n                    <strong>{{(total$ | async)!}}</strong> results\r\n                </p>\r\n            </div>\r\n            <div class=\"col-lg-6 col-md-6 col-sm-12 col-xs-12\">\r\n                <ngb-pagination [collectionSize]=\"(total$ | async)!\" class=\"float-right\" [(page)]=\"service.page\" [pageSize]=\"service.pageSize\" [maxSize]=\"3\" [rotate]=\"true\" [boundaryLinks]=\"true\">\r\n                </ngb-pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
       /***/
     },
 
@@ -680,7 +760,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/FaviconLayout.png\" style=\"width: 40%;\" />\r\n        </div>\r\n      </a>\r\n\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Companies\r\n      </div>\r\n      <!-- Nav Item - Utilities Collapse Menu -->\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Planera Group</span>\r\n        </a>\r\n        <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/newsevent']\">News & Event</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/service']\">Services Page</a>\r\n\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseplaneraint\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Planera Interior</span>\r\n        </a>\r\n        <div id=\"collapseplaneraint\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planerainterior/gallery']\">Gallery Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseActivarBh\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Activar Bahrain</span>\r\n        </a>\r\n        <div id=\"collapseActivarBh\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/activarbahrain/gallery']\">Gallery Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseHarmanoCont\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Harmano Contracting</span>\r\n        </a>\r\n        <div id=\"collapseHarmanoCont\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/harmanocontract/gallery']\">Project Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#ActivarDB\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Activar Dubai</span>\r\n        </a>\r\n        <div id=\"ActivarDB\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/activardubai/gallery']\">Gallery Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#HarmanoRP\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Harmano Repair</span>\r\n        </a>\r\n        <div id=\"HarmanoRP\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/harmanorepair/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/harmanorepair/gallery']\">Gallery Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Sidebar Toggler (Sidebar) -->\r\n      <div class=\"text-center d-none d-md-inline\">\r\n        <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n      </div>\r\n    </ul>\r\n    <!-- End of Sidebar -->\r\n    <!-- Content Wrapper -->\r\n    <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n      <!-- Main Content -->\r\n      <div id=\"content\">\r\n        <!-- Topbar -->\r\n        <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n\r\n          <!-- Sidebar Toggle (Topbar) -->\r\n          <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n            <i class=\"fa fa-bars\"></i>\r\n          </button>\r\n          <!-- Topbar Search -->\r\n          <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n            <strong>Branch Name</strong> : {{branchname}} |\r\n            <strong>Email</strong> : {{email}}\r\n          </div>\r\n\r\n          <!-- Topbar Navbar -->\r\n          <ul class=\"navbar-nav ml-auto\">\r\n            <!-- Nav Item - User Information -->\r\n            <li class=\"nav-item dropdown no-arrow\">\r\n              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Administrator</span>\r\n                <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n              </a>\r\n              <!-- Dropdown - User Information -->\r\n              <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n                <div class=\"dropdown-divider\"></div>\r\n                <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                  <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n                </a>\r\n              </div>\r\n            </li>\r\n\r\n          </ul>\r\n\r\n        </nav>\r\n        <!-- End of Topbar -->\r\n        <!-- Begin Page Content -->\r\n        <div class=\"container-fluid\">\r\n          <router-outlet></router-outlet>\r\n        </div>\r\n      </div>\r\n      <!-- End of Main Content -->\r\n      <!-- Footer -->\r\n      <footer class=\"sticky-footer bg-white\">\r\n        <div class=\"container my-auto\">\r\n          <div class=\"copyright text-center my-auto\">\r\n            <span>Copyright &copy; PlaneraBH 2022</span>\r\n          </div>\r\n        </div>\r\n      </footer>\r\n      <!-- End of Footer -->\r\n\r\n    </div>\r\n    <!-- End of Content Wrapper -->\r\n\r\n  </div>\r\n</body>\r\n";
+      __webpack_exports__["default"] = "<body id=\"page-top\">\r\n  <!-- Page Wrapper -->\r\n  <div id=\"wrapper\">\r\n\r\n    <!-- Sidebar -->\r\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\r\n\r\n      <!-- Sidebar - Brand -->\r\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" [routerLink]=\"['dashboard']\">\r\n        <div class=\"sidebar-brand-icon\">\r\n          <img src=\"../../assets/img/FaviconLayout.png\" style=\"width: 40%;\" />\r\n        </div>\r\n      </a>\r\n\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider my-0\">\r\n\r\n      <!-- Nav Item - Dashboard -->\r\n      <li class=\"nav-item active\">\r\n        <a class=\"nav-link\" [routerLink]=\"['dashboard']\">\r\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\r\n          <span>Dashboard</span>\r\n        </a>\r\n      </li>\r\n\r\n      <!-- Divider -->\r\n      <hr class=\"sidebar-divider\">\r\n\r\n      <!-- Heading -->\r\n      <div class=\"sidebar-heading\">\r\n        Companies\r\n      </div>\r\n      <!-- Nav Item - Utilities Collapse Menu -->\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseCompany\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Planera Group</span>\r\n        </a>\r\n        <div id=\"collapseCompany\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/newsevent']\">News & Event</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/service']\">Services Page</a>\r\n\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseplaneraint\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Planera Interior</span>\r\n        </a>\r\n        <div id=\"collapseplaneraint\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planerainterior/gallery']\">Project Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseActivarBh\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Activar Bahrain</span>\r\n        </a>\r\n        <div id=\"collapseActivarBh\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/activarbahrain/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/activarbahrain/gallery']\">Gallery Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseHarmanoCont\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Harmano Contracting</span>\r\n        </a>\r\n        <div id=\"collapseHarmanoCont\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/planeragroup/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/harmanocontract/gallery']\">Project Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#ActivarDB\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Activar Dubai</span>\r\n        </a>\r\n        <div id=\"ActivarDB\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/activardubai/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/activardubai/gallery']\">Gallery Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#HarmanoRP\" aria-expanded=\"true\" aria-controls=\"collapseCompany\">\r\n          <i class=\"fas fa-fw fa-folder\"></i>\r\n          <span>Harmano Repair</span>\r\n        </a>\r\n        <div id=\"HarmanoRP\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\r\n          <div class=\"bg-white py-2 collapse-inner rounded\">\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/harmanorepair/service']\">Services Page</a>\r\n            <a class=\"collapse-item\" [routerLink]=\"['/admin/harmanorepair/gallery']\">Gallery Page</a>\r\n          </div>\r\n        </div>\r\n      </li>\r\n      <hr class=\"sidebar-divider\">\r\n      <!-- Sidebar Toggler (Sidebar) -->\r\n      <div class=\"text-center d-none d-md-inline\">\r\n        <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n      </div>\r\n    </ul>\r\n    <!-- End of Sidebar -->\r\n    <!-- Content Wrapper -->\r\n    <div id=\"content-wrapper\" class=\"d-flex flex-column\">\r\n      <!-- Main Content -->\r\n      <div id=\"content\">\r\n        <!-- Topbar -->\r\n        <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\r\n\r\n          <!-- Sidebar Toggle (Topbar) -->\r\n          <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\r\n            <i class=\"fa fa-bars\"></i>\r\n          </button>\r\n          <!-- Topbar Search -->\r\n          <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100\">\r\n            <strong>Branch Name</strong> : {{branchname}} |\r\n            <strong>Email</strong> : {{email}}\r\n          </div>\r\n\r\n          <!-- Topbar Navbar -->\r\n          <ul class=\"navbar-nav ml-auto\">\r\n            <!-- Nav Item - User Information -->\r\n            <li class=\"nav-item dropdown no-arrow\">\r\n              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Administrator</span>\r\n                <img class=\"img-profile rounded-circle\" src=\"https://user-images.githubusercontent.com/16608864/35882949-bbe13aa0-0bab-11e8-859c-ceda3b213818.jpeg\">\r\n              </a>\r\n              <!-- Dropdown - User Information -->\r\n              <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\r\n                <div class=\"dropdown-divider\"></div>\r\n                <a class=\"dropdown-item\" data-toggle=\"modal\" (click)=\"Logout()\">\r\n                  <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i> Logout\r\n                </a>\r\n              </div>\r\n            </li>\r\n\r\n          </ul>\r\n\r\n        </nav>\r\n        <!-- End of Topbar -->\r\n        <!-- Begin Page Content -->\r\n        <div class=\"container-fluid\">\r\n          <router-outlet></router-outlet>\r\n        </div>\r\n      </div>\r\n      <!-- End of Main Content -->\r\n      <!-- Footer -->\r\n      <footer class=\"sticky-footer bg-white\">\r\n        <div class=\"container my-auto\">\r\n          <div class=\"copyright text-center my-auto\">\r\n            <span>Copyright &copy; PlaneraBH 2022</span>\r\n          </div>\r\n        </div>\r\n      </footer>\r\n      <!-- End of Footer -->\r\n\r\n    </div>\r\n    <!-- End of Content Wrapper -->\r\n\r\n  </div>\r\n</body>\r\n";
       /***/
     },
 
@@ -1267,6 +1347,297 @@
     },
 
     /***/
+    "./src/app/_services/actbahservice.ts":
+    /*!********************************************!*\
+      !*** ./src/app/_services/actbahservice.ts ***!
+      \********************************************/
+
+    /*! exports provided: ActBahServiceService */
+
+    /***/
+    function srcApp_servicesActbahserviceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ActBahServiceService", function () {
+        return ActBahServiceService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! rxjs */
+      "./node_modules/rxjs/_esm2015/index.js");
+      /* harmony import */
+
+
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! rxjs/operators */
+      "./node_modules/rxjs/_esm2015/operators/index.js");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var compare = function compare(v1, v2) {
+        return v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+      };
+
+      function sort(data, column, direction) {
+        if (direction === '' || column === '') {
+          return data;
+        } else {
+          return _toConsumableArray(data).sort(function (a, b) {
+            var res = compare("".concat(a[column]), "".concat(b[column]));
+            return direction === 'asc' ? res : -res;
+          });
+        }
+      }
+
+      function matches(data, term) {
+        return data.title.toLowerCase().includes(term.toLowerCase());
+      }
+
+      var ActBahServiceService = /*#__PURE__*/function () {
+        function ActBahServiceService(http) {
+          _classCallCheck(this, ActBahServiceService);
+
+          this.http = http;
+          this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+          this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+          this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+          };
+        }
+
+        _createClass(ActBahServiceService, [{
+          key: "getById",
+          value: function getById(id) {
+            return this.http.get("api/activarbahrain/".concat(id));
+          }
+        }, {
+          key: "ExportList",
+          value: function ExportList() {
+            return this.http.get("api/activarbahrain/serviceall");
+          }
+        }, {
+          key: "getAllData",
+          value: function getAllData() {
+            var _this2 = this;
+
+            var url = "api/activarbahrain/serviceall";
+            console.log(url);
+            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+              return _this2._loading$.next(true);
+            }), this.http.get(url).subscribe(function (res) {
+              _this2.newsevent = res;
+
+              _this2._data$.next(_this2.newsevent);
+
+              _this2._allData$.next(_this2.newsevent);
+
+              _this2._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this2._search();
+              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+                return _this2._loading$.next(false);
+              })).subscribe(function (result) {
+                _this2._data$.next(result.data);
+
+                _this2._total$.next(result.total);
+              });
+
+              _this2._search$.next();
+            });
+          }
+        }, {
+          key: "_set",
+          value: function _set(patch) {
+            Object.assign(this._state, patch);
+
+            this._search$.next();
+          }
+        }, {
+          key: "_search",
+          value: function _search() {
+            var _this$_state2 = this._state,
+                sortColumn = _this$_state2.sortColumn,
+                sortDirection = _this$_state2.sortDirection,
+                pageSize = _this$_state2.pageSize,
+                page = _this$_state2.page,
+                searchTerm = _this$_state2.searchTerm; // 1. sort
+
+            var sortedData = sort(this.newsevent, sortColumn, sortDirection); //// 2. filter
+
+            sortedData = sortedData.filter(function (data) {
+              return matches(data, searchTerm);
+            });
+            var total = sortedData.length; // 3. paginate
+
+            var data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({
+              data: data,
+              total: total
+            });
+          }
+        }, {
+          key: "clear",
+          value: function clear() {
+            // clear by calling subject.next() without parameters
+            this._search$.next();
+
+            this._data$.next(null);
+
+            this._allData$.next(null);
+
+            this._total$.next(null);
+
+            this._loading$.next(null);
+
+            this._state = {
+              page: 1,
+              pageSize: 10,
+              searchTerm: '',
+              sortColumn: '',
+              sortDirection: ''
+            };
+          }
+        }, {
+          key: "insert",
+          value: function insert(data) {
+            debugger;
+            return this.http.post("api/activarbahrain/insertservice", data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "update",
+          value: function update(updateData) {
+            return this.http.post("api/activarbahrain/updateservice", updateData).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "delete",
+          value: function _delete(deleteData) {
+            debugger;
+            return this.http.post("api/activarbahrain/deleteservice", deleteData);
+          }
+        }, {
+          key: "total$",
+          get: function get() {
+            return this._total$.asObservable();
+          }
+        }, {
+          key: "loading$",
+          get: function get() {
+            return this._loading$.asObservable();
+          }
+        }, {
+          key: "page",
+          get: function get() {
+            return this._state.page;
+          },
+          set: function set(page) {
+            this._set({
+              page: page
+            });
+          }
+        }, {
+          key: "pageSize",
+          get: function get() {
+            return this._state.pageSize;
+          },
+          set: function set(pageSize) {
+            this._set({
+              pageSize: pageSize
+            });
+          }
+        }, {
+          key: "searchTerm",
+          get: function get() {
+            return this._state.searchTerm;
+          },
+          set: function set(searchTerm) {
+            this._set({
+              searchTerm: searchTerm
+            });
+          }
+        }, {
+          key: "sortColumn",
+          set: function set(sortColumn) {
+            this._set({
+              sortColumn: sortColumn
+            });
+          }
+        }, {
+          key: "sortDirection",
+          set: function set(sortDirection) {
+            this._set({
+              sortDirection: sortDirection
+            });
+          }
+        }, {
+          key: "data$",
+          get: function get() {
+            return this._data$.asObservable();
+          }
+        }, {
+          key: "allData$",
+          get: function get() {
+            return this._allData$.asObservable();
+          }
+        }]);
+
+        return ActBahServiceService;
+      }();
+
+      ActBahServiceService.ctorParameters = function () {
+        return [{
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
+        }];
+      };
+
+      ActBahServiceService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+      }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])], ActBahServiceService);
+      /***/
+    },
+
+    /***/
     "./src/app/_services/actdubgallery.ts":
     /*!********************************************!*\
       !*** ./src/app/_services/actdubgallery.ts ***!
@@ -1375,30 +1746,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this2 = this;
+            var _this3 = this;
 
             var url = "api/activardubai/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this2._loading$.next(true);
+              return _this3._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this2.newsevent = res;
+              _this3.newsevent = res;
 
-              _this2._data$.next(_this2.newsevent);
+              _this3._data$.next(_this3.newsevent);
 
-              _this2._allData$.next(_this2.newsevent);
+              _this3._allData$.next(_this3.newsevent);
 
-              _this2._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this2._search();
+              _this3._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this3._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this2._loading$.next(false);
+                return _this3._loading$.next(false);
               })).subscribe(function (result) {
-                _this2._data$.next(result.data);
+                _this3._data$.next(result.data);
 
-                _this2._total$.next(result.total);
+                _this3._total$.next(result.total);
               });
 
-              _this2._search$.next();
+              _this3._search$.next();
             });
           }
         }, {
@@ -1411,12 +1782,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state2 = this._state,
-                sortColumn = _this$_state2.sortColumn,
-                sortDirection = _this$_state2.sortDirection,
-                pageSize = _this$_state2.pageSize,
-                page = _this$_state2.page,
-                searchTerm = _this$_state2.searchTerm; // 1. sort
+            var _this$_state3 = this._state,
+                sortColumn = _this$_state3.sortColumn,
+                sortDirection = _this$_state3.sortDirection,
+                pageSize = _this$_state3.pageSize,
+                page = _this$_state3.page,
+                searchTerm = _this$_state3.searchTerm; // 1. sort
 
             var sortedData = sort(this.newsevent, sortColumn, sortDirection); //// 2. filter
 
@@ -1554,6 +1925,297 @@
       ActDubGalleryService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
         providedIn: 'root'
       }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])], ActDubGalleryService);
+      /***/
+    },
+
+    /***/
+    "./src/app/_services/actdubservice.ts":
+    /*!********************************************!*\
+      !*** ./src/app/_services/actdubservice.ts ***!
+      \********************************************/
+
+    /*! exports provided: ActDubServiceService */
+
+    /***/
+    function srcApp_servicesActdubserviceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ActDubServiceService", function () {
+        return ActDubServiceService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! rxjs */
+      "./node_modules/rxjs/_esm2015/index.js");
+      /* harmony import */
+
+
+      var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! rxjs/operators */
+      "./node_modules/rxjs/_esm2015/operators/index.js");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var compare = function compare(v1, v2) {
+        return v1 < v2 ? -1 : v1 > v2 ? 1 : 0;
+      };
+
+      function sort(data, column, direction) {
+        if (direction === '' || column === '') {
+          return data;
+        } else {
+          return _toConsumableArray(data).sort(function (a, b) {
+            var res = compare("".concat(a[column]), "".concat(b[column]));
+            return direction === 'asc' ? res : -res;
+          });
+        }
+      }
+
+      function matches(data, term) {
+        return data.title.toLowerCase().includes(term.toLowerCase());
+      }
+
+      var ActDubServiceService = /*#__PURE__*/function () {
+        function ActDubServiceService(http) {
+          _classCallCheck(this, ActDubServiceService);
+
+          this.http = http;
+          this._loading$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](true);
+          this._search$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+          this._allData$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._data$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]([]);
+          this._total$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
+          this._state = {
+            page: 1,
+            pageSize: 10,
+            searchTerm: '',
+            sortColumn: '',
+            sortDirection: ''
+          };
+        }
+
+        _createClass(ActDubServiceService, [{
+          key: "getById",
+          value: function getById(id) {
+            return this.http.get("api/activardubai/".concat(id));
+          }
+        }, {
+          key: "ExportList",
+          value: function ExportList() {
+            return this.http.get("api/activardubai/serviceall");
+          }
+        }, {
+          key: "getAllData",
+          value: function getAllData() {
+            var _this4 = this;
+
+            var url = "api/activardubai/serviceall";
+            console.log(url);
+            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+              return _this4._loading$.next(true);
+            }), this.http.get(url).subscribe(function (res) {
+              _this4.newsevent = res;
+
+              _this4._data$.next(_this4.newsevent);
+
+              _this4._allData$.next(_this4.newsevent);
+
+              _this4._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this4._search();
+              }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
+                return _this4._loading$.next(false);
+              })).subscribe(function (result) {
+                _this4._data$.next(result.data);
+
+                _this4._total$.next(result.total);
+              });
+
+              _this4._search$.next();
+            });
+          }
+        }, {
+          key: "_set",
+          value: function _set(patch) {
+            Object.assign(this._state, patch);
+
+            this._search$.next();
+          }
+        }, {
+          key: "_search",
+          value: function _search() {
+            var _this$_state4 = this._state,
+                sortColumn = _this$_state4.sortColumn,
+                sortDirection = _this$_state4.sortDirection,
+                pageSize = _this$_state4.pageSize,
+                page = _this$_state4.page,
+                searchTerm = _this$_state4.searchTerm; // 1. sort
+
+            var sortedData = sort(this.newsevent, sortColumn, sortDirection); //// 2. filter
+
+            sortedData = sortedData.filter(function (data) {
+              return matches(data, searchTerm);
+            });
+            var total = sortedData.length; // 3. paginate
+
+            var data = sortedData.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])({
+              data: data,
+              total: total
+            });
+          }
+        }, {
+          key: "clear",
+          value: function clear() {
+            // clear by calling subject.next() without parameters
+            this._search$.next();
+
+            this._data$.next(null);
+
+            this._allData$.next(null);
+
+            this._total$.next(null);
+
+            this._loading$.next(null);
+
+            this._state = {
+              page: 1,
+              pageSize: 10,
+              searchTerm: '',
+              sortColumn: '',
+              sortDirection: ''
+            };
+          }
+        }, {
+          key: "insert",
+          value: function insert(data) {
+            debugger;
+            return this.http.post("api/activardubai/insertservice", data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "update",
+          value: function update(updateData) {
+            return this.http.post("api/activardubai/updateservice", updateData).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
+              console.log(res);
+              return res;
+            }));
+          }
+        }, {
+          key: "delete",
+          value: function _delete(deleteData) {
+            debugger;
+            return this.http.post("api/activardubai/deleteservice", deleteData);
+          }
+        }, {
+          key: "total$",
+          get: function get() {
+            return this._total$.asObservable();
+          }
+        }, {
+          key: "loading$",
+          get: function get() {
+            return this._loading$.asObservable();
+          }
+        }, {
+          key: "page",
+          get: function get() {
+            return this._state.page;
+          },
+          set: function set(page) {
+            this._set({
+              page: page
+            });
+          }
+        }, {
+          key: "pageSize",
+          get: function get() {
+            return this._state.pageSize;
+          },
+          set: function set(pageSize) {
+            this._set({
+              pageSize: pageSize
+            });
+          }
+        }, {
+          key: "searchTerm",
+          get: function get() {
+            return this._state.searchTerm;
+          },
+          set: function set(searchTerm) {
+            this._set({
+              searchTerm: searchTerm
+            });
+          }
+        }, {
+          key: "sortColumn",
+          set: function set(sortColumn) {
+            this._set({
+              sortColumn: sortColumn
+            });
+          }
+        }, {
+          key: "sortDirection",
+          set: function set(sortDirection) {
+            this._set({
+              sortDirection: sortDirection
+            });
+          }
+        }, {
+          key: "data$",
+          get: function get() {
+            return this._data$.asObservable();
+          }
+        }, {
+          key: "allData$",
+          get: function get() {
+            return this._allData$.asObservable();
+          }
+        }]);
+
+        return ActDubServiceService;
+      }();
+
+      ActDubServiceService.ctorParameters = function () {
+        return [{
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
+        }];
+      };
+
+      ActDubServiceService = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+        providedIn: 'root'
+      }), __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])], ActDubServiceService);
       /***/
     },
 
@@ -1760,30 +2422,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this3 = this;
+            var _this5 = this;
 
             var url = "api/harmanocontract/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this3._loading$.next(true);
+              return _this5._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this3.newsevent = res;
+              _this5.newsevent = res;
 
-              _this3._data$.next(_this3.newsevent);
+              _this5._data$.next(_this5.newsevent);
 
-              _this3._allData$.next(_this3.newsevent);
+              _this5._allData$.next(_this5.newsevent);
 
-              _this3._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this3._search();
+              _this5._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this5._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this3._loading$.next(false);
+                return _this5._loading$.next(false);
               })).subscribe(function (result) {
-                _this3._data$.next(result.data);
+                _this5._data$.next(result.data);
 
-                _this3._total$.next(result.total);
+                _this5._total$.next(result.total);
               });
 
-              _this3._search$.next();
+              _this5._search$.next();
             });
           }
         }, {
@@ -1796,12 +2458,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state3 = this._state,
-                sortColumn = _this$_state3.sortColumn,
-                sortDirection = _this$_state3.sortDirection,
-                pageSize = _this$_state3.pageSize,
-                page = _this$_state3.page,
-                searchTerm = _this$_state3.searchTerm; // 1. sort
+            var _this$_state5 = this._state,
+                sortColumn = _this$_state5.sortColumn,
+                sortDirection = _this$_state5.sortDirection,
+                pageSize = _this$_state5.pageSize,
+                page = _this$_state5.page,
+                searchTerm = _this$_state5.searchTerm; // 1. sort
 
             var sortedData = sort(this.newsevent, sortColumn, sortDirection); //// 2. filter
 
@@ -2051,30 +2713,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this4 = this;
+            var _this6 = this;
 
             var url = "api/harmanorepair/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this4._loading$.next(true);
+              return _this6._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this4.newsevent = res;
+              _this6.newsevent = res;
 
-              _this4._data$.next(_this4.newsevent);
+              _this6._data$.next(_this6.newsevent);
 
-              _this4._allData$.next(_this4.newsevent);
+              _this6._allData$.next(_this6.newsevent);
 
-              _this4._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this4._search();
+              _this6._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this6._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this4._loading$.next(false);
+                return _this6._loading$.next(false);
               })).subscribe(function (result) {
-                _this4._data$.next(result.data);
+                _this6._data$.next(result.data);
 
-                _this4._total$.next(result.total);
+                _this6._total$.next(result.total);
               });
 
-              _this4._search$.next();
+              _this6._search$.next();
             });
           }
         }, {
@@ -2087,12 +2749,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state4 = this._state,
-                sortColumn = _this$_state4.sortColumn,
-                sortDirection = _this$_state4.sortDirection,
-                pageSize = _this$_state4.pageSize,
-                page = _this$_state4.page,
-                searchTerm = _this$_state4.searchTerm; // 1. sort
+            var _this$_state6 = this._state,
+                sortColumn = _this$_state6.sortColumn,
+                sortDirection = _this$_state6.sortDirection,
+                pageSize = _this$_state6.pageSize,
+                page = _this$_state6.page,
+                searchTerm = _this$_state6.searchTerm; // 1. sort
 
             var sortedData = sort(this.newsevent, sortColumn, sortDirection); //// 2. filter
 
@@ -2535,30 +3197,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this5 = this;
+            var _this7 = this;
 
             var url = "api/planeragroup/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this5._loading$.next(true);
+              return _this7._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this5.newsevent = res;
+              _this7.newsevent = res;
 
-              _this5._data$.next(_this5.newsevent);
+              _this7._data$.next(_this7.newsevent);
 
-              _this5._allData$.next(_this5.newsevent);
+              _this7._allData$.next(_this7.newsevent);
 
-              _this5._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this5._search();
+              _this7._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this7._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this5._loading$.next(false);
+                return _this7._loading$.next(false);
               })).subscribe(function (result) {
-                _this5._data$.next(result.data);
+                _this7._data$.next(result.data);
 
-                _this5._total$.next(result.total);
+                _this7._total$.next(result.total);
               });
 
-              _this5._search$.next();
+              _this7._search$.next();
             });
           }
         }, {
@@ -2571,12 +3233,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state5 = this._state,
-                sortColumn = _this$_state5.sortColumn,
-                sortDirection = _this$_state5.sortDirection,
-                pageSize = _this$_state5.pageSize,
-                page = _this$_state5.page,
-                searchTerm = _this$_state5.searchTerm; // 1. sort
+            var _this$_state7 = this._state,
+                sortColumn = _this$_state7.sortColumn,
+                sortDirection = _this$_state7.sortDirection,
+                pageSize = _this$_state7.pageSize,
+                page = _this$_state7.page,
+                searchTerm = _this$_state7.searchTerm; // 1. sort
 
             var sortedData = sort(this.newsevent, sortColumn, sortDirection); //// 2. filter
 
@@ -2827,31 +3489,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this6 = this;
+            var _this8 = this;
 
-            debugger;
             var url = "api/planeragroup/serviceall";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this6._loading$.next(true);
+              return _this8._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this6.services = res;
+              _this8.services = res;
 
-              _this6._data$.next(_this6.services);
+              _this8._data$.next(_this8.services);
 
-              _this6._allData$.next(_this6.services);
+              _this8._allData$.next(_this8.services);
 
-              _this6._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this6._search();
+              _this8._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this8._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this6._loading$.next(false);
+                return _this8._loading$.next(false);
               })).subscribe(function (result) {
-                _this6._data$.next(result.data);
+                _this8._data$.next(result.data);
 
-                _this6._total$.next(result.total);
+                _this8._total$.next(result.total);
               });
 
-              _this6._search$.next();
+              _this8._search$.next();
             });
           }
         }, {
@@ -2864,12 +3525,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state6 = this._state,
-                sortColumn = _this$_state6.sortColumn,
-                sortDirection = _this$_state6.sortDirection,
-                pageSize = _this$_state6.pageSize,
-                page = _this$_state6.page,
-                searchTerm = _this$_state6.searchTerm; // 1. sort
+            var _this$_state8 = this._state,
+                sortColumn = _this$_state8.sortColumn,
+                sortDirection = _this$_state8.sortDirection,
+                pageSize = _this$_state8.pageSize,
+                page = _this$_state8.page,
+                searchTerm = _this$_state8.searchTerm; // 1. sort
 
             var sortedData = sort(this.services, sortColumn, sortDirection); //// 2. filter
 
@@ -3118,30 +3779,30 @@
         }, {
           key: "getAllData",
           value: function getAllData() {
-            var _this7 = this;
+            var _this9 = this;
 
             var url = "api/planerainterior/all";
             console.log(url);
             Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-              return _this7._loading$.next(true);
+              return _this9._loading$.next(true);
             }), this.http.get(url).subscribe(function (res) {
-              _this7.newsevent = res;
+              _this9.newsevent = res;
 
-              _this7._data$.next(_this7.newsevent);
+              _this9._data$.next(_this9.newsevent);
 
-              _this7._allData$.next(_this7.newsevent);
+              _this9._allData$.next(_this9.newsevent);
 
-              _this7._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
-                return _this7._search();
+              _this9._search$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["switchMap"])(function () {
+                return _this9._search();
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(function () {
-                return _this7._loading$.next(false);
+                return _this9._loading$.next(false);
               })).subscribe(function (result) {
-                _this7._data$.next(result.data);
+                _this9._data$.next(result.data);
 
-                _this7._total$.next(result.total);
+                _this9._total$.next(result.total);
               });
 
-              _this7._search$.next();
+              _this9._search$.next();
             });
           }
         }, {
@@ -3154,12 +3815,12 @@
         }, {
           key: "_search",
           value: function _search() {
-            var _this$_state7 = this._state,
-                sortColumn = _this$_state7.sortColumn,
-                sortDirection = _this$_state7.sortDirection,
-                pageSize = _this$_state7.pageSize,
-                page = _this$_state7.page,
-                searchTerm = _this$_state7.searchTerm; // 1. sort
+            var _this$_state9 = this._state,
+                sortColumn = _this$_state9.sortColumn,
+                sortDirection = _this$_state9.sortDirection,
+                pageSize = _this$_state9.pageSize,
+                page = _this$_state9.page,
+                searchTerm = _this$_state9.searchTerm; // 1. sort
 
             var sortedData = sort(this.newsevent, sortColumn, sortDirection); //// 2. filter
 
@@ -3521,21 +4182,21 @@
         }, {
           key: "setSelectedGallery",
           value: function setSelectedGallery() {
-            var _this8 = this;
+            var _this10 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this8.loadingGallery = true;
+                _this10.loadingGallery = true;
 
-                _this8.f.galleryID.setValue(sid);
+                _this10.f.galleryID.setValue(sid);
 
-                _this8.galleryService.getById(sid).subscribe(function (res) {
+                _this10.galleryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this8.editForm(res);
+                  _this10.editForm(res);
 
-                  _this8.loadingGallery = false;
+                  _this10.loadingGallery = false;
                 });
               }
             });
@@ -3543,7 +4204,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this9 = this;
+            var _this11 = this;
 
             this.galleryForm.markAllAsTouched();
             this.submitted = true;
@@ -3560,31 +4221,31 @@
               //Insert category
               this.galleryService.insert(this.galleryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this9.ts.showSuccess("Success", "Record added successfully.");
+                  _this11.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this9.router.navigate(['/admin/activarbahrain/gallery']);
+                  _this11.router.navigate(['/admin/activarbahrain/gallery']);
                 }
 
-                _this9.loading = false;
+                _this11.loading = false;
               }, function (error) {
-                _this9.ts.showError("Error", "Failed to insert record.");
+                _this11.ts.showError("Error", "Failed to insert record.");
 
-                _this9.loading = false;
+                _this11.loading = false;
               });
             } else {
               //Update category
               this.galleryService.update(this.galleryForm.value).subscribe(function (data) {
-                _this9.loading = false;
+                _this11.loading = false;
 
                 if (data != 0) {
-                  _this9.ts.showSuccess("Success", "Record updated successfully.");
+                  _this11.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this9.router.navigate(['/admin/activarbahrain/gallery']);
+                  _this11.router.navigate(['/admin/activarbahrain/gallery']);
                 }
               }, function (error) {
-                _this9.ts.showError("Error", "Failed to update record.");
+                _this11.ts.showError("Error", "Failed to update record.");
 
-                _this9.loading = false;
+                _this11.loading = false;
               });
             }
           }
@@ -3742,12 +4403,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this10 = this;
+            var _this12 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this10.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this12.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this10.ts.showError("Error", "Failed to export");
+              _this12.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -3779,18 +4440,18 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this11 = this;
+            var _this13 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this11.ts.showSuccess("Success", "Record deleted successfully.");
+                _this13.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this11.getData();
+                _this13.getData();
               } else {
-                _this11.ts.showError("Error", "Failed to delete record.");
+                _this13.ts.showError("Error", "Failed to delete record.");
               }
             }, function (error) {
-              _this11.ts.showError("Error", "Failed to delete record.");
+              _this13.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -3827,6 +4488,449 @@
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activarbahrain/gallery/gallery.component.html"))["default"],
         providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]]
       }), __metadata("design:paramtypes", [src_app_services_actbahgallery__WEBPACK_IMPORTED_MODULE_7__["ActBahGalleryService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], ActBahGalleryComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/activarbahrain/service/add/addservice.component.ts":
+    /*!**************************************************************************!*\
+      !*** ./src/app/admin/activarbahrain/service/add/addservice.component.ts ***!
+      \**************************************************************************/
+
+    /*! exports provided: AddServiceActBahComponent */
+
+    /***/
+    function srcAppAdminActivarbahrainServiceAddAddserviceComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "AddServiceActBahComponent", function () {
+        return AddServiceActBahComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/imageupload/imageupload.component */
+      "./src/app/imageupload/imageupload.component.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_app_services_actbahservice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/app/_services/actbahservice */
+      "./src/app/_services/actbahservice.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var AddServiceActBahComponent = /*#__PURE__*/function () {
+        function AddServiceActBahComponent(formBuilder, router, route, ls, ts, galleryService) {
+          _classCallCheck(this, AddServiceActBahComponent);
+
+          this.formBuilder = formBuilder;
+          this.router = router;
+          this.route = route;
+          this.ls = ls;
+          this.ts = ts;
+          this.galleryService = galleryService;
+          this.submitted = false;
+          this.loading = false;
+          this.loadingGallery = false;
+          this.ButtonText = "Save";
+          this.createForm();
+        }
+
+        _createClass(AddServiceActBahComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.setSelectedGallery();
+          }
+        }, {
+          key: "createForm",
+          value: function createForm() {
+            this.serviceForm = this.formBuilder.group({
+              title: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              arabicTitle: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              description: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              arabicDescription: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              statusID: [true],
+              serviceID: 0,
+              imagePath: [''],
+              displayOrder: ['']
+            });
+          }
+        }, {
+          key: "editForm",
+          value: function editForm(obj) {
+            this.f.title.setValue(obj.title);
+            this.f.arabicTitle.setValue(obj.arabicTitle);
+            this.f.description.setValue(obj.description);
+            this.f.arabicDescription.setValue(obj.arabicDescription);
+            this.f.serviceID.setValue(obj.serviceID);
+            this.f.imagePath.setValue(obj.imagePath);
+            this.f.displayOrder.setValue(obj.displayOrder);
+            this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+            this.imgComp.imageUrl = obj.imagePath;
+          }
+        }, {
+          key: "setSelectedGallery",
+          value: function setSelectedGallery() {
+            var _this14 = this;
+
+            this.route.paramMap.subscribe(function (param) {
+              var sid = +param.get('id');
+
+              if (sid) {
+                _this14.loadingGallery = true;
+
+                _this14.f.serviceID.setValue(sid);
+
+                _this14.galleryService.getById(sid).subscribe(function (res) {
+                  //Set Forms
+                  _this14.editForm(res);
+
+                  _this14.loadingGallery = false;
+                });
+              }
+            });
+          }
+        }, {
+          key: "onSubmit",
+          value: function onSubmit() {
+            var _this15 = this;
+
+            this.serviceForm.markAllAsTouched();
+            this.submitted = true;
+
+            if (this.serviceForm.invalid) {
+              return;
+            }
+
+            this.loading = true;
+            this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+            this.f.imagePath.setValue(this.imgComp.imageUrl);
+
+            if (parseInt(this.f.serviceID.value) === 0) {
+              //Insert category
+              this.galleryService.insert(this.serviceForm.value).subscribe(function (data) {
+                if (data != 0) {
+                  _this15.ts.showSuccess("Success", "Record added successfully.");
+
+                  _this15.router.navigate(['/admin/activarbahrain/service']);
+                }
+
+                _this15.loading = false;
+              }, function (error) {
+                _this15.ts.showError("Error", "Failed to insert record.");
+
+                _this15.loading = false;
+              });
+            } else {
+              //Update category
+              this.galleryService.update(this.serviceForm.value).subscribe(function (data) {
+                _this15.loading = false;
+
+                if (data != 0) {
+                  _this15.ts.showSuccess("Success", "Record updated successfully.");
+
+                  _this15.router.navigate(['/admin/activarbahrain/service']);
+                }
+              }, function (error) {
+                _this15.ts.showError("Error", "Failed to update record.");
+
+                _this15.loading = false;
+              });
+            }
+          }
+        }, {
+          key: "f",
+          get: function get() {
+            return this.serviceForm.controls;
+          }
+        }]);
+
+        return AddServiceActBahComponent;
+      }();
+
+      AddServiceActBahComponent.ctorParameters = function () {
+        return [{
+          type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
+        }, {
+          type: src_app_services_actbahservice__WEBPACK_IMPORTED_MODULE_6__["ActBahServiceService"]
+        }];
+      };
+
+      AddServiceActBahComponent.propDecorators = {
+        imgComp: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], {
+            "static": true
+          }]
+        }]
+      };
+      AddServiceActBahComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addservice',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./addservice.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activarbahrain/service/add/addservice.component.html"))["default"]
+      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], src_app_services_actbahservice__WEBPACK_IMPORTED_MODULE_6__["ActBahServiceService"]])], AddServiceActBahComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/activarbahrain/service/service.component.ts":
+    /*!*******************************************************************!*\
+      !*** ./src/app/admin/activarbahrain/service/service.component.ts ***!
+      \*******************************************************************/
+
+    /*! exports provided: ActBahServiceComponent */
+
+    /***/
+    function srcAppAdminActivarbahrainServiceServiceComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ActBahServiceComponent", function () {
+        return ActBahServiceComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! src/app/_directives/sortable.directive */
+      "./src/app/_directives/sortable.directive.ts");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var ngx_toastr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! ngx-toastr */
+      "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
+      /* harmony import */
+
+
+      var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/ExportExcel/excel.service */
+      "./src/ExportExcel/excel.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_actbahservice__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! src/app/_services/actbahservice */
+      "./src/app/_services/actbahservice.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var ActBahServiceComponent = /*#__PURE__*/function () {
+        function ActBahServiceComponent(service, excelService, ls, ts, tss, router) {
+          _classCallCheck(this, ActBahServiceComponent);
+
+          this.service = service;
+          this.excelService = excelService;
+          this.ls = ls;
+          this.ts = ts;
+          this.tss = tss;
+          this.router = router;
+          this.gallery = [];
+          this.loading$ = service.loading$;
+          this.submit = false;
+        }
+
+        _createClass(ActBahServiceComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.getData();
+          }
+        }, {
+          key: "exportAsXLSX",
+          value: function exportAsXLSX() {
+            var _this16 = this;
+
+            this.service.ExportList().subscribe(function (res) {
+              _this16.excelService.exportAsExcelFile(res, 'Report_Export');
+            }, function (error) {
+              _this16.ts.showError("Error", "Failed to export");
+            });
+          }
+        }, {
+          key: "getData",
+          value: function getData() {
+            this.service.getAllData();
+            this.data$ = this.service.data$;
+            this.total$ = this.service.total$;
+            this.loading$ = this.service.loading$;
+          }
+        }, {
+          key: "onSort",
+          value: function onSort(_ref2) {
+            var column = _ref2.column,
+                direction = _ref2.direction;
+            this.headers.forEach(function (header) {
+              if (header.sortable !== column) {
+                header.direction = '';
+              }
+            });
+            this.service.sortColumn = column;
+            this.service.sortDirection = direction;
+          }
+        }, {
+          key: "Edit",
+          value: function Edit(gallery) {
+            this.router.navigate(["admin/activarbahrain/service/edit", gallery]);
+          }
+        }, {
+          key: "Delete",
+          value: function Delete(obj) {
+            var _this17 = this;
+
+            this.service["delete"](obj).subscribe(function (res) {
+              if (res != 0) {
+                _this17.ts.showSuccess("Success", "Record deleted successfully.");
+
+                _this17.getData();
+              } else {
+                _this17.ts.showError("Error", "Failed to delete record.");
+              }
+            }, function (error) {
+              _this17.ts.showError("Error", "Failed to delete record.");
+            });
+          }
+        }]);
+
+        return ActBahServiceComponent;
+      }();
+
+      ActBahServiceComponent.ctorParameters = function () {
+        return [{
+          type: src_app_services_actbahservice__WEBPACK_IMPORTED_MODULE_7__["ActBahServiceService"]
+        }, {
+          type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"]
+        }, {
+          type: ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }];
+      };
+
+      ActBahServiceComponent.propDecorators = {
+        headers: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
+          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"]]
+        }]
+      };
+      ActBahServiceComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-service',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./service.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activarbahrain/service/service.component.html"))["default"],
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]]
+      }), __metadata("design:paramtypes", [src_app_services_actbahservice__WEBPACK_IMPORTED_MODULE_7__["ActBahServiceService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], ActBahServiceComponent);
       /***/
     },
 
@@ -3960,21 +5064,21 @@
         }, {
           key: "setSelectedGallery",
           value: function setSelectedGallery() {
-            var _this12 = this;
+            var _this18 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this12.loadingGallery = true;
+                _this18.loadingGallery = true;
 
-                _this12.f.galleryID.setValue(sid);
+                _this18.f.galleryID.setValue(sid);
 
-                _this12.galleryService.getById(sid).subscribe(function (res) {
+                _this18.galleryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this12.editForm(res);
+                  _this18.editForm(res);
 
-                  _this12.loadingGallery = false;
+                  _this18.loadingGallery = false;
                 });
               }
             });
@@ -3982,7 +5086,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this13 = this;
+            var _this19 = this;
 
             this.galleryForm.markAllAsTouched();
             this.submitted = true;
@@ -3999,31 +5103,31 @@
               //Insert category
               this.galleryService.insert(this.galleryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this13.ts.showSuccess("Success", "Record added successfully.");
+                  _this19.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this13.router.navigate(['/admin/activardubai/gallery']);
+                  _this19.router.navigate(['/admin/activardubai/gallery']);
                 }
 
-                _this13.loading = false;
+                _this19.loading = false;
               }, function (error) {
-                _this13.ts.showError("Error", "Failed to insert record.");
+                _this19.ts.showError("Error", "Failed to insert record.");
 
-                _this13.loading = false;
+                _this19.loading = false;
               });
             } else {
               //Update category
               this.galleryService.update(this.galleryForm.value).subscribe(function (data) {
-                _this13.loading = false;
+                _this19.loading = false;
 
                 if (data != 0) {
-                  _this13.ts.showSuccess("Success", "Record updated successfully.");
+                  _this19.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this13.router.navigate(['/admin/activardubai/gallery']);
+                  _this19.router.navigate(['/admin/activardubai/gallery']);
                 }
               }, function (error) {
-                _this13.ts.showError("Error", "Failed to update record.");
+                _this19.ts.showError("Error", "Failed to update record.");
 
-                _this13.loading = false;
+                _this19.loading = false;
               });
             }
           }
@@ -4181,12 +5285,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this14 = this;
+            var _this20 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this14.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this20.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this14.ts.showError("Error", "Failed to export");
+              _this20.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -4199,9 +5303,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref2) {
-            var column = _ref2.column,
-                direction = _ref2.direction;
+          value: function onSort(_ref3) {
+            var column = _ref3.column,
+                direction = _ref3.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -4218,18 +5322,18 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this15 = this;
+            var _this21 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this15.ts.showSuccess("Success", "Record deleted successfully.");
+                _this21.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this15.getData();
+                _this21.getData();
               } else {
-                _this15.ts.showError("Error", "Failed to delete record.");
+                _this21.ts.showError("Error", "Failed to delete record.");
               }
             }, function (error) {
-              _this15.ts.showError("Error", "Failed to delete record.");
+              _this21.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -4266,6 +5370,449 @@
         "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activardubai/gallery/gallery.component.html"))["default"],
         providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]]
       }), __metadata("design:paramtypes", [src_app_services_actdubgallery__WEBPACK_IMPORTED_MODULE_7__["ActDubGalleryService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], ActDubGalleryComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/activardubai/service/add/addservice.component.ts":
+    /*!************************************************************************!*\
+      !*** ./src/app/admin/activardubai/service/add/addservice.component.ts ***!
+      \************************************************************************/
+
+    /*! exports provided: AddServiceActDubComponent */
+
+    /***/
+    function srcAppAdminActivardubaiServiceAddAddserviceComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "AddServiceActDubComponent", function () {
+        return AddServiceActDubComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/imageupload/imageupload.component */
+      "./src/app/imageupload/imageupload.component.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var src_app_services_actdubservice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/app/_services/actdubservice */
+      "./src/app/_services/actdubservice.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var AddServiceActDubComponent = /*#__PURE__*/function () {
+        function AddServiceActDubComponent(formBuilder, router, route, ls, ts, galleryService) {
+          _classCallCheck(this, AddServiceActDubComponent);
+
+          this.formBuilder = formBuilder;
+          this.router = router;
+          this.route = route;
+          this.ls = ls;
+          this.ts = ts;
+          this.galleryService = galleryService;
+          this.submitted = false;
+          this.loading = false;
+          this.loadingGallery = false;
+          this.ButtonText = "Save";
+          this.createForm();
+        }
+
+        _createClass(AddServiceActDubComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.setSelectedGallery();
+          }
+        }, {
+          key: "createForm",
+          value: function createForm() {
+            this.serviceForm = this.formBuilder.group({
+              title: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              arabicTitle: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              description: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              arabicDescription: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+              statusID: [true],
+              serviceID: 0,
+              imagePath: [''],
+              displayOrder: ['']
+            });
+          }
+        }, {
+          key: "editForm",
+          value: function editForm(obj) {
+            this.f.title.setValue(obj.title);
+            this.f.arabicTitle.setValue(obj.arabicTitle);
+            this.f.description.setValue(obj.description);
+            this.f.arabicDescription.setValue(obj.arabicDescription);
+            this.f.serviceID.setValue(obj.serviceID);
+            this.f.imagePath.setValue(obj.imagePath);
+            this.f.displayOrder.setValue(obj.displayOrder);
+            this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+            this.imgComp.imageUrl = obj.imagePath;
+          }
+        }, {
+          key: "setSelectedGallery",
+          value: function setSelectedGallery() {
+            var _this22 = this;
+
+            this.route.paramMap.subscribe(function (param) {
+              var sid = +param.get('id');
+
+              if (sid) {
+                _this22.loadingGallery = true;
+
+                _this22.f.serviceID.setValue(sid);
+
+                _this22.galleryService.getById(sid).subscribe(function (res) {
+                  //Set Forms
+                  _this22.editForm(res);
+
+                  _this22.loadingGallery = false;
+                });
+              }
+            });
+          }
+        }, {
+          key: "onSubmit",
+          value: function onSubmit() {
+            var _this23 = this;
+
+            this.serviceForm.markAllAsTouched();
+            this.submitted = true;
+
+            if (this.serviceForm.invalid) {
+              return;
+            }
+
+            this.loading = true;
+            this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+            this.f.imagePath.setValue(this.imgComp.imageUrl);
+
+            if (parseInt(this.f.serviceID.value) === 0) {
+              //Insert category
+              this.galleryService.insert(this.serviceForm.value).subscribe(function (data) {
+                if (data != 0) {
+                  _this23.ts.showSuccess("Success", "Record added successfully.");
+
+                  _this23.router.navigate(['/admin/activardubai/service']);
+                }
+
+                _this23.loading = false;
+              }, function (error) {
+                _this23.ts.showError("Error", "Failed to insert record.");
+
+                _this23.loading = false;
+              });
+            } else {
+              //Update category
+              this.galleryService.update(this.serviceForm.value).subscribe(function (data) {
+                _this23.loading = false;
+
+                if (data != 0) {
+                  _this23.ts.showSuccess("Success", "Record updated successfully.");
+
+                  _this23.router.navigate(['/admin/activardubai/service']);
+                }
+              }, function (error) {
+                _this23.ts.showError("Error", "Failed to update record.");
+
+                _this23.loading = false;
+              });
+            }
+          }
+        }, {
+          key: "f",
+          get: function get() {
+            return this.serviceForm.controls;
+          }
+        }]);
+
+        return AddServiceActDubComponent;
+      }();
+
+      AddServiceActDubComponent.ctorParameters = function () {
+        return [{
+          type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"]
+        }, {
+          type: src_app_services_actdubservice__WEBPACK_IMPORTED_MODULE_6__["ActDubServiceService"]
+        }];
+      };
+
+      AddServiceActDubComponent.propDecorators = {
+        imgComp: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+          args: [src_app_imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_2__["ImageuploadComponent"], {
+            "static": true
+          }]
+        }]
+      };
+      AddServiceActDubComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-addservice',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./addservice.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activardubai/service/add/addservice.component.html"))["default"]
+      }), __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_4__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_5__["ToastService"], src_app_services_actdubservice__WEBPACK_IMPORTED_MODULE_6__["ActDubServiceService"]])], AddServiceActDubComponent);
+      /***/
+    },
+
+    /***/
+    "./src/app/admin/activardubai/service/service.component.ts":
+    /*!*****************************************************************!*\
+      !*** ./src/app/admin/activardubai/service/service.component.ts ***!
+      \*****************************************************************/
+
+    /*! exports provided: ActDubServiceComponent */
+
+    /***/
+    function srcAppAdminActivardubaiServiceServiceComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ActDubServiceComponent", function () {
+        return ActDubServiceComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! src/app/_directives/sortable.directive */
+      "./src/app/_directives/sortable.directive.ts");
+      /* harmony import */
+
+
+      var src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/_services/local-storage.service */
+      "./src/app/_services/local-storage.service.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/_services/toastservice */
+      "./src/app/_services/toastservice.ts");
+      /* harmony import */
+
+
+      var ngx_toastr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! ngx-toastr */
+      "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
+      /* harmony import */
+
+
+      var src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/ExportExcel/excel.service */
+      "./src/ExportExcel/excel.service.ts");
+      /* harmony import */
+
+
+      var src_app_services_actdubservice__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! src/app/_services/actdubservice */
+      "./src/app/_services/actdubservice.ts");
+
+      var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+        var c = arguments.length,
+            r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+            d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+          if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        }
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+      };
+
+      var __metadata = undefined && undefined.__metadata || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+      };
+
+      var __importDefault = undefined && undefined.__importDefault || function (mod) {
+        return mod && mod.__esModule ? mod : {
+          "default": mod
+        };
+      };
+
+      var ActDubServiceComponent = /*#__PURE__*/function () {
+        function ActDubServiceComponent(service, excelService, ls, ts, tss, router) {
+          _classCallCheck(this, ActDubServiceComponent);
+
+          this.service = service;
+          this.excelService = excelService;
+          this.ls = ls;
+          this.ts = ts;
+          this.tss = tss;
+          this.router = router;
+          this.gallery = [];
+          this.loading$ = service.loading$;
+          this.submit = false;
+        }
+
+        _createClass(ActDubServiceComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.getData();
+          }
+        }, {
+          key: "exportAsXLSX",
+          value: function exportAsXLSX() {
+            var _this24 = this;
+
+            this.service.ExportList().subscribe(function (res) {
+              _this24.excelService.exportAsExcelFile(res, 'Report_Export');
+            }, function (error) {
+              _this24.ts.showError("Error", "Failed to export");
+            });
+          }
+        }, {
+          key: "getData",
+          value: function getData() {
+            this.service.getAllData();
+            this.data$ = this.service.data$;
+            this.total$ = this.service.total$;
+            this.loading$ = this.service.loading$;
+          }
+        }, {
+          key: "onSort",
+          value: function onSort(_ref4) {
+            var column = _ref4.column,
+                direction = _ref4.direction;
+            this.headers.forEach(function (header) {
+              if (header.sortable !== column) {
+                header.direction = '';
+              }
+            });
+            this.service.sortColumn = column;
+            this.service.sortDirection = direction;
+          }
+        }, {
+          key: "Edit",
+          value: function Edit(gallery) {
+            this.router.navigate(["admin/activardubai/service/edit", gallery]);
+          }
+        }, {
+          key: "Delete",
+          value: function Delete(obj) {
+            var _this25 = this;
+
+            this.service["delete"](obj).subscribe(function (res) {
+              if (res != 0) {
+                _this25.ts.showSuccess("Success", "Record deleted successfully.");
+
+                _this25.getData();
+              } else {
+                _this25.ts.showError("Error", "Failed to delete record.");
+              }
+            }, function (error) {
+              _this25.ts.showError("Error", "Failed to delete record.");
+            });
+          }
+        }]);
+
+        return ActDubServiceComponent;
+      }();
+
+      ActDubServiceComponent.ctorParameters = function () {
+        return [{
+          type: src_app_services_actdubservice__WEBPACK_IMPORTED_MODULE_7__["ActDubServiceService"]
+        }, {
+          type: src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]
+        }, {
+          type: src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"]
+        }, {
+          type: src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"]
+        }, {
+          type: ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+        }];
+      };
+
+      ActDubServiceComponent.propDecorators = {
+        headers: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChildren"],
+          args: [src_app_directives_sortable_directive__WEBPACK_IMPORTED_MODULE_1__["NgbdSortableHeader"]]
+        }]
+      };
+      ActDubServiceComponent = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        selector: 'app-service',
+        template: __importDefault(__webpack_require__(
+        /*! raw-loader!./service.component.html */
+        "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/activardubai/service/service.component.html"))["default"],
+        providers: [src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]]
+      }), __metadata("design:paramtypes", [src_app_services_actdubservice__WEBPACK_IMPORTED_MODULE_7__["ActDubServiceService"], src_ExportExcel_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"], src_app_services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"], src_app_services_toastservice__WEBPACK_IMPORTED_MODULE_4__["ToastService"], ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])], ActDubServiceComponent);
       /***/
     },
 
@@ -4435,27 +5982,27 @@
         }, {
           key: "GetDashboard",
           value: function GetDashboard() {
-            var _this16 = this;
+            var _this26 = this;
 
             this.service.GetDashboard(this.ls.getSelectedLocation().locationID, new Date()).subscribe(function (res) {
-              _this16.dashboardSummary = res.summarysales;
+              _this26.dashboardSummary = res.summarysales;
 
-              _this16.BindTodaysSales(res.todaysales.sales, res.todaysales.timeSlot);
+              _this26.BindTodaysSales(res.todaysales.sales, res.todaysales.timeSlot);
 
-              _this16.BindMAEN(res.maensales);
+              _this26.BindMAEN(res.maensales);
             }, function (error) {});
           }
         }, {
           key: "GetDataDashboard",
           value: function GetDataDashboard() {
-            var _this17 = this;
+            var _this27 = this;
 
             this.service.GetDashboardRange(this.ls.getSelectedLocation().locationID, this.parseDate(this._datepicker.fromDate), this.parseDate(this._datepicker.toDate)).subscribe(function (res) {
-              _this17.dashboardSummary = res.summarysales;
+              _this27.dashboardSummary = res.summarysales;
 
-              _this17.BindTodaysSales(res.todaysales.sales, res.todaysales.timeSlot);
+              _this27.BindTodaysSales(res.todaysales.sales, res.todaysales.timeSlot);
 
-              _this17.BindMAEN(res.maensales);
+              _this27.BindMAEN(res.maensales);
             }, function (error) {});
           }
         }, {
@@ -4631,21 +6178,21 @@
         }, {
           key: "setSelectedGallery",
           value: function setSelectedGallery() {
-            var _this18 = this;
+            var _this28 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this18.loadingGallery = true;
+                _this28.loadingGallery = true;
 
-                _this18.f.galleryID.setValue(sid);
+                _this28.f.galleryID.setValue(sid);
 
-                _this18.galleryService.getById(sid).subscribe(function (res) {
+                _this28.galleryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this18.editForm(res);
+                  _this28.editForm(res);
 
-                  _this18.loadingGallery = false;
+                  _this28.loadingGallery = false;
                 });
               }
             });
@@ -4653,7 +6200,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this19 = this;
+            var _this29 = this;
 
             this.galleryForm.markAllAsTouched();
             this.submitted = true;
@@ -4670,31 +6217,31 @@
               //Insert category
               this.galleryService.insert(this.galleryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this19.ts.showSuccess("Success", "Record added successfully.");
+                  _this29.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this19.router.navigate(['/admin/harmanocontract/gallery']);
+                  _this29.router.navigate(['/admin/harmanocontract/gallery']);
                 }
 
-                _this19.loading = false;
+                _this29.loading = false;
               }, function (error) {
-                _this19.ts.showError("Error", "Failed to insert record.");
+                _this29.ts.showError("Error", "Failed to insert record.");
 
-                _this19.loading = false;
+                _this29.loading = false;
               });
             } else {
               //Update category
               this.galleryService.update(this.galleryForm.value).subscribe(function (data) {
-                _this19.loading = false;
+                _this29.loading = false;
 
                 if (data != 0) {
-                  _this19.ts.showSuccess("Success", "Record updated successfully.");
+                  _this29.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this19.router.navigate(['/admin/harmanocontract/gallery']);
+                  _this29.router.navigate(['/admin/harmanocontract/gallery']);
                 }
               }, function (error) {
-                _this19.ts.showError("Error", "Failed to update record.");
+                _this29.ts.showError("Error", "Failed to update record.");
 
-                _this19.loading = false;
+                _this29.loading = false;
               });
             }
           }
@@ -4852,12 +6399,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this20 = this;
+            var _this30 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this20.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this30.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this20.ts.showError("Error", "Failed to export");
+              _this30.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -4870,9 +6417,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref3) {
-            var column = _ref3.column,
-                direction = _ref3.direction;
+          value: function onSort(_ref5) {
+            var column = _ref5.column,
+                direction = _ref5.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -4889,18 +6436,18 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this21 = this;
+            var _this31 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this21.ts.showSuccess("Success", "Record deleted successfully.");
+                _this31.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this21.getData();
+                _this31.getData();
               } else {
-                _this21.ts.showError("Error", "Failed to delete record.");
+                _this31.ts.showError("Error", "Failed to delete record.");
               }
             }, function (error) {
-              _this21.ts.showError("Error", "Failed to delete record.");
+              _this31.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -5070,21 +6617,21 @@
         }, {
           key: "setSelectedGallery",
           value: function setSelectedGallery() {
-            var _this22 = this;
+            var _this32 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this22.loadingGallery = true;
+                _this32.loadingGallery = true;
 
-                _this22.f.galleryID.setValue(sid);
+                _this32.f.galleryID.setValue(sid);
 
-                _this22.galleryService.getById(sid).subscribe(function (res) {
+                _this32.galleryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this22.editForm(res);
+                  _this32.editForm(res);
 
-                  _this22.loadingGallery = false;
+                  _this32.loadingGallery = false;
                 });
               }
             });
@@ -5092,7 +6639,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this23 = this;
+            var _this33 = this;
 
             this.galleryForm.markAllAsTouched();
             this.submitted = true;
@@ -5109,31 +6656,31 @@
               //Insert category
               this.galleryService.insert(this.galleryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this23.ts.showSuccess("Success", "Record added successfully.");
+                  _this33.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this23.router.navigate(['/admin/harmanorepair/gallery']);
+                  _this33.router.navigate(['/admin/harmanorepair/gallery']);
                 }
 
-                _this23.loading = false;
+                _this33.loading = false;
               }, function (error) {
-                _this23.ts.showError("Error", "Failed to insert record.");
+                _this33.ts.showError("Error", "Failed to insert record.");
 
-                _this23.loading = false;
+                _this33.loading = false;
               });
             } else {
               //Update category
               this.galleryService.update(this.galleryForm.value).subscribe(function (data) {
-                _this23.loading = false;
+                _this33.loading = false;
 
                 if (data != 0) {
-                  _this23.ts.showSuccess("Success", "Record updated successfully.");
+                  _this33.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this23.router.navigate(['/admin/harmanorepair/gallery']);
+                  _this33.router.navigate(['/admin/harmanorepair/gallery']);
                 }
               }, function (error) {
-                _this23.ts.showError("Error", "Failed to update record.");
+                _this33.ts.showError("Error", "Failed to update record.");
 
-                _this23.loading = false;
+                _this33.loading = false;
               });
             }
           }
@@ -5291,12 +6838,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this24 = this;
+            var _this34 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this24.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this34.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this24.ts.showError("Error", "Failed to export");
+              _this34.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -5309,9 +6856,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref4) {
-            var column = _ref4.column,
-                direction = _ref4.direction;
+          value: function onSort(_ref6) {
+            var column = _ref6.column,
+                direction = _ref6.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -5328,18 +6875,18 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this25 = this;
+            var _this35 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this25.ts.showSuccess("Success", "Record deleted successfully.");
+                _this35.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this25.getData();
+                _this35.getData();
               } else {
-                _this25.ts.showError("Error", "Failed to delete record.");
+                _this35.ts.showError("Error", "Failed to delete record.");
               }
             }, function (error) {
-              _this25.ts.showError("Error", "Failed to delete record.");
+              _this35.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -5535,21 +7082,21 @@
         }, {
           key: "setSelectedCategory",
           value: function setSelectedCategory() {
-            var _this26 = this;
+            var _this36 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this26.loadingCategory = true;
+                _this36.loadingCategory = true;
 
-                _this26.f.newsEventID.setValue(sid);
+                _this36.f.newsEventID.setValue(sid);
 
-                _this26.newseventService.getById(sid).subscribe(function (res) {
+                _this36.newseventService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this26.editForm(res);
+                  _this36.editForm(res);
 
-                  _this26.loadingCategory = false;
+                  _this36.loadingCategory = false;
                 });
               }
             });
@@ -5557,7 +7104,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this27 = this;
+            var _this37 = this;
 
             this.newsandeventForm.markAllAsTouched();
             this.submitted = true;
@@ -5574,31 +7121,31 @@
               //Insert category
               this.newseventService.insert(this.newsandeventForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this27.ts.showSuccess("Success", "Record added successfully.");
+                  _this37.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this27.router.navigate(['/admin/planeragroup/newsevent']);
+                  _this37.router.navigate(['/admin/planeragroup/newsevent']);
                 }
 
-                _this27.loading = false;
+                _this37.loading = false;
               }, function (error) {
-                _this27.ts.showError("Error", "Failed to insert record.");
+                _this37.ts.showError("Error", "Failed to insert record.");
 
-                _this27.loading = false;
+                _this37.loading = false;
               });
             } else {
               //Update category
               this.newseventService.update(this.newsandeventForm.value).subscribe(function (data) {
-                _this27.loading = false;
+                _this37.loading = false;
 
                 if (data != 0) {
-                  _this27.ts.showSuccess("Success", "Record updated successfully.");
+                  _this37.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this27.router.navigate(['/admin/planeragroup/newsevent']);
+                  _this37.router.navigate(['/admin/planeragroup/newsevent']);
                 }
               }, function (error) {
-                _this27.ts.showError("Error", "Failed to update record.");
+                _this37.ts.showError("Error", "Failed to update record.");
 
-                _this27.loading = false;
+                _this37.loading = false;
               });
             }
           }
@@ -5760,12 +7307,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this28 = this;
+            var _this38 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this28.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this38.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this28.ts.showError("Error", "Failed to export");
+              _this38.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -5778,9 +7325,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref5) {
-            var column = _ref5.column,
-                direction = _ref5.direction;
+          value: function onSort(_ref7) {
+            var column = _ref7.column,
+                direction = _ref7.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -5797,18 +7344,18 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this29 = this;
+            var _this39 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this29.ts.showSuccess("Success", "Record deleted successfully.");
+                _this39.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this29.getData();
+                _this39.getData();
               } else {
-                _this29.ts.showError("Error", "Failed to delete record.");
+                _this39.ts.showError("Error", "Failed to delete record.");
               }
             }, function (error) {
-              _this29.ts.showError("Error", "Failed to delete record.");
+              _this39.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -5979,21 +7526,21 @@
         }, {
           key: "setSelectedService",
           value: function setSelectedService() {
-            var _this30 = this;
+            var _this40 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this30.loadingService = true;
+                _this40.loadingService = true;
 
-                _this30.f.ServiceID.setValue(sid);
+                _this40.f.ServiceID.setValue(sid);
 
-                _this30.Service.getById(sid).subscribe(function (res) {
+                _this40.Service.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this30.editForm(res);
+                  _this40.editForm(res);
 
-                  _this30.loadingService = false;
+                  _this40.loadingService = false;
                 });
               }
             });
@@ -6001,7 +7548,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this31 = this;
+            var _this41 = this;
 
             debugger;
             this.servicesForm.markAllAsTouched();
@@ -6019,31 +7566,31 @@
               //Insert category
               this.Service.insert(this.servicesForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this31.ts.showSuccess("Success", "Record added successfully.");
+                  _this41.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this31.router.navigate(['/admin/planeragroup/service']);
+                  _this41.router.navigate(['/admin/planeragroup/service']);
                 }
 
-                _this31.loading = false;
+                _this41.loading = false;
               }, function (error) {
-                _this31.ts.showError("Error", "Failed to insert record.");
+                _this41.ts.showError("Error", "Failed to insert record.");
 
-                _this31.loading = false;
+                _this41.loading = false;
               });
             } else {
               //Update category
               this.Service.update(this.servicesForm.value).subscribe(function (data) {
-                _this31.loading = false;
+                _this41.loading = false;
 
                 if (data != 0) {
-                  _this31.ts.showSuccess("Success", "Record updated successfully.");
+                  _this41.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this31.router.navigate(['/admin/planeragroup/service']);
+                  _this41.router.navigate(['/admin/planeragroup/service']);
                 }
               }, function (error) {
-                _this31.ts.showError("Error", "Failed to update record.");
+                _this41.ts.showError("Error", "Failed to update record.");
 
-                _this31.loading = false;
+                _this41.loading = false;
               });
             }
           }
@@ -6201,12 +7748,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this32 = this;
+            var _this42 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this32.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this42.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this32.ts.showError("Error", "Failed to export");
+              _this42.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -6219,9 +7766,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref6) {
-            var column = _ref6.column,
-                direction = _ref6.direction;
+          value: function onSort(_ref8) {
+            var column = _ref8.column,
+                direction = _ref8.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -6238,18 +7785,18 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this33 = this;
+            var _this43 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this33.ts.showSuccess("Success", "Record deleted successfully.");
+                _this43.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this33.getData();
+                _this43.getData();
               } else {
-                _this33.ts.showError("Error", "Failed to delete record.");
+                _this43.ts.showError("Error", "Failed to delete record.");
               }
             }, function (error) {
-              _this33.ts.showError("Error", "Failed to delete record.");
+              _this43.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -6419,21 +7966,21 @@
         }, {
           key: "setSelectedGallery",
           value: function setSelectedGallery() {
-            var _this34 = this;
+            var _this44 = this;
 
             this.route.paramMap.subscribe(function (param) {
               var sid = +param.get('id');
 
               if (sid) {
-                _this34.loadingGallery = true;
+                _this44.loadingGallery = true;
 
-                _this34.f.galleryID.setValue(sid);
+                _this44.f.galleryID.setValue(sid);
 
-                _this34.galleryService.getById(sid).subscribe(function (res) {
+                _this44.galleryService.getById(sid).subscribe(function (res) {
                   //Set Forms
-                  _this34.editForm(res);
+                  _this44.editForm(res);
 
-                  _this34.loadingGallery = false;
+                  _this44.loadingGallery = false;
                 });
               }
             });
@@ -6441,7 +7988,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this35 = this;
+            var _this45 = this;
 
             this.galleryForm.markAllAsTouched();
             this.submitted = true;
@@ -6458,31 +8005,31 @@
               //Insert category
               this.galleryService.insert(this.galleryForm.value).subscribe(function (data) {
                 if (data != 0) {
-                  _this35.ts.showSuccess("Success", "Record added successfully.");
+                  _this45.ts.showSuccess("Success", "Record added successfully.");
 
-                  _this35.router.navigate(['/admin/planerinterior/gallery']);
+                  _this45.router.navigate(['/admin/planerinterior/gallery']);
                 }
 
-                _this35.loading = false;
+                _this45.loading = false;
               }, function (error) {
-                _this35.ts.showError("Error", "Failed to insert record.");
+                _this45.ts.showError("Error", "Failed to insert record.");
 
-                _this35.loading = false;
+                _this45.loading = false;
               });
             } else {
               //Update category
               this.galleryService.update(this.galleryForm.value).subscribe(function (data) {
-                _this35.loading = false;
+                _this45.loading = false;
 
                 if (data != 0) {
-                  _this35.ts.showSuccess("Success", "Record updated successfully.");
+                  _this45.ts.showSuccess("Success", "Record updated successfully.");
 
-                  _this35.router.navigate(['/admin/planerainterior/gallery']);
+                  _this45.router.navigate(['/admin/planerainterior/gallery']);
                 }
               }, function (error) {
-                _this35.ts.showError("Error", "Failed to update record.");
+                _this45.ts.showError("Error", "Failed to update record.");
 
-                _this35.loading = false;
+                _this45.loading = false;
               });
             }
           }
@@ -6640,12 +8187,12 @@
         }, {
           key: "exportAsXLSX",
           value: function exportAsXLSX() {
-            var _this36 = this;
+            var _this46 = this;
 
             this.service.ExportList().subscribe(function (res) {
-              _this36.excelService.exportAsExcelFile(res, 'Report_Export');
+              _this46.excelService.exportAsExcelFile(res, 'Report_Export');
             }, function (error) {
-              _this36.ts.showError("Error", "Failed to export");
+              _this46.ts.showError("Error", "Failed to export");
             });
           }
         }, {
@@ -6658,9 +8205,9 @@
           }
         }, {
           key: "onSort",
-          value: function onSort(_ref7) {
-            var column = _ref7.column,
-                direction = _ref7.direction;
+          value: function onSort(_ref9) {
+            var column = _ref9.column,
+                direction = _ref9.direction;
             this.headers.forEach(function (header) {
               if (header.sortable !== column) {
                 header.direction = '';
@@ -6677,18 +8224,18 @@
         }, {
           key: "Delete",
           value: function Delete(obj) {
-            var _this37 = this;
+            var _this47 = this;
 
             this.service["delete"](obj).subscribe(function (res) {
               if (res != 0) {
-                _this37.ts.showSuccess("Success", "Record deleted successfully.");
+                _this47.ts.showSuccess("Success", "Record deleted successfully.");
 
-                _this37.getData();
+                _this47.getData();
               } else {
-                _this37.ts.showError("Error", "Failed to delete record.");
+                _this47.ts.showError("Error", "Failed to delete record.");
               }
             }, function (error) {
-              _this37.ts.showError("Error", "Failed to delete record.");
+              _this47.ts.showError("Error", "Failed to delete record.");
             });
           }
         }]);
@@ -7011,13 +8558,37 @@
       /* harmony import */
 
 
-      var _admin_activardubai_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(
+      var _admin_activarbahrain_service_service_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(
+      /*! ./admin/activarbahrain/service/service.component */
+      "./src/app/admin/activarbahrain/service/service.component.ts");
+      /* harmony import */
+
+
+      var _admin_activarbahrain_service_add_addservice_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(
+      /*! ./admin/activarbahrain/service/add/addservice.component */
+      "./src/app/admin/activarbahrain/service/add/addservice.component.ts");
+      /* harmony import */
+
+
+      var _admin_activardubai_service_service_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(
+      /*! ./admin/activardubai/service/service.component */
+      "./src/app/admin/activardubai/service/service.component.ts");
+      /* harmony import */
+
+
+      var _admin_activardubai_service_add_addservice_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(
+      /*! ./admin/activardubai/service/add/addservice.component */
+      "./src/app/admin/activardubai/service/add/addservice.component.ts");
+      /* harmony import */
+
+
+      var _admin_activardubai_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(
       /*! ./admin/activardubai/gallery/gallery.component */
       "./src/app/admin/activardubai/gallery/gallery.component.ts");
       /* harmony import */
 
 
-      var _admin_activardubai_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(
+      var _admin_activardubai_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(
       /*! ./admin/activardubai/gallery/add/addgallery.component */
       "./src/app/admin/activardubai/gallery/add/addgallery.component.ts");
 
@@ -7038,7 +8609,7 @@
       AppModule = __decorate([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         declarations: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"], _nav_menu_nav_menu_component__WEBPACK_IMPORTED_MODULE_6__["NavMenuComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"], _admin_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_11__["DashboardComponent"], _layout_layout_component__WEBPACK_IMPORTED_MODULE_12__["LayoutComponent"], _counter_counter_component__WEBPACK_IMPORTED_MODULE_8__["CounterComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_10__["LoginComponent"], _fetch_data_fetch_data_component__WEBPACK_IMPORTED_MODULE_9__["FetchDataComponent"], _imageupload_imageupload_component__WEBPACK_IMPORTED_MODULE_16__["ImageuploadComponent"], _datepicker_range_datepicker_range_popup__WEBPACK_IMPORTED_MODULE_21__["NgbdDatepickerRangePopup"], _admin_planeragroup_newsevent_newsevent_component__WEBPACK_IMPORTED_MODULE_22__["newseventComponent"], _admin_planeragroup_newsevent_addnewsevent_addnewsevent_component__WEBPACK_IMPORTED_MODULE_23__["AddnewseventComponent"], _admin_planeragroup_service_service_component__WEBPACK_IMPORTED_MODULE_24__["serviceComponent"], _admin_planeragroup_service_add_addservices_component__WEBPACK_IMPORTED_MODULE_25__["AddServiceComponent"], //HRRepairServiceComponent,
         //AddHRRepairServiceComponent,
-        _admin_harmanorepair_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_26__["HrRprGalleryComponent"], _admin_harmanorepair_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_27__["AddGalleryHrRprComponent"], _admin_planerainterior_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_30__["GalleryComponent"], _admin_planerainterior_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_31__["AddGalleryComponent"], _admin_activarbahrain_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_32__["ActBahGalleryComponent"], _admin_activarbahrain_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_33__["AddGalleryActBahComponent"], _admin_activardubai_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_34__["ActDubGalleryComponent"], _admin_activardubai_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_35__["AddGalleryActDubComponent"], _admin_harmanocontract_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_28__["HrCntGalleryComponent"], _admin_harmanocontract_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_29__["AddGalleryHrCntComponent"]],
+        _admin_harmanorepair_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_26__["HrRprGalleryComponent"], _admin_harmanorepair_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_27__["AddGalleryHrRprComponent"], _admin_planerainterior_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_30__["GalleryComponent"], _admin_planerainterior_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_31__["AddGalleryComponent"], _admin_activarbahrain_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_32__["ActBahGalleryComponent"], _admin_activarbahrain_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_33__["AddGalleryActBahComponent"], _admin_activardubai_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_38__["ActDubGalleryComponent"], _admin_activardubai_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_39__["AddGalleryActDubComponent"], _admin_harmanocontract_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_28__["HrCntGalleryComponent"], _admin_harmanocontract_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_29__["AddGalleryHrCntComponent"], _admin_activarbahrain_service_service_component__WEBPACK_IMPORTED_MODULE_34__["ActBahServiceComponent"], _admin_activarbahrain_service_add_addservice_component__WEBPACK_IMPORTED_MODULE_35__["AddServiceActBahComponent"], _admin_activardubai_service_service_component__WEBPACK_IMPORTED_MODULE_36__["ActDubServiceComponent"], _admin_activardubai_service_add_addservice_component__WEBPACK_IMPORTED_MODULE_37__["AddServiceActDubComponent"]],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"].withServerTransition({
           appId: 'ng-cli-universal'
         }), _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_17__["NgSelectModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_19__["ToastrModule"].forRoot(), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_20__["BrowserAnimationsModule"], ng_apexcharts__WEBPACK_IMPORTED_MODULE_18__["NgApexchartsModule"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forRoot([{
@@ -7097,14 +8668,32 @@
             path: 'activarbahrain/gallery/edit/:id',
             component: _admin_activarbahrain_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_33__["AddGalleryActBahComponent"]
           }, {
+            path: 'activarbahrain/service',
+            component: _admin_activarbahrain_service_service_component__WEBPACK_IMPORTED_MODULE_34__["ActBahServiceComponent"]
+          }, {
+            path: 'activarbahrain/service/add',
+            component: _admin_activarbahrain_service_add_addservice_component__WEBPACK_IMPORTED_MODULE_35__["AddServiceActBahComponent"]
+          }, {
+            path: 'activarbahrain/service/edit/:id',
+            component: _admin_activarbahrain_service_add_addservice_component__WEBPACK_IMPORTED_MODULE_35__["AddServiceActBahComponent"]
+          }, {
             path: 'activardubai/gallery',
-            component: _admin_activardubai_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_34__["ActDubGalleryComponent"]
+            component: _admin_activardubai_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_38__["ActDubGalleryComponent"]
           }, {
             path: 'activardubai/gallery/add',
-            component: _admin_activardubai_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_35__["AddGalleryActDubComponent"]
+            component: _admin_activardubai_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_39__["AddGalleryActDubComponent"]
           }, {
             path: 'activardubai/gallery/edit/:id',
-            component: _admin_activardubai_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_35__["AddGalleryActDubComponent"]
+            component: _admin_activardubai_gallery_add_addgallery_component__WEBPACK_IMPORTED_MODULE_39__["AddGalleryActDubComponent"]
+          }, {
+            path: 'activardubai/service',
+            component: _admin_activardubai_service_service_component__WEBPACK_IMPORTED_MODULE_36__["ActDubServiceComponent"]
+          }, {
+            path: 'activardubai/service/add',
+            component: _admin_activardubai_service_add_addservice_component__WEBPACK_IMPORTED_MODULE_37__["AddServiceActDubComponent"]
+          }, {
+            path: 'activardubai/service/edit/:id',
+            component: _admin_activardubai_service_add_addservice_component__WEBPACK_IMPORTED_MODULE_37__["AddServiceActDubComponent"]
           }, {
             path: 'harmanocontract/gallery',
             component: _admin_harmanocontract_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_28__["HrCntGalleryComponent"]
@@ -7368,12 +8957,12 @@
       };
 
       var FetchDataComponent = function FetchDataComponent(http, baseUrl) {
-        var _this38 = this;
+        var _this48 = this;
 
         _classCallCheck(this, FetchDataComponent);
 
         http.get(baseUrl + 'weatherforecast').subscribe(function (result) {
-          _this38.forecasts = result;
+          _this48.forecasts = result;
         }, function (error) {
           return console.error(error);
         });
@@ -7525,7 +9114,7 @@
         _createClass(ImageuploadComponent, [{
           key: "onFileChange",
           value: function onFileChange(event) {
-            var _this39 = this;
+            var _this49 = this;
 
             var reader = new FileReader(); // HTML5 FileReader API
 
@@ -7535,14 +9124,14 @@
               reader.readAsDataURL(file); // When file uploads set it to file formcontrol
 
               reader.onload = function () {
-                _this39.imageUrl = reader.result;
+                _this49.imageUrl = reader.result;
 
-                _this39.registrationForm.patchValue({
+                _this49.registrationForm.patchValue({
                   file: reader.result
                 });
 
-                _this39.editFile = false;
-                _this39.removeUpload = true;
+                _this49.editFile = false;
+                _this49.removeUpload = true;
               }; // ChangeDetectorRef since file is loading outside the zone
 
 
@@ -7836,7 +9425,7 @@
         }, {
           key: "onSubmit",
           value: function onSubmit() {
-            var _this40 = this;
+            var _this50 = this;
 
             this.loginForm.markAllAsTouched();
 
@@ -7846,13 +9435,13 @@
 
             this.service.login(this.f.username.value, this.f.password.value).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])()).subscribe(function (data) {
               if (data != null) {
-                _this40.loadLocations(); //this.ls.setSelectedBrand(data);           
+                _this50.loadLocations(); //this.ls.setSelectedBrand(data);           
 
               } else {
-                _this40.ts.showError("Error", "Username or password is not correct.");
+                _this50.ts.showError("Error", "Username or password is not correct.");
               }
             }, function (error) {
-              _this40.ts.showError("Error", "Something went wrong.");
+              _this50.ts.showError("Error", "Something went wrong.");
             });
           }
         }, {
