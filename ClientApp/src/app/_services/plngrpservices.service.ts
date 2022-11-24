@@ -32,7 +32,7 @@ function matches(data: Service, term: string) {
   providedIn: 'root'
 })
 
-export class PlnGrpServicesService {
+export class PlnGrpServiceService {
 
   constructor(private http: HttpClient) {
   }
@@ -41,7 +41,7 @@ export class PlnGrpServicesService {
   private _allData$ = new BehaviorSubject<Service[]>([]);
   private _data$ = new BehaviorSubject<Service[]>([]);
   private _total$ = new BehaviorSubject<number>(0);
-  public services: Service[];
+  public service: Service[];
   private _state: State = {
     page: 1,
     pageSize: 10,
@@ -55,23 +55,20 @@ export class PlnGrpServicesService {
   get page() { return this._state.page; }
   get pageSize() { return this._state.pageSize; }
   get searchTerm() { return this._state.searchTerm; }
-
   set page(page: number) { this._set({ page }); }
   set pageSize(pageSize: number) { this._set({ pageSize }); }
   set searchTerm(searchTerm: any) { this._set({ searchTerm }); }
   set sortColumn(sortColumn: SortColumn) { this._set({ sortColumn }); }
   set sortDirection(sortDirection: SortDirection) { this._set({ sortDirection }); }
-
   get data$() {
     return this._data$.asObservable();
   }
   get allData$() {
     return this._allData$.asObservable();
   }
-
-  getById(id) {
+  getById(getid) {
     debugger
-    return this.http.get<Service[]>(`api/planeragroup/${id}`);
+    return this.http.get<Service[]>(`api/planeragroup/${getid}`);
   }
 
   ExportList() {
@@ -82,10 +79,10 @@ export class PlnGrpServicesService {
     console.log(url);
     tap(() => this._loading$.next(true)),
       this.http.get<Service[]>(url).subscribe(res => {
-        this.services = res;
-           
-        this._data$.next(this.services);
-        this._allData$.next(this.services);
+        this.service = res;
+
+        this._data$.next(this.service);
+        this._allData$.next(this.service);
 
         this._search$.pipe(
           switchMap(() => this._search()),
@@ -104,11 +101,11 @@ export class PlnGrpServicesService {
   }
 
   private _search(): Observable<SearchServiceResult> {
-     
+
     const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
 
     // 1. sort
-    let sortedData = sort(this.services, sortColumn, sortDirection);
+    let sortedData = sort(this.service, sortColumn, sortDirection);
 
     //// 2. filter
     sortedData = sortedData.filter(data => matches(data, searchTerm));
@@ -119,7 +116,7 @@ export class PlnGrpServicesService {
     return of({ data, total });
   }
 
-  
+
   clear() {
     // clear by calling subject.next() without parameters
     this._search$.next();
@@ -138,11 +135,13 @@ export class PlnGrpServicesService {
   insert(data) {
     debugger
     return this.http.post(`api/planeragroup/insertservice`, data)
-      .pipe(map(res => {       
+      .pipe(map(res => {
+
         console.log(res);
         return res;
       }));
   }
+
   update(updateData) {
     return this.http.post(`api/planeragroup/updateservice`, updateData)
       .pipe(map(res => {
@@ -150,9 +149,10 @@ export class PlnGrpServicesService {
         return res;
       }));
   }
- 
-  delete(updateData) {
-    return this.http.post(`api/planeragroup/deleteservice`, updateData);
+
+  delete(deleteData) {
+    debugger
+    return this.http.post(`api/planeragroup/deleteservice`, deleteData);
   }
 
 }

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using WebAPICode.Helpers;
 using static PlaneraAdmin._Models.PlaneraGroupViewModel;
+using static PlaneraAdmin._Models.ServiceViewModel;
 
 namespace BAL.Repositories
 {
@@ -24,6 +25,7 @@ namespace BAL.Repositories
             _dt = new DataTable();
             _ds = new DataSet();
         }
+        //NewsAlert
         public List<NewsEventBLL> GetAll()
         {
             try
@@ -51,32 +53,6 @@ namespace BAL.Repositories
                 return null;
             }
         }
-        public List<ServiceBLL> GetService()
-        {
-            try
-            {
-                var lst = new List<ServiceBLL>();
-                SqlParameter[] p = new SqlParameter[0];
-               
-
-                _dt = (new DBHelper().GetTableFromSP)("sp_GetServicePlnGrp", p);
-                if (_dt != null)
-                {
-                    if (_dt.Rows.Count > 0)
-                    {
-                        //lst = _dt.DataTableToList<ServiceBLL>();
-                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<ServiceBLL>>();
-                    }
-                }
-           
-                return lst;
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
-        }
-
         public NewsEventBLL Get(int id)
         {
             try
@@ -101,8 +77,7 @@ namespace BAL.Repositories
             {
                 return null;
             }
-        }
-       
+        }      
         public int Insert(NewsEventBLL data)
         {
             try
@@ -121,30 +96,6 @@ namespace BAL.Repositories
                 p[8] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_insertNewsEvent_Admin", p);
               
-                return rtn;
-            }
-            catch (Exception ex)
-            {
-                return 0;
-            }
-        }
-        public int InsertService(ServiceBLL data)
-        {
-            try
-            {
-                int rtn = 0;
-                SqlParameter[] p = new SqlParameter[7];
-
-                p[0] = new SqlParameter("@Title", data.Title);
-                p[1] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
-                p[2] = new SqlParameter("@Description", data.Description);
-                p[3] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
-                p[4] = new SqlParameter("@StatusID", data.StatusID);
-                p[5] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
-                p[6] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_insertService_Admin", p);
-
                 return rtn;
             }
             catch (Exception ex)
@@ -180,7 +131,99 @@ namespace BAL.Repositories
                 return 0;
             }
         }
+        public int Delete(NewsEventBLL data)
+        {
+            try
+            {
+                int _obj = 0;
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@id", data.NewsEventID);
 
+
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteNewsEvent_Admin", p);
+
+                return _obj;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        //NewsAlert
+        //Service
+        public List<ServiceBLL> GetService()
+        {
+            try
+            {
+                var lst = new List<ServiceBLL>();
+                SqlParameter[] p = new SqlParameter[0];
+
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetService_PlnGrp", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<ServiceBLL>>();
+                    }
+                }
+
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public ServiceBLL GetService(int id)
+        {
+            try
+            {
+                var _obj = new ServiceBLL();
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@id", id);
+
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetServiceID_PlnGrp", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        _obj = _dt.DataTableToList<ServiceBLL>().FirstOrDefault();
+                    }
+                }
+
+                return _obj;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public int InsertService(ServiceBLL data)
+        {
+            try
+            {
+                int rtn = 0;
+                SqlParameter[] p = new SqlParameter[7];
+
+                p[0] = new SqlParameter("@Title", data.Title);
+                p[1] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
+                p[2] = new SqlParameter("@Description", data.Description);
+                p[3] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
+                p[4] = new SqlParameter("@StatusID", data.StatusID);
+                p[5] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
+                p[6] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_insertService_PlnGrp", p);
+
+                return rtn;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
         public int UpdateService(ServiceBLL data)
         {
             try
@@ -196,28 +239,9 @@ namespace BAL.Repositories
                 p[7] = new SqlParameter("@CompanyID", data.CompanyID);
                 p[8] = new SqlParameter("@ServiceID", data.ServiceID);
 
-                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateService_Admin", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateService_PlnGrp", p);
 
                 return rtn;
-            }
-            catch (Exception ex)
-            {
-                return 0;
-            }
-        }
-
-        public int Delete(NewsEventBLL data)
-        {
-            try
-            {
-                int _obj = 0;
-                SqlParameter[] p = new SqlParameter[1];
-                p[0] = new SqlParameter("@id", data.NewsEventID);
-                
-
-                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteNewsEvent_Admin", p);
-
-                return _obj;
             }
             catch (Exception ex)
             {
@@ -231,7 +255,7 @@ namespace BAL.Repositories
                 int _obj = 0;
                 SqlParameter[] p = new SqlParameter[1];
                 p[0] = new SqlParameter("@id", data.ServiceID);
-                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteService_Admin", p);
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteService_PlGrp", p);
 
                 return _obj;
             }
@@ -240,5 +264,6 @@ namespace BAL.Repositories
                 return 0;
             }
         }
+        //Service
     }
 }

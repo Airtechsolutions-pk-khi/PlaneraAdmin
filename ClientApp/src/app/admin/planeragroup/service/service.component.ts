@@ -1,3 +1,4 @@
+
 import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { NgbdSortableHeader, SortEvent } from 'src/app/_directives/sortable.directive';
@@ -7,7 +8,7 @@ import { ToastService } from 'src/app/_services/toastservice';
 import { ToastrService } from 'ngx-toastr';
 import { ExcelService } from 'src/ExportExcel/excel.service';
 import { Service } from 'src/app/_models/PlGrpService';
-import { PlnGrpServicesService } from 'src/app/_services/plngrpservices.service';
+import { PlnGrpServiceService } from 'src/app/_services/plngrpservices.service';
 
 @Component({
   selector: 'app-service',
@@ -15,24 +16,27 @@ import { PlnGrpServicesService } from 'src/app/_services/plngrpservices.service'
   providers: [ExcelService]
 })
 
-export class serviceComponent implements OnInit {
+export class PlnGrpServiceComponent implements OnInit {
  
-  service$: Observable<Service[]>;
+  data$: Observable<Service[]>;
   oldData: Service[];
   total$: Observable<number>;
   loading$: Observable<boolean>;
+  // private selectedBrand;
   locationSubscription: Subscription;
   submit: boolean;
   @ViewChildren(NgbdSortableHeader) headers: QueryList<NgbdSortableHeader>;
-  services: Service[] = [];
-  constructor(public service: PlnGrpServicesService,
+  gallery: Service[] = [];
+  constructor(public service: PlnGrpServiceService,
     public excelService: ExcelService,
     public ls: LocalStorageService,
     public ts: ToastService,
     public tss: ToastrService,
     public router: Router) {
     this.loading$ = service.loading$;
-    this.submit = false; 
+    this.submit = false;
+    
+    
   }
 
   ngOnInit() {
@@ -49,7 +53,7 @@ export class serviceComponent implements OnInit {
   
   getData() {
     this.service.getAllData();
-    this.service$ = this.service.allData$;
+    this.data$ = this.service.data$;
     this.total$ = this.service.total$;
     this.loading$ = this.service.loading$;
     

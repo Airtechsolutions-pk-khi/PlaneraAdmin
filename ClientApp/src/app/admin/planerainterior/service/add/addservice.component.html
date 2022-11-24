@@ -1,12 +1,12 @@
-<h1 class="h3 mb-2 text-gray-800">Add Services</h1>
+<h1 class="h3 mb-2 text-gray-800">Planera Interior</h1>
 <p class="mb-4"></p>
 
-<form [formGroup]="servicesForm" class="form" (ngSubmit)="onSubmit()">
+<form [formGroup]="serviceForm" class="form" (ngSubmit)="onSubmit()">
   <div class="row">
 
     <div class="col-xl-12">
       <div class="card mb-4">
-        <div class="card-header">Services</div>
+        <div class="card-header">Add Service</div>
         <div class="card-body">
           <div class="form-row">
             <div class="form-group col-md-8">
@@ -28,21 +28,20 @@
                   </div>
                 </div>
               </div>
-              <div class="form-row">
-                <div class="form-group col-md-12">
-                  <label class="small mb-1" for="inputLocation">Description</label>
-                  <textarea class="form-control" formControlName="description" height="100px"></textarea>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-12">
-                  <label class="small mb-1" for="inputLocation">Arabic Description</label>
-                  <textarea class="form-control" formControlName="arabicDescription" height="100px"></textarea>
-                </div>
+              <div class="form-group">
+                <label class="small mb-1" for="inputUsername">Description</label>
+                <input type="text" class="form-control" id=description placeholder="" formControlName="description">
               </div>
               <div class="form-group">
-                <label class="small mb-1" for="inputUsername">Display Order</label>
-                <input type="number" class="form-control" id=displayOrder placeholder="" formControlName="displayOrder">
+                <label class="small mb-1" for="inputUsername">Arabic Description</label>
+                <input type="text" class="form-control" id=arabicDescription placeholder="" formControlName="arabicDescription">
+              </div>
+              <!-- Form Row-->
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label class="small mb-1" for="inputLocation">Display Order</label>
+                  <input class="form-control" formControlName="displayOrder" type="number">
+                </div>
               </div>
             </div>
             <div class="form-group col-md-4 text-center">

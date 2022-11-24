@@ -7,6 +7,8 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using static PlaneraAdmin._Models.GalleryViewModel;
+using static PlaneraAdmin._Models.ServiceViewModel;
+using static PlaneraAdmin._Models.HomeViewModel;
 
 namespace PlaneraAdmin.BLL._Services
 {
@@ -18,61 +20,72 @@ namespace PlaneraAdmin.BLL._Services
             _service = new harmanorepairDB();
         }
         ////HarmanoRepair Service
-        //public List<ServiceBLL> GetService()
-        //{
-        //    try
-        //    {
-        //        return _service.GetService();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return new List<ServiceBLL>();
-        //    }
-        //}
-        //public int InsertService(ServiceBLL data, IWebHostEnvironment _env)
-        //{
-        //    try
-        //    {
-        //        //data.Image = UploadImage(data.Image, "Service", _env);
+        public List<ServiceBLL> GetService()
+        {
+            try
+            {
+                return _service.GetService();
+            }
+            catch (Exception ex)
+            {
+                return new List<ServiceBLL>();
+            }
+        }
+        public ServiceBLL GetID(int id)
+        {
+            try
+            {
+                return _service.GetID(id);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public int DeleteService(ServiceBLL data)
+        {
+            try
+            {
 
-        //        var result = _service.InsertService(data);
+                var result = _service.DeleteService(data);
 
-        //        return result;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return 0;
-        //    }
-        //}
-        //public int UpdateService(ServiceBLL data, IWebHostEnvironment _env)
-        //{
-        //    try
-        //    {
-        //        //data.Image = UploadImage(data.Image, "NewsEvent", _env);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public int InsertService(ServiceBLL data, IWebHostEnvironment _env)
+        {
+            try
+            {
+                data.ImagePath = UploadImage(data.ImagePath, "Service", _env);
+                data.LastUpdatedDate = _UTCDateTime_SA();
+                var result = _service.InsertService(data);
 
-        //        var result = _service.UpdateService(data);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public int UpdateService(ServiceBLL data, IWebHostEnvironment _env)
+        {
+            try
+            {
+                data.ImagePath = UploadImage(data.ImagePath, "Service", _env);
+                data.LastUpdatedDate = _UTCDateTime_SA();
+                var result = _service.UpdateService(data);
 
-        //        return result;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return 0;
-        //    }
-        //}
-        //public int DeleteService(ServiceBLL data)
-        //{
-        //    try
-        //    {
-
-        //        var result = _service.DeleteService(data);
-
-        //        return result;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return 0;
-        //    }
-        //}
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
         ////HarmanoRepair Service
         //HarmanoRepair Gallery
         public List<GalleryImageBLL> GetGallery()
@@ -141,5 +154,73 @@ namespace PlaneraAdmin.BLL._Services
                 return 0;
             }
         }
+        //HomePage
+        public List<HomePageBLL> GetHome()
+        {
+            try
+            {
+                return _service.GetHome();
+            }
+            catch (Exception ex)
+            {
+                return new List<HomePageBLL>();
+            }
+        }
+        public HomePageBLL GetHomeID(int id)
+        {
+            try
+            {
+                return _service.GetHomeID(id);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public int DeleteHome(HomePageBLL data)
+        {
+            try
+            {
+
+                var result = _service.DeleteHome(data);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public int InsertHome(HomePageBLL data, IWebHostEnvironment _env)
+        {
+            try
+            {
+                data.ImagePath = UploadImage(data.ImagePath, "HomePage", _env);
+                data.LastUpdatedDate = _UTCDateTime_SA();
+                var result = _service.InsertHome(data);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public int UpdateHome(HomePageBLL data, IWebHostEnvironment _env)
+        {
+            try
+            {
+                data.ImagePath = UploadImage(data.ImagePath, "Service", _env);
+                data.LastUpdatedDate = _UTCDateTime_SA();
+                var result = _service.UpdateHome(data);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        //HomePage
     }
 }

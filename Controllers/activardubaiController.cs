@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using static PlaneraAdmin._Models.GalleryViewModel;
 using static PlaneraAdmin._Models.ServiceViewModel;
+using static PlaneraAdmin._Models.HomeViewModel;
 
 namespace PlaneraAdmin.Controllers
 {
@@ -58,9 +59,9 @@ namespace PlaneraAdmin.Controllers
             return _service.GetService();
         }
         [HttpGet("{id}")]
-        public ServiceBLL GetService(int id)
+        public ServiceBLL GetID(int id)
         {
-            return _service.GetService(id);
+            return _service.GetID(id);
         }
         [HttpPost]
         [Route("insertservice")]
@@ -81,5 +82,35 @@ namespace PlaneraAdmin.Controllers
             return _service.DeleteService(obj);
         }
         //Service
+        //HomePage
+        [HttpGet("homeall")]
+        public List<HomePageBLL> GetHome()
+        {
+            return _service.GetHome();
+        }
+        [HttpGet("{gethomeid}")]
+        public HomePageBLL GetHomeID(int id)
+        {
+            return _service.GetHomeID(id);
+        }
+        [HttpPost]
+        [Route("inserthome")]
+        public int PostHome([FromBody] HomePageBLL obj)
+        {
+            return _service.InsertHome(obj, _env);
+        }
+        [HttpPost]
+        [Route("updatehome")]
+        public int UpdateHome([FromBody] HomePageBLL obj)
+        {
+            return _service.UpdateHome(obj, _env);
+        }
+        [HttpPost]
+        [Route("deletehome")]
+        public int DeleteHome([FromBody] HomePageBLL obj)
+        {
+            return _service.DeleteHome(obj);
+        }
+        //HomePage
     }
 }

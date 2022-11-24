@@ -5,6 +5,7 @@ using PlaneraAdmin.BLL._Services;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using static PlaneraAdmin._Models.PlaneraGroupViewModel;
+using static PlaneraAdmin._Models.ServiceViewModel;
 
 namespace PlaneraAdmin.Controllers
 {
@@ -50,12 +51,16 @@ namespace PlaneraAdmin.Controllers
             return _service.Delete(obj);
         }
         //NewsAlert
-
         //Services
         [HttpGet("serviceall")]
         public List<ServiceBLL> GetService()
         {
             return _service.GetService();
+        }
+        [HttpGet("{getid}")]
+        public ServiceBLL GetId(int id)
+        {
+            return _service.GetService(id);
         }
         [HttpPost]
         [Route("insertservice")]

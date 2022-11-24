@@ -4,20 +4,20 @@ import { ImageuploadComponent } from 'src/app/imageupload/imageupload.component'
 import { Router, ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { ToastService } from 'src/app/_services/toastservice';
-import { PlnGrpServicesService } from 'src/app/_services/plngrpservices.service';
+import { PlnGrpServiceService } from 'src/app/_services/plngrpservices.service';
 
 @Component({
-  selector: 'app-addservices',
-  templateUrl: './addservices.component.html'
+  selector: 'app-addservice',
+  templateUrl: './addservice.component.html',
 })
-export class AddServiceComponent implements OnInit {
+export class AddServicePlnGrpComponent implements OnInit {
 
 
   submitted = false;
-  servicesForm: FormGroup;
+  serviceForm: FormGroup;
 
   loading = false;
-  loadingService = false;
+  loadingGallery = false;
   ButtonText = "Save"; selectedCityIds
   selectedSubCategoriesIds: string[];
   selectedLocationIds: string[];
@@ -30,88 +30,89 @@ export class AddServiceComponent implements OnInit {
     private route: ActivatedRoute,
     private ls: LocalStorageService,
     public ts: ToastService,
-    private Service: PlnGrpServicesService
+    private galleryService: PlnGrpServiceService
 
   ) {
     this.createForm();
   }
 
   ngOnInit() {
-    this.setSelectedService();
+    this.setSelectedGallery();
   }
 
-  get f() { return this.servicesForm.controls; }
+  get f() { return this.serviceForm.controls; }
 
   private createForm() {
-    this.servicesForm = this.formBuilder.group({
+    this.serviceForm = this.formBuilder.group({
       title: ['', Validators.required],
       arabicTitle: ['', Validators.required],
-      description: [''],
-      arabicDescription: [''],
-      displayOrder: [''],
-      statusID: [true],
+      description: ['', Validators.required],
+      arabicDescription: ['', Validators.required],
+      statusID: [true],       
       serviceID: 0,
+      imagePath: [''],
+      displayOrder: [''],
     });
   }
 
   private editForm(obj) {
-
     this.f.title.setValue(obj.title);
     this.f.arabicTitle.setValue(obj.arabicTitle);
-    this.f.serviceID.setValue(obj.serviceID);
     this.f.description.setValue(obj.description);
     this.f.arabicDescription.setValue(obj.arabicDescription);
+    this.f.serviceID.setValue(obj.serviceID);
+    this.f.imagePath.setValue(obj.imagePath);
+    this.f.displayOrder.setValue(obj.displayOrder);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.imgComp.imageUrl = obj.imagePath;
   }
 
-  setSelectedService() {
+  setSelectedGallery() {
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');
       if (sid) {
-        this.loadingService = true;
-        this.f.ServiceID.setValue(sid);
-        this.Service.getById(sid).subscribe(res => {
+        this.loadingGallery = true;
+        this.f.serviceID.setValue(sid);
+        this.galleryService.getById(sid).subscribe(res => {
           //Set Forms
           this.editForm(res);
-          this.loadingService = false;
+          this.loadingGallery = false;
         });
       }
     })
   }
 
   onSubmit() {
-    debugger
-    this.servicesForm.markAllAsTouched();
+    this.serviceForm.markAllAsTouched();
     this.submitted = true;
-    if (this.servicesForm.invalid) { return; }
+    if (this.serviceForm.invalid) { return; }
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-/*    this.f.imagePath.setValue(this.imgComp.imageUrl);*/
+    this.f.imagePath.setValue(this.imgComp.imageUrl);
 
     if (parseInt(this.f.serviceID.value) === 0) {
       //Insert category
-      this.Service.insert(this.servicesForm.value).subscribe(data => {
+      this.galleryService.insert(this.serviceForm.value).subscribe(data => {
         if (data != 0) {
-          this.ts.showSuccess("Success", "Record added successfully.")
+          this.ts.showSuccess("Success","Record added successfully.")
           this.router.navigate(['/admin/planeragroup/service']);
         }
         this.loading = false;
       }, error => {
-        this.ts.showError("Error", "Failed to insert record.")
+        this.ts.showError("Error","Failed to insert record.")
         this.loading = false;
       });
 
     } else {
       //Update category
-      this.Service.update(this.servicesForm.value).subscribe(data => {
+      this.galleryService.update(this.serviceForm.value).subscribe(data => {
         this.loading = false;
         if (data != 0) {
-          this.ts.showSuccess("Success", "Record updated successfully.")
+          this.ts.showSuccess("Success","Record updated successfully.")
           this.router.navigate(['/admin/planeragroup/service']);
         }
       }, error => {
-        this.ts.showError("Error", "Failed to update record.")
+        this.ts.showError("Error","Failed to update record.")
         this.loading = false;
       });
     }

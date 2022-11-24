@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using WebAPICode.Helpers;
 using static PlaneraAdmin._Models.GalleryViewModel;
+using static PlaneraAdmin._Models.ServiceViewModel;
+using static PlaneraAdmin._Models.HomeViewModel;
 
 namespace BAL.Repositories
 {
@@ -25,101 +27,119 @@ namespace BAL.Repositories
             _ds = new DataSet();
         }
         ////Harmanocontract Service
-        //public List<ServiceBLL> GetService()
-        //{
-        //    try
-        //    {
-        //        var lst = new List<ServiceBLL>();
-        //        SqlParameter[] p = new SqlParameter[0];
-               
+        public List<ServiceBLL> GetService()
+        {
+            try
+            {
+                var lst = new List<ServiceBLL>();
+                SqlParameter[] p = new SqlParameter[0];
 
-        //        _dt = (new DBHelper().GetTableFromSP)("sp_GetServicePlnGrp", p);
-        //        if (_dt != null)
-        //        {
-        //            if (_dt.Rows.Count > 0)
-        //            {
-        //                lst = _dt.DataTableToList<ServiceBLL>();
-                       
-        //                //lst= JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToArray<CategoryBLL>()
-        //                //lst = _dt.ToList<CategoryBLL>().ToList();
-        //            }
-        //        }
-           
-        //        return lst;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return null;
-        //    }
-        //}
-        //public int InsertService(ServiceBLL data)
-        //{
-        //    try
-        //    {
-        //        int rtn = 0;
-        //        SqlParameter[] p = new SqlParameter[9];
 
-        //        p[0] = new SqlParameter("@Title", data.Title);
-        //        p[1] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
-        //        p[2] = new SqlParameter("@Description", data.Description);
-        //        p[3] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
-        //        p[4] = new SqlParameter("@ImagePath", data.ImagePath);
-        //        p[5] = new SqlParameter("@ImageIcon", data.ImageIcon);
-        //        p[6] = new SqlParameter("@StatusID", data.StatusID);
-        //        p[7] = new SqlParameter("@CompanyID", data.CompanyID);
-        //        p[8] = new SqlParameter("@ServiceID", data.ServiceID);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetService_HrCnt", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<ServiceBLL>>();
+                    }
+                }
 
-        //        rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_insertService_Admin", p);
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public ServiceBLL GetID(int id)
+        {
+            try
+            {
+                var _obj = new ServiceBLL();
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@id", id);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetServiceID_HrCnt", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        _obj = _dt.DataTableToList<ServiceBLL>().FirstOrDefault();
+                    }
+                }
+                return _obj;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public int InsertService(ServiceBLL data)
+        {
+            try
+            {
+                int rtn = 0;
+                SqlParameter[] p = new SqlParameter[8];
 
-        //        return rtn;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return 0;
-        //    }
-        //}
-        //public int UpdateService(ServiceBLL data)
-        //{
-        //    try
-        //    {
-        //        int rtn = 0;
-        //        SqlParameter[] p = new SqlParameter[9];
+                p[0] = new SqlParameter("@Title", data.Title);
+                p[1] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
+                p[2] = new SqlParameter("@Description", data.Description);
+                p[3] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
+                p[4] = new SqlParameter("@ImagePath", data.ImagePath);
+                p[5] = new SqlParameter("@StatusID", data.StatusID);
+                p[6] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
+                p[7] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_insertService_HrCnt", p);
 
-        //        p[0] = new SqlParameter("@Title", data.Title);
-        //        p[1] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
-        //        p[2] = new SqlParameter("@Description", data.Description);
-        //        p[3] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
-        //        p[4] = new SqlParameter("@ImagePath", data.ImagePath);
-        //        p[5] = new SqlParameter("@ImageIcon", data.ImageIcon);
-        //        p[6] = new SqlParameter("@StatusID", data.StatusID);
-        //        p[7] = new SqlParameter("@CompanyID", data.CompanyID);
-        //        p[8] = new SqlParameter("@ServiceID", data.ServiceID);
+                return rtn;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public int UpdateService(ServiceBLL data)
+        {
+            try
+            {
+                int rtn = 0;
+                SqlParameter[] p = new SqlParameter[8];
 
-        //        rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateService_Admin", p);
+                p[0] = new SqlParameter("@Title", data.Title);
+                p[1] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
+                p[2] = new SqlParameter("@Description", data.Description);
+                p[3] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
+                p[4] = new SqlParameter("@ImagePath", data.ImagePath);
+                p[5] = new SqlParameter("@StatusID", data.StatusID);
+                p[6] = new SqlParameter("@CompanyID", data.CompanyID);
+                p[7] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
+                p[8] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[9] = new SqlParameter("@ServiceID", data.ServiceID);
 
-        //        return rtn;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return 0;
-        //    }
-        //}
-        //public int DeleteService(ServiceBLL data)
-        //{
-        //    try
-        //    {
-        //        int _obj = 0;
-        //        SqlParameter[] p = new SqlParameter[1];
-        //        p[0] = new SqlParameter("@id", data.ServiceID);
-        //        _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteService_Admin", p);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateService_HrCnt", p);
 
-        //        return _obj;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return 0;
-        //    }
-        //}
+                return rtn;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public int DeleteService(ServiceBLL data)
+        {
+            try
+            {
+                int _obj = 0;
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@id", data.ServiceID);
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteService_HrCnt", p);
+
+                return _obj;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
         ////Harmanocontract Service
         //Harmanocontract Gallery
         public List<GalleryImageBLL> GetGallery()
@@ -231,5 +251,118 @@ namespace BAL.Repositories
             }
         }
         //Harmanocontract Gallery
+        //HomePage
+        public List<HomePageBLL> GetHome()
+        {
+            try
+            {
+                var lst = new List<HomePageBLL>();
+                SqlParameter[] p = new SqlParameter[0];
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetHomeImage_HrCnt", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<HomePageBLL>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public HomePageBLL GetHomeID(int id)
+        {
+            try
+            {
+                var _obj = new HomePageBLL();
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@id", id);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetHomeImageID_HrCnt", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        _obj = _dt.DataTableToList<HomePageBLL>().FirstOrDefault();
+                    }
+                }
+                return _obj;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public int InsertHome(HomePageBLL data)
+        {
+            try
+            {
+                int rtn = 0;
+                SqlParameter[] p = new SqlParameter[8];
+
+                p[0] = new SqlParameter("@Title", data.Title);
+                p[1] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
+                p[2] = new SqlParameter("@Description", data.Description);
+                p[3] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
+                p[4] = new SqlParameter("@ImagePath", data.ImagePath);
+                p[5] = new SqlParameter("@StatusID", data.StatusID);
+                p[6] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
+                p[7] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_insertHome_HrCnt", p);
+
+                return rtn;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public int UpdateHome(HomePageBLL data)
+        {
+            try
+            {
+                int rtn = 0;
+                SqlParameter[] p = new SqlParameter[8];
+
+                p[0] = new SqlParameter("@Title", data.Title);
+                p[1] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
+                p[2] = new SqlParameter("@Description", data.Description);
+                p[3] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
+                p[4] = new SqlParameter("@ImagePath", data.ImagePath);
+                p[5] = new SqlParameter("@StatusID", data.StatusID);
+                p[6] = new SqlParameter("@CompanyID", data.CompanyID);
+                p[7] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
+                p[8] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[9] = new SqlParameter("@HomePageID", data.HomePageID);
+
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateHome_HrCnt", p);
+
+                return rtn;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public int DeleteHome(HomePageBLL data)
+        {
+            try
+            {
+                int _obj = 0;
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@id", data.HomePageID);
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteHome_HrCnt", p);
+
+                return _obj;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        //HomePage
     }
 }

@@ -1,124 +1,120 @@
-//import { Component, OnInit, ViewChild } from '@angular/core';
-//import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-//import { ImageuploadComponent } from 'src/app/imageupload/imageupload.component';
-//import { Router, ActivatedRoute } from '@angular/router';
-//import { LocalStorageService } from 'src/app/_services/local-storage.service';
-//import { ToastService } from 'src/app/_services/toastservice';
-//import { hrrprservices } from 'src/app/_services/hrrprservices.service';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ImageuploadComponent } from 'src/app/imageupload/imageupload.component';
+import { Router, ActivatedRoute } from '@angular/router';
+import { LocalStorageService } from 'src/app/_services/local-storage.service';
+import { ToastService } from 'src/app/_services/toastservice';
+import { hrrprservices } from 'src/app/_services/hrrprservices.service';
 
-//@Component({
-//  selector: 'app-addservices',
-//  templateUrl: './addservices.component.html'
-//})
-//export class AddHRRepairServiceComponent implements OnInit {
+@Component({
+  selector: 'app-addservices',
+  templateUrl: './addservices.component.html',
+})
+export class AddServiceHrRprComponent implements OnInit {
 
 
-//  submitted = false;
-//  servicesForm: FormGroup;
+  submitted = false;
+  serviceForm: FormGroup;
 
-//  loading = false;
-//  loadingService = false;
-//  ButtonText = "Save"; selectedCityIds
-//  selectedSubCategoriesIds: string[];
-//  selectedLocationIds: string[];
-//  selectedgroupModifierIds: string[];
+  loading = false;
+  loadingGallery = false;
+  ButtonText = "Save"; selectedCityIds
+  selectedSubCategoriesIds: string[];
+  selectedLocationIds: string[];
+  selectedgroupModifierIds: string[];
 
-//  @ViewChild(ImageuploadComponent, { static: true }) imgComp;
-//  constructor(
-//    private formBuilder: FormBuilder,
-//    private router: Router,
-//    private route: ActivatedRoute,
-//    private ls: LocalStorageService,
-//    public ts: ToastService,
-//    private Service: hrrprservices
+  @ViewChild(ImageuploadComponent, { static: true }) imgComp;
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private route: ActivatedRoute,
+    private ls: LocalStorageService,
+    public ts: ToastService,
+    private galleryService: hrrprservices
 
-//  ) {
-//    this.createForm();
-//  }
+  ) {
+    this.createForm();
+  }
 
-//  ngOnInit() {
-//    this.setSelectedService();
-//  }
+  ngOnInit() {
+    this.setSelectedGallery();
+  }
 
-//  get f() { return this.servicesForm.controls; }
+  get f() { return this.serviceForm.controls; }
 
-//  private createForm() {
-//    this.servicesForm = this.formBuilder.group({
-//      title: ['', Validators.required],
-//      arabicTitle: ['', Validators.required],
-//      description: [''],
-//      arabicDescription: [''],
-//      statusID: [true],
-//      serviceID: 0,
-//      serviceImageID: 0,
-//      companyID: 0,
-//      imagePath: [''],
-//      imageIcon: [''],
-//    });
-//  }
+  private createForm() {
+    this.serviceForm = this.formBuilder.group({
+      title: ['', Validators.required],
+      arabicTitle: ['', Validators.required],
+      description: ['', Validators.required],
+      arabicDescription: ['', Validators.required],
+      statusID: [true],
+      serviceID: 0,
+      imagePath: [''],
+      displayOrder: [''],
+    });
+  }
 
-//  private editForm(obj) {
+  private editForm(obj) {
+    this.f.title.setValue(obj.title);
+    this.f.arabicTitle.setValue(obj.arabicTitle);
+    this.f.description.setValue(obj.description);
+    this.f.arabicDescription.setValue(obj.arabicDescription);
+    this.f.serviceID.setValue(obj.serviceID);
+    this.f.imagePath.setValue(obj.imagePath);
+    this.f.displayOrder.setValue(obj.displayOrder);
+    this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+    this.imgComp.imageUrl = obj.imagePath;
+  }
 
-//    this.f.title.setValue(obj.title);
-//    this.f.arabicTitle.setValue(obj.arabicTitle);
-//    this.f.serviceID.setValue(obj.serviceID);
-//    this.f.imagePath.setValue(obj.imagePath);
-//    this.f.imageIcon.setValue(obj.imageIcon);
-//    this.f.description.setValue(obj.description);
-//    this.f.arabicDescription.setValue(obj.arabicDescription);
-//    this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-//    this.imgComp.imageUrl = obj.imagePath;
-//  }
+  setSelectedGallery() {
+    this.route.paramMap.subscribe(param => {
+      const sid = +param.get('id');
+      if (sid) {
+        this.loadingGallery = true;
+        this.f.serviceID.setValue(sid);
+        this.galleryService.getById(sid).subscribe(res => {
+          //Set Forms
+          this.editForm(res);
+          this.loadingGallery = false;
+        });
+      }
+    })
+  }
 
-//  setSelectedService() {
-//    this.route.paramMap.subscribe(param => {
-//      const sid = +param.get('id');
-//      if (sid) {
-//        this.loadingService = true;
-//        this.f.ServiceID.setValue(sid);
-//        this.Service.getById(sid).subscribe(res => {
-//          //Set Forms
-//          this.editForm(res);
-//          this.loadingService = false;
-//        });
-//      }
-//    })
-//  }
+  onSubmit() {
+    this.serviceForm.markAllAsTouched();
+    this.submitted = true;
+    if (this.serviceForm.invalid) { return; }
+    this.loading = true;
+    this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
+    this.f.imagePath.setValue(this.imgComp.imageUrl);
 
-//  onSubmit() {
-//    debugger
-//    this.servicesForm.markAllAsTouched();
-//    this.submitted = true;
-//    if (this.servicesForm.invalid) { return; }
-//    this.loading = true;
-//    this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
-//    this.f.imagePath.setValue(this.imgComp.imageUrl);
+    if (parseInt(this.f.serviceID.value) === 0) {
+      //Insert category
+      this.galleryService.insert(this.serviceForm.value).subscribe(data => {
+        if (data != 0) {
+          this.ts.showSuccess("Success", "Record added successfully.")
+          this.router.navigate(['/admin/harmanorepair/service']);
+        }
+        this.loading = false;
+      }, error => {
+        this.ts.showError("Error", "Failed to insert record.")
+        this.loading = false;
+      });
 
-//    if (parseInt(this.f.serviceID.value) === 0) {
-//      //Insert category
-//      this.Service.insert(this.servicesForm.value).subscribe(data => {
-//        if (data != 0) {
-//          this.ts.showSuccess("Success", "Record added successfully.")
-//          this.router.navigate(['/admin/harmanorepair/service']);
-//        }
-//        this.loading = false;
-//      }, error => {
-//        this.ts.showError("Error", "Failed to insert record.")
-//        this.loading = false;
-//      });
-
-//    } else {
-//      //Update category
-//      this.Service.update(this.servicesForm.value).subscribe(data => {
-//        this.loading = false;
-//        if (data != 0) {
-//          this.ts.showSuccess("Success", "Record updated successfully.")
-//          this.router.navigate(['/admin/harmanorepair/service']);
-//        }
-//      }, error => {
-//        this.ts.showError("Error", "Failed to update record.")
-//        this.loading = false;
-//      });
-//    }
-//  }
-//}
+    } else {
+      //Update category
+      this.galleryService.update(this.serviceForm.value).subscribe(data => {
+        this.loading = false;
+        if (data != 0) {
+          this.ts.showSuccess("Success", "Record updated successfully.")
+          this.router.navigate(['/admin/harmanorepair/service']);
+        }
+      }, error => {
+        this.ts.showError("Error", "Failed to update record.")
+        this.loading = false;
+      });
+    }
+  }
+}

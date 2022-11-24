@@ -24,11 +24,14 @@ import { NgbdDatepickerRangePopup } from './datepicker-range/datepicker-range-po
 import { ExcelService } from 'src/ExportExcel/excel.service';
 import { newseventComponent } from './admin/planeragroup/newsevent/newsevent.component';
 import { AddnewseventComponent } from './admin/planeragroup/newsevent/addnewsevent/addnewsevent.component';
-import { serviceComponent } from '././admin/planeragroup/service/service.component';
-import { AddServiceComponent } from '././admin/planeragroup/service/add/addservices.component';
+import { PlnGrpServiceComponent } from '././admin/planeragroup/service/service.component';
+import { AddServicePlnGrpComponent } from '././admin/planeragroup/service/add/addservice.component';
 
 import { HrRprGalleryComponent } from './admin/harmanorepair/gallery/gallery.component';
 import { AddGalleryHrRprComponent } from './admin/harmanorepair/gallery/add/addgallery.component';
+
+import { HrRprServiceComponent } from './admin/harmanorepair/service/service.component';
+import { AddServiceHrRprComponent } from './admin/harmanorepair/service/add/addservices.component';
 
 import { HrCntGalleryComponent } from './admin/harmanocontract/gallery/gallery.component';
 import { AddGalleryHrCntComponent } from './admin/harmanocontract/gallery/add/addgallery.component';
@@ -36,17 +39,38 @@ import { AddGalleryHrCntComponent } from './admin/harmanocontract/gallery/add/ad
 import { GalleryComponent } from '././admin/planerainterior/gallery/gallery.component';
 import { AddGalleryComponent } from '././admin/planerainterior/gallery/add/addgallery.component';
 
+import { PlnIntServiceComponent } from '././admin/planerainterior/service/service.component';
+import { AddServicePlnIntComponent } from '././admin/planerainterior/service/add/addservice.component';
+
 import { ActBahGalleryComponent } from './admin/activarbahrain/gallery/gallery.component';
 import { AddGalleryActBahComponent } from './admin/activarbahrain/gallery/add/addgallery.component';
 
 import { ActBahServiceComponent } from './admin/activarbahrain/service/service.component';
 import { AddServiceActBahComponent } from './admin/activarbahrain/service/add/addservice.component';
 
+import { ActBahHomeComponent } from './admin/activarbahrain/homepage/home.component';
+import { AddHomeAcBahComponent } from './admin/activarbahrain/homepage/add/addhome.component';
+
 import { ActDubServiceComponent } from './admin/activardubai/service/service.component';
 import { AddServiceActDubComponent } from './admin/activardubai/service/add/addservice.component';
 
 import { ActDubGalleryComponent } from './admin/activardubai/gallery/gallery.component';
 import { AddGalleryActDubComponent } from './admin/activardubai/gallery/add/addgallery.component';
+
+import { HrCntServiceComponent } from '././admin/harmanocontract/service/service.component';
+import { AddServiceHrCntComponent } from '././admin/harmanocontract/service/add/addservice.component';
+
+import { PlnIntHomeComponent } from '././admin/planerainterior/homepage/home.component';
+import { AddHomePlnIntComponent } from '././admin/planerainterior/homepage/add/addhome.component';
+
+import { ActDubHomeComponent } from '././admin/activardubai/homepage/home.component';
+import { AddHomeAcDubComponent } from '././admin/activardubai/homepage/add/addhome.component';
+
+import { HrCntHomeComponent } from '././admin/harmanocontract/homepage/home.component';
+import { AddHomeHrCntComponent } from '././admin/harmanocontract/homepage/add/addhome.component';
+
+import { HrRprHomeComponent } from '././admin/harmanorepair/homepage/home.component';
+import { AddHomeHrRprComponent } from '././admin/harmanorepair/homepage/add/addhome.component';
 
 @NgModule({
   declarations: [
@@ -62,10 +86,7 @@ import { AddGalleryActDubComponent } from './admin/activardubai/gallery/add/addg
     NgbdDatepickerRangePopup,
     newseventComponent,
     AddnewseventComponent,
-    serviceComponent,
-    AddServiceComponent,
-    //HRRepairServiceComponent,
-    //AddHRRepairServiceComponent,
+    PlnGrpServiceComponent,
     HrRprGalleryComponent,
     AddGalleryHrRprComponent,
     GalleryComponent,
@@ -80,6 +101,23 @@ import { AddGalleryActDubComponent } from './admin/activardubai/gallery/add/addg
     AddServiceActBahComponent,
     ActDubServiceComponent,
     AddServiceActDubComponent,
+    PlnIntServiceComponent,
+    AddServicePlnIntComponent,
+    AddServiceHrCntComponent,
+    HrCntServiceComponent,
+    HrRprServiceComponent,
+    AddServiceHrRprComponent,
+    PlnIntHomeComponent,
+    AddHomePlnIntComponent,
+    ActBahHomeComponent,
+    AddHomeAcBahComponent,
+    ActDubHomeComponent,
+    AddHomeAcDubComponent,
+    HrCntHomeComponent,
+    AddHomeHrCntComponent,
+    HrRprHomeComponent,
+    AddHomeHrRprComponent
+
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -100,17 +138,33 @@ import { AddGalleryActDubComponent } from './admin/activardubai/gallery/add/addg
           { path: 'planeragroup/newsevent/add', component: AddnewseventComponent },
           { path: 'planeragroup/newsevent/edit/:id', component: AddnewseventComponent },
 
-          { path: 'planeragroup/service', component: serviceComponent },
-          { path: 'planeragroup/service/add', component: AddServiceComponent },
-          { path: 'planeragroup/service/edit/:id', component: AddServiceComponent },
+          { path: 'planeragroup/service', component: PlnGrpServiceComponent },
+          { path: 'planeragroup/service/add', component: AddServicePlnGrpComponent },
+          { path: 'planeragroup/service/edit/:id', component: AddServicePlnGrpComponent },
 
           { path: 'harmanorepair/gallery', component: HrRprGalleryComponent },
           { path: 'harmanorepair/gallery/add', component: AddGalleryHrRprComponent },
           { path: 'harmanorepair/gallery/edit/:id', component: AddGalleryHrRprComponent },
 
+          { path: 'harmanorepair/service', component: HrRprServiceComponent },
+          { path: 'harmanorepair/service/add', component: AddServiceHrRprComponent },
+          { path: 'harmanorepair/service/edit/:id', component: AddServiceHrRprComponent },
+
+          { path: 'harmanocontract/service', component: HrCntServiceComponent },
+          { path: 'harmanocontract/service/add', component: AddServiceHrCntComponent },
+          { path: 'harmanocontract/service/edit/:id', component: AddServiceHrCntComponent },
+
           { path: 'planerainterior/gallery', component: GalleryComponent },
           { path: 'planerainterior/gallery/add', component: AddGalleryComponent },
           { path: 'planerainterior/gallery/edit/:id', component: AddGalleryComponent },
+
+          { path: 'planerainterior/service', component: PlnIntServiceComponent },
+          { path: 'planerainterior/service/add', component: AddServicePlnIntComponent },
+          { path: 'planerainterior/service/edit/:id', component: AddServicePlnIntComponent },
+
+          { path: 'planerainterior/homepage', component: PlnIntHomeComponent },
+          { path: 'planerainterior/homepage/add', component: AddHomePlnIntComponent },
+          { path: 'planerainterior/homepage/edit/:id', component: AddHomePlnIntComponent },
 
           { path: 'activarbahrain/gallery', component: ActBahGalleryComponent },
           { path: 'activarbahrain/gallery/add', component: AddGalleryActBahComponent },
@@ -119,6 +173,10 @@ import { AddGalleryActDubComponent } from './admin/activardubai/gallery/add/addg
           { path: 'activarbahrain/service', component: ActBahServiceComponent },
           { path: 'activarbahrain/service/add', component: AddServiceActBahComponent },
           { path: 'activarbahrain/service/edit/:id', component: AddServiceActBahComponent },
+
+          { path: 'activarbahrain/homepage', component: ActBahHomeComponent },
+          { path: 'activarbahrain/homepage/add', component: AddHomeAcBahComponent },
+          { path: 'activarbahrain/homepage/edit/:id', component: AddHomeAcBahComponent },
 
           { path: 'activardubai/gallery', component: ActDubGalleryComponent },
           { path: 'activardubai/gallery/add', component: AddGalleryActDubComponent },
@@ -131,6 +189,18 @@ import { AddGalleryActDubComponent } from './admin/activardubai/gallery/add/addg
           { path: 'harmanocontract/gallery', component: HrCntGalleryComponent },
           { path: 'harmanocontract/gallery/add', component: AddGalleryHrCntComponent },
           { path: 'harmanocontract/gallery/edit/:id', component: AddGalleryHrCntComponent },
+
+          { path: 'activardubai/homepage', component: ActDubHomeComponent },
+          { path: 'activardubai/homepage/add', component: AddHomeAcDubComponent },
+          { path: 'activardubai/homepage/edit/:id', component: AddHomeAcDubComponent },
+
+          { path: 'harmanocontract/homepage', component: HrCntHomeComponent },
+          { path: 'harmanocontract/homepage/add', component: AddHomeHrCntComponent },
+          { path: 'harmanocontract/homepage/edit/:id', component: AddHomeHrCntComponent },
+
+          { path: 'harmanorepair/homepage', component: HrRprHomeComponent },
+          { path: 'harmanorepair/homepage/add', component: AddHomeHrRprComponent },
+          { path: 'harmanorepair/homepage/edit/:id', component: AddHomeHrRprComponent },
         ]
       }
     ]),

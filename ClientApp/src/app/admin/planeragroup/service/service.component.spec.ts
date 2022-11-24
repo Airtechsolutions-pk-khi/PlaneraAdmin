@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { serviceComponent } from './service.component';
+import { PlnGrpServiceComponent } from './service.component';
 
-describe('serviceComponent', () => {
-  let component: serviceComponent;
-  let fixture: ComponentFixture<serviceComponent>;
+describe('ActDubServiceComponent', () => {
+  let component: PlnGrpServiceComponent;
+  let fixture: ComponentFixture<PlnGrpServiceComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [serviceComponent ]
+      declarations: [PlnGrpServiceComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(serviceComponent);
+    fixture = TestBed.createComponent(PlnGrpServiceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

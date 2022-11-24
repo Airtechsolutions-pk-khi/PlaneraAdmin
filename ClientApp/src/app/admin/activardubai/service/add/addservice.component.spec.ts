@@ -1,21 +1,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { AddGalleryActBahComponent } from './addgallery.component';
+import { AddServiceActDubComponent } from './addservice.component';
 
 
 
 describe('AddcategoryComponent', () => {
-  let component: AddGalleryActBahComponent;
-  let fixture: ComponentFixture<AddGalleryActBahComponent>;
+  let component: AddServiceActDubComponent;
+  let fixture: ComponentFixture<AddServiceActDubComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AddGalleryActBahComponent ]
+      declarations: [AddServiceActDubComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddGalleryActBahComponent);
+    fixture = TestBed.createComponent(AddServiceActDubComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

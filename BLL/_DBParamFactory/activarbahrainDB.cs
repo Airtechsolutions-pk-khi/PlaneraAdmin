@@ -8,6 +8,7 @@ using System.Linq;
 using WebAPICode.Helpers;
 using static PlaneraAdmin._Models.GalleryViewModel;
 using static PlaneraAdmin._Models.ServiceViewModel;
+using static PlaneraAdmin._Models.HomeViewModel;
 
 namespace BAL.Repositories
 {
@@ -248,5 +249,118 @@ namespace BAL.Repositories
             }
         }
         //Service
+        //HomePage
+        public List<HomePageBLL> GetHome()
+        {
+            try
+            {
+                var lst = new List<HomePageBLL>();
+                SqlParameter[] p = new SqlParameter[0];
+
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetHomeImage_AcBah", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        lst = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<HomePageBLL>>();
+                    }
+                }
+                return lst;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public HomePageBLL GetHomeID(int id)
+        {
+            try
+            {
+                var _obj = new HomePageBLL();
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@id", id);
+                _dt = (new DBHelper().GetTableFromSP)("sp_GetHomeImageID_AcBah", p);
+                if (_dt != null)
+                {
+                    if (_dt.Rows.Count > 0)
+                    {
+                        _obj = _dt.DataTableToList<HomePageBLL>().FirstOrDefault();
+                    }
+                }
+                return _obj;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public int InsertHome(HomePageBLL data)
+        {
+            try
+            {
+                int rtn = 0;
+                SqlParameter[] p = new SqlParameter[8];
+
+                p[0] = new SqlParameter("@Title", data.Title);
+                p[1] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
+                p[2] = new SqlParameter("@Description", data.Description);
+                p[3] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
+                p[4] = new SqlParameter("@ImagePath", data.ImagePath);
+                p[5] = new SqlParameter("@StatusID", data.StatusID);
+                p[6] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
+                p[7] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_insertHome_AcBah", p);
+
+                return rtn;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public int UpdateHome(HomePageBLL data)
+        {
+            try
+            {
+                int rtn = 0;
+                SqlParameter[] p = new SqlParameter[8];
+
+                p[0] = new SqlParameter("@Title", data.Title);
+                p[1] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
+                p[2] = new SqlParameter("@Description", data.Description);
+                p[3] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
+                p[4] = new SqlParameter("@ImagePath", data.ImagePath);
+                p[5] = new SqlParameter("@StatusID", data.StatusID);
+                p[6] = new SqlParameter("@CompanyID", data.CompanyID);
+                p[7] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
+                p[8] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[9] = new SqlParameter("@HomePageID", data.HomePageID);
+
+                rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateHome_AcBah", p);
+
+                return rtn;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public int DeleteHome(HomePageBLL data)
+        {
+            try
+            {
+                int _obj = 0;
+                SqlParameter[] p = new SqlParameter[1];
+                p[0] = new SqlParameter("@id", data.HomePageID);
+                _obj = (new DBHelper().ExecuteNonQueryReturn)("sp_DeleteHome_AcBah", p);
+
+                return _obj;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        //HomePage
     }
 }

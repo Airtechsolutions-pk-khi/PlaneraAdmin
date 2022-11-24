@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using static PlaneraAdmin._Models.GalleryViewModel;
 using static PlaneraAdmin._Models.ServiceViewModel;
+using static PlaneraAdmin._Models.HomeViewModel;
 
 namespace PlaneraAdmin.BLL._Services
 {
@@ -154,6 +155,74 @@ namespace PlaneraAdmin.BLL._Services
             }
         }
         //Service
+        //HomePage
+        public List<HomePageBLL> GetHome()
+        {
+            try
+            {
+                return _service.GetHome();
+            }
+            catch (Exception ex)
+            {
+                return new List<HomePageBLL>();
+            }
+        }
+        public HomePageBLL GetHomeID(int id)
+        {
+            try
+            {
+                return _service.GetHomeID(id);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public int DeleteHome(HomePageBLL data)
+        {
+            try
+            {
+
+                var result = _service.DeleteHome(data);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public int InsertHome(HomePageBLL data, IWebHostEnvironment _env)
+        {
+            try
+            {
+                data.ImagePath = UploadImage(data.ImagePath, "HomePage", _env);
+                data.LastUpdatedDate = _UTCDateTime_SA();
+                var result = _service.InsertHome(data);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public int UpdateHome(HomePageBLL data, IWebHostEnvironment _env)
+        {
+            try
+            {
+                data.ImagePath = UploadImage(data.ImagePath, "Service", _env);
+                data.LastUpdatedDate = _UTCDateTime_SA();
+                var result = _service.UpdateHome(data);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        //HomePage
     }
 }
 

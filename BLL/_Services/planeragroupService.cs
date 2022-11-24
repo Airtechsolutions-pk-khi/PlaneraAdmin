@@ -7,6 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using static PlaneraAdmin._Models.PlaneraGroupViewModel;
+using static PlaneraAdmin._Models.ServiceViewModel;
 
 namespace PlaneraAdmin.BLL._Services
 {
@@ -17,7 +18,7 @@ namespace PlaneraAdmin.BLL._Services
         {
             _service = new planeragroupDB();
         }
-
+        //NewsAlert
         public List<NewsEventBLL> GetAll()
         {
             try
@@ -40,17 +41,6 @@ namespace PlaneraAdmin.BLL._Services
                 return null;
             }
         }
-        public List<ServiceBLL> GetService()
-        {
-            try
-            {
-                return _service.GetService();
-            }
-            catch (Exception ex)
-            {
-                return new List<ServiceBLL>();
-            }
-        }
         public int Insert(NewsEventBLL data, IWebHostEnvironment _env)
         {
             try
@@ -66,22 +56,6 @@ namespace PlaneraAdmin.BLL._Services
                 return 0;
             }
         }
-        public int InsertService(ServiceBLL data, IWebHostEnvironment _env)
-        {
-            try
-            {
-                //data.ImagePath = UploadImage(data.ImagePath, "Service", _env);
-                data.LastUpdatedDate = _UTCDateTime_SA();
-                var result = _service.InsertService(data);
-
-                return result;
-            }
-            catch (Exception ex)
-            {
-                return 0;
-            }
-        }
-
         public int Update(NewsEventBLL data, IWebHostEnvironment _env)
         {
             try
@@ -89,22 +63,6 @@ namespace PlaneraAdmin.BLL._Services
                 data.Image = UploadImage(data.Image, "NewsAlert", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Update(data);
-
-                return result;
-            }
-            catch (Exception ex)
-            {
-                return 0;
-            }
-        }
-
-        public int UpdateService(ServiceBLL data, IWebHostEnvironment _env)
-        {
-            try
-            {
-                //data.Image = UploadImage(data.Image, "NewsEvent", _env);
-
-                var result = _service.UpdateService(data);
 
                 return result;
             }
@@ -127,6 +85,60 @@ namespace PlaneraAdmin.BLL._Services
                 return 0;
             }
         }
+        //NewsAlert
+        //Service
+        public List<ServiceBLL> GetService()
+        {
+            try
+            {
+                return _service.GetService();
+            }
+            catch (Exception ex)
+            {
+                return new List<ServiceBLL>();
+            }
+        }
+        public ServiceBLL GetService(int id)
+        {
+            try
+            {
+                return _service.GetService(id);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public int InsertService(ServiceBLL data, IWebHostEnvironment _env)
+        {
+            try
+            {
+                //data.ImagePath = UploadImage(data.ImagePath, "Service", _env);
+                data.LastUpdatedDate = _UTCDateTime_SA();
+                var result = _service.InsertService(data);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+        public int UpdateService(ServiceBLL data, IWebHostEnvironment _env)
+        {
+            try
+            {
+                //data.Image = UploadImage(data.Image, "NewsEvent", _env);
+
+                var result = _service.UpdateService(data);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
         public int DeleteService(ServiceBLL data)
         {
             try
@@ -141,6 +153,6 @@ namespace PlaneraAdmin.BLL._Services
                 return 0;
             }
         }
-
+        //Service
     }
 }
