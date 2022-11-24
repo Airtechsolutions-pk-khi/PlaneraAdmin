@@ -128,6 +128,7 @@ namespace PlaneraAdmin.BLL._Services
             try
             {
                 data.ImagePath = UploadImage(data.ImagePath, "Service", _env);
+                data.IconImage = UploadImage(data.IconImage, "ServiceIcon", _env);
                 data.LastUpdatedDate = _UTCDateTime_SA();
                 var result = _service.Insert(data);
 

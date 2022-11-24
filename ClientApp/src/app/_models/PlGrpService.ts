@@ -8,4 +8,5 @@ export class Service {
   statusID: number;
   displayOrder: number;
   imagePath: string;
+  iconImage: string;
 }

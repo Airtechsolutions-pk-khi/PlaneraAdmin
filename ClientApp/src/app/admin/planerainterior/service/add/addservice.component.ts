@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, forwardRef } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ImageuploadComponent } from 'src/app/imageupload/imageupload.component';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -23,7 +23,7 @@ export class AddServicePlnIntComponent implements OnInit {
   selectedLocationIds: string[];
   selectedgroupModifierIds: string[];
 
-  @ViewChild(ImageuploadComponent, { static: true }) imgComp;
+  @ViewChild(ImageuploadComponent, { static: true }) imgComp; image
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
@@ -51,6 +51,7 @@ export class AddServicePlnIntComponent implements OnInit {
       statusID: [true],       
       serviceID: 0,
       imagePath: [''],
+      iconImage: [''],
       displayOrder: [''],
     });
   }
@@ -62,9 +63,11 @@ export class AddServicePlnIntComponent implements OnInit {
     this.f.arabicDescription.setValue(obj.arabicDescription);
     this.f.serviceID.setValue(obj.serviceID);
     this.f.imagePath.setValue(obj.imagePath);
+    this.f.iconImage.setValue(obj.iconImage);
     this.f.displayOrder.setValue(obj.displayOrder);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.imgComp.imageUrl = obj.imagePath;
+    this.image.imageUrl = obj.iconImage;
   }
 
   setSelectedGallery() {
@@ -89,6 +92,7 @@ export class AddServicePlnIntComponent implements OnInit {
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
     this.f.imagePath.setValue(this.imgComp.imageUrl);
+    this.f.iconImage.setValue(this.image.imageUrl);
 
     if (parseInt(this.f.serviceID.value) === 0) {
       //Insert category
