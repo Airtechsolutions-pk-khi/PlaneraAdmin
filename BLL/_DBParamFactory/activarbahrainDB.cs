@@ -210,7 +210,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[8];
+                SqlParameter[] p = new SqlParameter[10];
 
                 p[0] = new SqlParameter("@Title", data.Title);
                 p[1] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
@@ -323,7 +323,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[8];
+                SqlParameter[] p = new SqlParameter[10];
 
                 p[0] = new SqlParameter("@Title", data.Title);
                 p[1] = new SqlParameter("@ArabicTitle", data.ArabicTitle);

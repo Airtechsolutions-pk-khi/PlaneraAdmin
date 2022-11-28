@@ -67,6 +67,7 @@ export class PlnGrpServiceService {
     return this._allData$.asObservable();
   }
   getById(id) {
+    debugger
     return this.http.get<Service[]>(`api/planeragroup/service/${id}`);
   }
 
