@@ -30,11 +30,11 @@ namespace PlaneraAdmin.BLL._Services
                 return new List<NewsEventBLL>();
             }
         }
-        public NewsEventBLL Get(int id)
+        public NewsEventBLL Getnews(int id)
         {
             try
             {
-                return _service.Get(id);
+                return _service.Getnews(id);
             }
             catch (Exception ex)
             {

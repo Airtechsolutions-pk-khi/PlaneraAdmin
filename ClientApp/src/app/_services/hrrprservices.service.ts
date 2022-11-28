@@ -71,8 +71,7 @@ export class hrrprservices {
   
 
   getById(id) {
-    debugger
-    return this.http.get<Service[]>(`api/harmanorepair/${id}`);
+    return this.http.get<Service[]>(`api/harmanorepair/service/${id}`);
   }
 
   ExportList() {

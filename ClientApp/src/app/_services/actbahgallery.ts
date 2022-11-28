@@ -67,7 +67,7 @@ export class ActBahGalleryService {
     return this._allData$.asObservable();
   }
   getById(id) {
-    return this.http.get<Gallery[]>(`api/activarbahrain/${id}`);
+    return this.http.get<Gallery[]>(`api/activarbahrain/gallery/${id}`);
   }
 
   ExportList() {

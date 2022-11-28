@@ -67,7 +67,7 @@ export class ActDubGalleryService {
     return this._allData$.asObservable();
   }
   getById(id) {
-    return this.http.get<Gallery[]>(`api/activardubai/${id}`);
+    return this.http.get<Gallery[]>(`api/activardubai/gallery/${id}`);
   }
 
   ExportList() {

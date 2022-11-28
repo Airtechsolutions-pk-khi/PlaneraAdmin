@@ -67,7 +67,7 @@ export class ActDubServiceService {
     return this._allData$.asObservable();
   }
   getById(id) {
-    return this.http.get<Service[]>(`api/activardubai/${id}`);
+    return this.http.get<Service[]>(`api/activardubai/service/${id}`);
   }
 
   ExportList() {

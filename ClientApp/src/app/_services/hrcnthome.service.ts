@@ -66,8 +66,8 @@ export class HrCntHomePageService {
   get allData$() {
     return this._allData$.asObservable();
   }
-  getById(gethomeid) {
-    return this.http.get<HomePage[]>(`api/harmanocontract/${gethomeid}`);
+  getById(id) {
+    return this.http.get<HomePage[]>(`api/harmanocontract/home/${id}`);
   }
 
   ExportList() {

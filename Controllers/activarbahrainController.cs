@@ -28,7 +28,7 @@ namespace PlaneraAdmin.Controllers
         {
             return _service.GetGallery();
         }
-        [HttpGet("{id}")]
+        [HttpGet("gallery/{id}")]
         public GalleryImageBLL Get(int id)
         {
             return _service.Get(id);
@@ -58,7 +58,7 @@ namespace PlaneraAdmin.Controllers
         {
             return _service.GetService();
         }
-        [HttpGet("{getid}")]
+        [HttpGet("service/{id}")]
         public ServiceBLL GetService(int id)
         {
             return _service.GetService(id);
@@ -88,7 +88,7 @@ namespace PlaneraAdmin.Controllers
         {
             return _service.GetHome();
         }
-        [HttpGet("{gethomeid}")]
+        [HttpGet("home/{id}")]
         public HomePageBLL GetHomeID(int id)
         {
             return _service.GetHomeID(id);

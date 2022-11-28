@@ -66,8 +66,8 @@ export class ActBahHomePageService {
   get allData$() {
     return this._allData$.asObservable();
   }
-  getById(gethomeid) {
-    return this.http.get<HomePage[]>(`api/activarbahrain/${gethomeid}`);
+  getById(id) {
+    return this.http.get<HomePage[]>(`api/activarbahrain/home/${id}`);
   }
 
   ExportList() {

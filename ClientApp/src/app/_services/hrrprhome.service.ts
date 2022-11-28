@@ -66,8 +66,8 @@ export class HrRprHomePageService {
   get allData$() {
     return this._allData$.asObservable();
   }
-  getById(gethomeid) {
-    return this.http.get<HomePage[]>(`api/harmanorepair/${gethomeid}`);
+  getById(id) {
+    return this.http.get<HomePage[]>(`api/harmanorepair/home/${id}`);
   }
 
   ExportList() {

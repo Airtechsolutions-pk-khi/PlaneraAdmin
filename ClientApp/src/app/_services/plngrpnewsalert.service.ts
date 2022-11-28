@@ -67,7 +67,7 @@ export class PlnGrpNewAlertService {
     return this._allData$.asObservable();
   }
   getById(id) {
-    return this.http.get<NewsEvent[]>(`api/planeragroup/${id}`);
+    return this.http.get<NewsEvent[]>(`api/planeragroup/news/${id}`);
   }
 
   ExportList() {

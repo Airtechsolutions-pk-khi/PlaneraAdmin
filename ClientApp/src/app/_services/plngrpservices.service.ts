@@ -66,9 +66,8 @@ export class PlnGrpServiceService {
   get allData$() {
     return this._allData$.asObservable();
   }
-  getById(getid) {
-    debugger
-    return this.http.get<Service[]>(`api/planeragroup/${getid}`);
+  getById(id) {
+    return this.http.get<Service[]>(`api/planeragroup/service/${id}`);
   }
 
   ExportList() {

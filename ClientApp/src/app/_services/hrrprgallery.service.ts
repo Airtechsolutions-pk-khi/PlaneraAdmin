@@ -67,7 +67,7 @@ export class HrRprGalleryService {
     return this._allData$.asObservable();
   }
   getById(id) {
-    return this.http.get<Gallery[]>(`api/harmanorepair/${id}`);
+    return this.http.get<Gallery[]>(`api/harmanorepair/gallery/${id}`);
   }
 
   ExportList() {

@@ -52,14 +52,13 @@ export class AddGalleryHrCntComponent implements OnInit {
       displayOrder: [''],
     });
   }
-
   private editForm(obj) {
     this.f.title.setValue(obj.title);
     this.f.arabicTitle.setValue(obj.arabicTitle);
     this.f.galleryID.setValue(obj.galleryID);
     this.f.imagePath.setValue(obj.imagePath);
     this.f.displayOrder.setValue(obj.displayOrder);
-    this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+    this.f.statusID.setValue(obj.statusID == 1 ? true : false);
     this.imgComp.imageUrl = obj.imagePath;
   }
 
@@ -90,12 +89,12 @@ export class AddGalleryHrCntComponent implements OnInit {
       //Insert category
       this.galleryService.insert(this.galleryForm.value).subscribe(data => {
         if (data != 0) {
-          this.ts.showSuccess("Success","Record added successfully.")
+          this.ts.showSuccess("Success", "Record added successfully.")
           this.router.navigate(['/admin/harmanocontract/gallery']);
         }
         this.loading = false;
       }, error => {
-        this.ts.showError("Error","Failed to insert record.")
+        this.ts.showError("Error", "Failed to insert record.")
         this.loading = false;
       });
 
@@ -104,11 +103,11 @@ export class AddGalleryHrCntComponent implements OnInit {
       this.galleryService.update(this.galleryForm.value).subscribe(data => {
         this.loading = false;
         if (data != 0) {
-          this.ts.showSuccess("Success","Record updated successfully.")
+          this.ts.showSuccess("Success", "Record updated successfully.")
           this.router.navigate(['/admin/harmanocontract/gallery']);
         }
       }, error => {
-        this.ts.showError("Error","Failed to update record.")
+        this.ts.showError("Error", "Failed to update record.")
         this.loading = false;
       });
     }

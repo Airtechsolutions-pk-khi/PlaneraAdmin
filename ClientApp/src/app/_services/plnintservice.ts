@@ -66,8 +66,8 @@ export class PlnIntServiceService {
   get allData$() {
     return this._allData$.asObservable();
   }
-  getById(getid) {
-    return this.http.get<Service[]>(`api/planerainterior/${getid}`);
+  getById(id) {
+    return this.http.get<Service[]>(`api/planerainterior/home/${id}`);
   }
 
   ExportList() {

@@ -66,8 +66,8 @@ export class ActDubHomePageService {
   get allData$() {
     return this._allData$.asObservable();
   }
-  getById(gethomeid) {
-    return this.http.get<HomePage[]>(`api/activardubai/${gethomeid}`);
+  getById(id) {
+    return this.http.get<HomePage[]>(`api/activardubai/home/${id}`);
   }
 
   ExportList() {

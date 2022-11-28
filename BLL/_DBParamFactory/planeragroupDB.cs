@@ -53,7 +53,7 @@ namespace BAL.Repositories
                 return null;
             }
         }
-        public NewsEventBLL Get(int id)
+        public NewsEventBLL Getnews(int id)
         {
             try
             {

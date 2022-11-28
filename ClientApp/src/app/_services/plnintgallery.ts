@@ -67,7 +67,7 @@ export class PlnIntGalleryService {
     return this._allData$.asObservable();
   }
   getById(id) {
-    return this.http.get<Gallery[]>(`api/planerainterior/${id}`);
+    return this.http.get<Gallery[]>(`api/planerainterior/gallery/${id}`);
   }
 
   ExportList() {

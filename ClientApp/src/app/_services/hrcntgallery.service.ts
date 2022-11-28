@@ -67,7 +67,7 @@ export class HrCntGalleryService {
     return this._allData$.asObservable();
   }
   getById(id) {
-    return this.http.get<Gallery[]>(`api/harmanocontract/${id}`);
+    return this.http.get<Gallery[]>(`api/harmanocontract/gallery/${id}`);
   }
 
   ExportList() {

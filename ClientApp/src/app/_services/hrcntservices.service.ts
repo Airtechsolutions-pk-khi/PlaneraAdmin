@@ -67,7 +67,7 @@ export class HrCntServiceService {
     return this._allData$.asObservable();
   }
   getById(id) {
-    return this.http.get<Service[]>(`api/harmanocontract/${id}`);
+    return this.http.get<Service[]>(`api/harmanocontract/service/${id}`);
   }
 
   ExportList() {

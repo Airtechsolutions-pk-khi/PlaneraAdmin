@@ -27,10 +27,10 @@ namespace PlaneraAdmin.Controllers
         {
             return _service.GetAll();
         }
-        [HttpGet("{id}")]
-        public NewsEventBLL Get(int id)
+        [HttpGet("news/{id}")]
+        public NewsEventBLL Getnews(int id)
         {
-            return _service.Get(id);
+            return _service.Getnews(id);
         }
         [HttpPost]
         [Route("insert")]
@@ -57,7 +57,7 @@ namespace PlaneraAdmin.Controllers
         {
             return _service.GetService();
         }
-        [HttpGet("{getid}")]
+        [HttpGet("service/{id}")]
         public ServiceBLL GetId(int id)
         {
             return _service.GetService(id);

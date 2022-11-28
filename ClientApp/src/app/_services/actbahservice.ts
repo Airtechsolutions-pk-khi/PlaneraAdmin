@@ -67,7 +67,7 @@ export class ActBahServiceService {
     return this._allData$.asObservable();
   }
   getById(id) {
-    return this.http.get<Service[]>(`api/activarbahrain/${id}`);
+    return this.http.get<Service[]>(`api/activarbahrain/service/${id}`);
   }
 
   ExportList() {
