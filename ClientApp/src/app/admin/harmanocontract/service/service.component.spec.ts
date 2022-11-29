@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PlnIntServiceComponent } from './service.component';
+import { HrCntServiceComponent } from './service.component';
 
 describe('PlnIntServiceComponent', () => {
-  let component: PlnIntServiceComponent;
-  let fixture: ComponentFixture<PlnIntServiceComponent>;
+  let component: HrCntServiceComponent;
+  let fixture: ComponentFixture<HrCntServiceComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [PlnIntServiceComponent]
+      declarations: [HrCntServiceComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PlnIntServiceComponent);
+    fixture = TestBed.createComponent(HrCntServiceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

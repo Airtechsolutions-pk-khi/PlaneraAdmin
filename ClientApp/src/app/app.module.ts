@@ -24,8 +24,8 @@ import { NgbdDatepickerRangePopup } from './datepicker-range/datepicker-range-po
 import { ExcelService } from 'src/ExportExcel/excel.service';
 import { newseventComponent } from './admin/planeragroup/newsevent/newsevent.component';
 import { AddnewseventComponent } from './admin/planeragroup/newsevent/addnewsevent/addnewsevent.component';
-import { PlnGrpServiceComponent } from '././admin/planeragroup/service/service.component';
-import { AddServicePlnGrpComponent } from '././admin/planeragroup/service/add/addservice.component';
+//import { PlnGrpServiceComponent } from '././admin/planeragroup/service/service.component';
+//import { AddServicePlnGrpComponent } from '././admin/planeragroup/service/add/addservice.component';
 
 import { HrRprGalleryComponent } from './admin/harmanorepair/gallery/gallery.component';
 import { AddGalleryHrRprComponent } from './admin/harmanorepair/gallery/add/addgallery.component';
@@ -86,7 +86,7 @@ import { AddHomeHrRprComponent } from '././admin/harmanorepair/homepage/add/addh
     NgbdDatepickerRangePopup,
     newseventComponent,
     AddnewseventComponent,
-    PlnGrpServiceComponent,
+    //PlnGrpServiceComponent,
     HrRprGalleryComponent,
     AddGalleryHrRprComponent,
     GalleryComponent,
@@ -138,9 +138,9 @@ import { AddHomeHrRprComponent } from '././admin/harmanorepair/homepage/add/addh
           { path: 'planeragroup/newsevent/add', component: AddnewseventComponent },
           { path: 'planeragroup/newsevent/edit/:id', component: AddnewseventComponent },
 
-          { path: 'planeragroup/service', component: PlnGrpServiceComponent },
-          { path: 'planeragroup/service/add', component: AddServicePlnGrpComponent },
-          { path: 'planeragroup/service/edit/:id', component: AddServicePlnGrpComponent },
+          //{ path: 'planeragroup/service', component: PlnGrpServiceComponent },
+          //{ path: 'planeragroup/service/add', component: AddServicePlnGrpComponent },
+          //{ path: 'planeragroup/service/edit/:id', component: AddServicePlnGrpComponent },
 
           { path: 'harmanorepair/gallery', component: HrRprGalleryComponent },
           { path: 'harmanorepair/gallery/add', component: AddGalleryHrRprComponent },
