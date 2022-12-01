@@ -44,8 +44,8 @@
                 <tbody>
                     <tr *ngFor="let item of data$ | async ">
                         <td>
-                            <img *ngIf="item.image !== ''" [src]="item.image" class="table-img" alt="" />
-                            <div *ngIf="item.image === ''" class="image-replace"></div>
+                            <img *ngIf="item.imagePath !== ''" [src]="item.imagePath" class="table-img" alt="" />
+                            <div *ngIf="item.imagePath === ''" class="image-replace"></div>
                         </td>
                         <td> {{item.title}} </td>
                         <td> {{item.arabicTitle}} </td>                        

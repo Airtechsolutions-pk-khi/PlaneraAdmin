@@ -51,7 +51,7 @@ export class AddServicePlnIntComponent implements OnInit {
       statusID: [true],       
       serviceID: 0,
       imagePath: [''],
-      iconImage: [''],
+      //iconImage: [''],
       displayOrder: [''],
     });
   }
@@ -63,11 +63,11 @@ export class AddServicePlnIntComponent implements OnInit {
     this.f.arabicDescription.setValue(obj.arabicDescription);
     this.f.serviceID.setValue(obj.serviceID);
     this.f.imagePath.setValue(obj.imagePath);
-    this.f.iconImage.setValue(obj.iconImage);
+    //this.f.iconImage.setValue(obj.iconImage);
     this.f.displayOrder.setValue(obj.displayOrder);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
-    this.imgComp.imageUrl = obj.imagePath;
-    this.image.imageUrl = obj.iconImage;
+    this.imgComp.imageUrl = obj.image;
+    //this.image.imageUrl = obj.iconImage;
   }
 
   setSelectedGallery() {
@@ -92,7 +92,7 @@ export class AddServicePlnIntComponent implements OnInit {
     this.loading = true;
     this.f.statusID.setValue(this.f.statusID.value === true ? 1 : 2);
     this.f.imagePath.setValue(this.imgComp.imageUrl);
-    this.f.iconImage.setValue(this.image.imageUrl);
+    //this.f.iconImage.setValue(this.image.imageUrl);
 
     if (parseInt(this.f.serviceID.value) === 0) {
       //Insert category

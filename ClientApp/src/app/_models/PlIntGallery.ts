@@ -7,4 +7,5 @@ export class Gallery {
   imagePath: string;
   statusID: number;
   displayOrder: number;
+  category: string;
 }

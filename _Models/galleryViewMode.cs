@@ -9,13 +9,13 @@ namespace PlaneraAdmin._Models
     {
         public class GalleryImageBLL
         {
-            public Nullable<int> GroupID { get; set; }
             public int GalleryID { get; set; }
             public int CompanyID { get; set; }
             public string Title { get; set; }
             public string ArabicTitle { get; set; }
             public string ImagePath { get; set; }
             public int DisplayOrder { get; set; }
+            public string Category { get; set; }
             public Nullable<int> StatusID { get; set; }
             public Nullable<DateTime> LastUpdatedDate { get; set; }
         }
