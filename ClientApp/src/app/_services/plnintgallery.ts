@@ -133,7 +133,6 @@ export class PlnIntGalleryService {
     };
   }
   insert(data) {
-    debugger
     return this.http.post(`api/planerainterior/insert`, data)
       .pipe(map(res => {
         
@@ -151,8 +150,6 @@ export class PlnIntGalleryService {
   }
  
   delete(deleteData) {
-    debugger
-    return this.http.post(`api/planerainterior/deletenews`, deleteData);
+    return this.http.post(`api/planerainterior/delete`, deleteData);
   }
-
 }

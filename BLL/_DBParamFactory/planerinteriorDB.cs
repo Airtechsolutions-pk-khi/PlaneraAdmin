@@ -119,7 +119,7 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[8];
+                SqlParameter[] p = new SqlParameter[9];
 
                 p[0] = new SqlParameter("@Title", data.Title);
                 p[1] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
@@ -127,8 +127,9 @@ namespace BAL.Repositories
                 p[3] = new SqlParameter("@StatusID", data.StatusID);
                 p[4] = new SqlParameter("@CompanyID", data.CompanyID);
                 p[5] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
-                p[6] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                p[7] = new SqlParameter("@GalleryID", data.GalleryID);
+                p[6] = new SqlParameter("@Category", data.Category);
+                p[7] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[8] = new SqlParameter("@GalleryID", data.GalleryID);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateGallery_PlnInt", p);
 

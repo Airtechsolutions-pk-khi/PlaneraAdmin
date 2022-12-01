@@ -93,7 +93,7 @@ export class AddGalleryComponent implements OnInit {
       this.galleryService.insert(this.galleryForm.value).subscribe(data => {
         if (data != 0) {
           this.ts.showSuccess("Success","Record added successfully.")
-          this.router.navigate(['/admin/planerinterior/gallery']);
+          this.router.navigate(['/admin/planerainterior/gallery']);
         }
         this.loading = false;
       }, error => {
