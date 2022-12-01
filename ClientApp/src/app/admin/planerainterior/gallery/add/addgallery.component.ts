@@ -20,7 +20,7 @@ export class AddGalleryComponent implements OnInit {
   loadingGallery = false;
   ButtonText = "Save"; selectedCityIds
   selectedSubCategoriesIds: string[];
-  selectedLocationIds: string[];
+ 
   selectedgroupModifierIds: string[];
 
   @ViewChild(ImageuploadComponent, { static: true }) imgComp;
@@ -50,7 +50,7 @@ export class AddGalleryComponent implements OnInit {
       galleryID: 0,
       imagePath: [''],
       displayOrder: [''],
-      category: ['', Validators.required],
+      category: [''],
     });
   }
 

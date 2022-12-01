@@ -27,14 +27,17 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.invalid) {
       return;
     }
-    this.service.login(this.f.username.value, this.f.password.value)    
+
+
+    this.service.login(this.f.username.value, this.f.password.value)
+
       .pipe(first())
       .subscribe(
         data => {
-          
+
           if (data != null) {
-            this.loadLocations();
-            //this.ls.setSelectedBrand(data);           
+            this.router.navigate(["/admin/dashboard"]);
+
           }
           else {
             this.ts.showError("Error", "Username or password is not correct.");
@@ -43,7 +46,7 @@ export class LoginComponent implements OnInit {
         },
         error => {
           this.ts.showError("Error", "Something went wrong.");
-        });  
+        });
   }
 
   get f() { return this.loginForm.controls; }
@@ -56,21 +59,4 @@ export class LoginComponent implements OnInit {
 
     });
   }
-  private loadLocations() {
-    this.router.navigate(["/admin/dashboard"]);
-    // this.service.getAllLocations(bid).subscribe((res: any) => {
-      
-    //   if(res.length>0){
-    //     this.ls.setLocation(res);
-    //     this.ls.setSelectedLocation(res[0]);
-    //     this.router.navigate(["/admin/dashboard"]);
-    //   }
-    //   else{
-    //     this.ls.setLocation(null);
-    //     this.ls.setSelectedLocation(null);
-    //   }
-    // });
-  }
-
- 
 }

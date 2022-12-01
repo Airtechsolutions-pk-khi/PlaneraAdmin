@@ -133,7 +133,6 @@ export class HrRprGalleryService {
     };
   }
   insert(data) {
-    debugger
     return this.http.post(`api/harmanorepair/insert`, data)
       .pipe(map(res => {
 

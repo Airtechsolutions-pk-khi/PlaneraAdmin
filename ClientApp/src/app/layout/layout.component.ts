@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment.prod';
 // import { DashboardService } from '../services/dashboard.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
-/*import { LocationsService } from '../_services/locations.service';*/
+//import { LocationsService } from '../_services/locations.service';
 import { LocalStorageService } from '../_services/local-storage.service';
 
 @Component({
@@ -19,24 +19,24 @@ export class LayoutComponent implements OnInit {
   _Langname = "";
   branchname = "";
   email = "";
-  locationID: 0;
-  Locations: [];
+  //locationID: 0;
+  //Locations: [];
   private selectedBrand;
 
   ngOnInit() {
     var data = this.ls.getSelectedBrand();
 
-    this.loadLocations();
+    //this.loadLocations();
 
 
-    if (data == null)
-      this.router.navigate(["/"]);
+    // if (data == null)
+    //   this.router.navigate(["/"]);
 
   }
   constructor(private router: Router
-/*    , public service: LocationsService*/
+    //, public service: LocationsService
     , public ls: LocalStorageService) {
-    //this.branchname = this.ls.getSelectedBrand().userName;
+    //this.branchname = this.ls.getSelectedBrand().name;
     //this.email = this.ls.getSelectedBrand().email;
   }
   Logout() {
@@ -65,12 +65,12 @@ export class LayoutComponent implements OnInit {
     //     }
     //   });
     // }
-    this.Locations = this.ls.getLocation();
-    this.locationID = this.ls.getSelectedLocation().locationID;
+    //this.Locations = this.ls.getLocation();
+    //this.locationID = this.ls.getSelectedLocation().locationID;
 
   }
   changeloc(LocObj) {
 
-    this.locationID = this.ls.selectedLocation().locationID;
+    //this.locationID = this.ls.selectedLocation().locationID;
   }
 }
