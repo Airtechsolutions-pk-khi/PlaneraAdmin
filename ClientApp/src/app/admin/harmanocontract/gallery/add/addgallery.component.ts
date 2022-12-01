@@ -45,20 +45,23 @@ export class AddGalleryHrCntComponent implements OnInit {
   private createForm() {
     this.galleryForm = this.formBuilder.group({
       title: ['', Validators.required],
-      arabicTitle: ['', Validators.required],
-      statusID: [true],       
+      arabicTitle: [''],
+      statusID: [true],
       galleryID: 0,
       imagePath: [''],
       displayOrder: [''],
+      category: ['', Validators.required],
     });
   }
+
   private editForm(obj) {
     this.f.title.setValue(obj.title);
     this.f.arabicTitle.setValue(obj.arabicTitle);
     this.f.galleryID.setValue(obj.galleryID);
     this.f.imagePath.setValue(obj.imagePath);
     this.f.displayOrder.setValue(obj.displayOrder);
-    this.f.statusID.setValue(obj.statusID == 1 ? true : false);
+    this.f.category.setValue(obj.category);
+    this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.imgComp.imageUrl = obj.imagePath;
   }
 

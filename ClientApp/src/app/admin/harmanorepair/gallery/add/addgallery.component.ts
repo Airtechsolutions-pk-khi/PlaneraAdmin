@@ -45,11 +45,12 @@ export class AddGalleryHrRprComponent implements OnInit {
   private createForm() {
     this.galleryForm = this.formBuilder.group({
       title: ['', Validators.required],
-      arabicTitle: ['', Validators.required],
-      statusID: [true],       
+      arabicTitle: [''],
+      statusID: [true],
       galleryID: 0,
       imagePath: [''],
       displayOrder: [''],
+      category: ['', Validators.required],
     });
   }
 
@@ -59,10 +60,10 @@ export class AddGalleryHrRprComponent implements OnInit {
     this.f.galleryID.setValue(obj.galleryID);
     this.f.imagePath.setValue(obj.imagePath);
     this.f.displayOrder.setValue(obj.displayOrder);
+    this.f.category.setValue(obj.category);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
     this.imgComp.imageUrl = obj.imagePath;
   }
-
   setSelectedGallery() {
     this.route.paramMap.subscribe(param => {
       const sid = +param.get('id');

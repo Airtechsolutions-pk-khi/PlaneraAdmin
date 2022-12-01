@@ -34,6 +34,7 @@
                         <th width="10%">IMAGE</th>
                         <th width="20%" sortable="Name" (sort)="onSort($event)"> Title </th>
                         <th width="20%" sortable="ArabicName" (sort)="onSort($event)"> Arabic Title </th>
+                        <th width="20%" sortable="Category" (sort)="onSort($event)"> Category </th>
                         <th width="20%" sortable="DisplayOrder" (sort)="onSort($event)"> Display Order </th>
                         <th width="15%" sortable="Status" (sort)="onSort($event)">Status </th>
                         <th width="10%">Action</th>
@@ -47,6 +48,7 @@
                         </td>
                         <td> {{item.title}} </td>
                         <td> {{item.arabicTitle}} </td>                        
+                        <td> {{item.category}} </td>                        
                         <td> {{item.displayOrder}} </td>                        
                         <td>
                             <ngb-highlight [ngClass]="{'btn-success': item.statusID === 1, 'btn-danger':item.statusID !== 1 }" class="btn btn-sm" [result]="item.statusID !==1?'InActive':'Active'" [term]="service.searchTerm">
