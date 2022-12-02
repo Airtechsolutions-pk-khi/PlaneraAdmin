@@ -5584,6 +5584,7 @@
         }, {
           key: "insert",
           value: function insert(data) {
+            debugger;
             return this.http.post("api/planerainterior/insert", data).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) {
               console.log(res);
               return res;
@@ -12521,6 +12522,7 @@
           value: function onSubmit() {
             var _this72 = this;
 
+            debugger;
             this.galleryForm.markAllAsTouched();
             this.submitted = true;
 
@@ -14806,13 +14808,11 @@
         return mod && mod.__esModule ? mod : {
           "default": mod
         };
-      };
-      /*import { LocationsService } from '../_services/locations.service';*/
+      }; //import { LocationsService } from '../_services/locations.service';
 
 
       var LayoutComponent = /*#__PURE__*/function () {
-        function LayoutComponent(router
-        /*    , public service: LocationsService*/
+        function LayoutComponent(router //, public service: LocationsService
         , ls) {
           _classCallCheck(this, LayoutComponent);
 
@@ -14820,16 +14820,16 @@
           this.ls = ls;
           this._Langname = "";
           this.branchname = "";
-          this.email = ""; //this.branchname = this.ls.getSelectedBrand().userName;
+          this.email = ""; //this.branchname = this.ls.getSelectedBrand().name;
           //this.email = this.ls.getSelectedBrand().email;
         }
 
         _createClass(LayoutComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var data = this.ls.getSelectedBrand();
-            this.loadLocations();
-            if (data == null) this.router.navigate(["/"]);
+            var data = this.ls.getSelectedBrand(); //this.loadLocations();
+            // if (data == null)
+            //   this.router.navigate(["/"]);
           }
         }, {
           key: "Logout",
@@ -14839,8 +14839,7 @@
           }
         }, {
           key: "loadLocations",
-          value: function loadLocations() {
-            // var loc = this.ls.getLocation();
+          value: function loadLocations() {// var loc = this.ls.getLocation();
             // if (loc != null) {
             //   this.Locations = this.ls.getLocation();
             //   this.locationID = this.ls.getSelectedLocation().locationID;
@@ -14859,13 +14858,12 @@
             //     }
             //   });
             // }
-            this.Locations = this.ls.getLocation();
-            this.locationID = this.ls.getSelectedLocation().locationID;
+            //this.Locations = this.ls.getLocation();
+            //this.locationID = this.ls.getSelectedLocation().locationID;
           }
         }, {
           key: "changeloc",
-          value: function changeloc(LocObj) {
-            this.locationID = this.ls.selectedLocation().locationID;
+          value: function changeloc(LocObj) {//this.locationID = this.ls.selectedLocation().locationID;
           }
         }]);
 
@@ -14888,8 +14886,7 @@
         styles: [__importDefault(__webpack_require__(
         /*! ./layout.component.css */
         "./src/app/layout/layout.component.css"))["default"]]
-      }), __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]
-      /*    , public service: LocationsService*/
+      }), __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] //, public service: LocationsService
       , _services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"]])], LayoutComponent);
       /***/
     },
@@ -15005,8 +15002,7 @@
 
             this.service.login(this.f.username.value, this.f.password.value).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])()).subscribe(function (data) {
               if (data != null) {
-                _this85.loadLocations(); //this.ls.setSelectedBrand(data);           
-
+                _this85.router.navigate(["/admin/dashboard"]);
               } else {
                 _this85.ts.showError("Error", "Username or password is not correct.");
               }
@@ -15021,21 +15017,6 @@
               username: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]
             });
-          }
-        }, {
-          key: "loadLocations",
-          value: function loadLocations() {
-            this.router.navigate(["/admin/dashboard"]); // this.service.getAllLocations(bid).subscribe((res: any) => {
-            //   if(res.length>0){
-            //     this.ls.setLocation(res);
-            //     this.ls.setSelectedLocation(res[0]);
-            //     this.router.navigate(["/admin/dashboard"]);
-            //   }
-            //   else{
-            //     this.ls.setLocation(null);
-            //     this.ls.setSelectedLocation(null);
-            //   }
-            // });
           }
         }, {
           key: "f",

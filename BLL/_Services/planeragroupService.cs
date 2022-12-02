@@ -25,7 +25,7 @@ namespace PlaneraAdmin.BLL._Services
             {
                 return _service.GetAll();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return new List<NewsEventBLL>();
             }
@@ -36,7 +36,7 @@ namespace PlaneraAdmin.BLL._Services
             {
                 return _service.Getnews(id);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -51,7 +51,7 @@ namespace PlaneraAdmin.BLL._Services
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -66,7 +66,7 @@ namespace PlaneraAdmin.BLL._Services
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -80,7 +80,7 @@ namespace PlaneraAdmin.BLL._Services
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -93,7 +93,7 @@ namespace PlaneraAdmin.BLL._Services
             {
                 return _service.GetService();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return new List<ServiceBLL>();
             }
@@ -104,7 +104,7 @@ namespace PlaneraAdmin.BLL._Services
             {
                 return _service.GetService(id);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -119,7 +119,7 @@ namespace PlaneraAdmin.BLL._Services
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -134,7 +134,7 @@ namespace PlaneraAdmin.BLL._Services
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -148,7 +148,7 @@ namespace PlaneraAdmin.BLL._Services
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }

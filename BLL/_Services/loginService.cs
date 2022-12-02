@@ -21,7 +21,7 @@ namespace PlaneraAdmin.BLL._Services
             {
                 return _service.GetAuthenticateUser( username,  password);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }

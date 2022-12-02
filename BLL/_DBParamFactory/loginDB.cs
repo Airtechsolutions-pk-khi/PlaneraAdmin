@@ -46,7 +46,7 @@ namespace BAL.Repositories
                 }
                 return repo;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }

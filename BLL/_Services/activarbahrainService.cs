@@ -26,7 +26,7 @@ namespace PlaneraAdmin.BLL._Services
             {
                 return _service.GetGallery();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return new List<GalleryImageBLL>();
             }
@@ -37,7 +37,7 @@ namespace PlaneraAdmin.BLL._Services
             {
                 return _service.Get(id);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -51,7 +51,7 @@ namespace PlaneraAdmin.BLL._Services
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -66,7 +66,7 @@ namespace PlaneraAdmin.BLL._Services
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -81,7 +81,7 @@ namespace PlaneraAdmin.BLL._Services
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -94,7 +94,7 @@ namespace PlaneraAdmin.BLL._Services
             {
                 return _service.GetService();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return new List<ServiceBLL>();
             }
@@ -105,7 +105,7 @@ namespace PlaneraAdmin.BLL._Services
             {
                 return _service.GetService(id);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -119,7 +119,7 @@ namespace PlaneraAdmin.BLL._Services
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -134,7 +134,7 @@ namespace PlaneraAdmin.BLL._Services
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -149,7 +149,7 @@ namespace PlaneraAdmin.BLL._Services
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -162,7 +162,7 @@ namespace PlaneraAdmin.BLL._Services
             {
                 return _service.GetHome();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return new List<HomePageBLL>();
             }
@@ -173,7 +173,7 @@ namespace PlaneraAdmin.BLL._Services
             {
                 return _service.GetHomeID(id);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
@@ -187,7 +187,7 @@ namespace PlaneraAdmin.BLL._Services
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -202,7 +202,7 @@ namespace PlaneraAdmin.BLL._Services
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -217,7 +217,7 @@ namespace PlaneraAdmin.BLL._Services
 
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }

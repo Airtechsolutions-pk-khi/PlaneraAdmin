@@ -3256,6 +3256,7 @@ let PlnIntGalleryService = class PlnIntGalleryService {
         };
     }
     insert(data) {
+        debugger;
         return this.http.post(`api/planerainterior/insert`, data)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(res => {
             console.log(res);
@@ -7509,6 +7510,7 @@ let AddGalleryComponent = class AddGalleryComponent {
         });
     }
     onSubmit() {
+        debugger;
         this.galleryForm.markAllAsTouched();
         this.submitted = true;
         if (this.galleryForm.invalid) {
@@ -8863,25 +8865,25 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 };
 
 
-/*import { LocationsService } from '../_services/locations.service';*/
+//import { LocationsService } from '../_services/locations.service';
 
 let LayoutComponent = class LayoutComponent {
     constructor(router
-    /*    , public service: LocationsService*/
+    //, public service: LocationsService
     , ls) {
         this.router = router;
         this.ls = ls;
         this._Langname = "";
         this.branchname = "";
         this.email = "";
-        //this.branchname = this.ls.getSelectedBrand().userName;
+        //this.branchname = this.ls.getSelectedBrand().name;
         //this.email = this.ls.getSelectedBrand().email;
     }
     ngOnInit() {
         var data = this.ls.getSelectedBrand();
-        this.loadLocations();
-        if (data == null)
-            this.router.navigate(["/"]);
+        //this.loadLocations();
+        // if (data == null)
+        //   this.router.navigate(["/"]);
     }
     Logout() {
         sessionStorage.clear();
@@ -8907,11 +8909,11 @@ let LayoutComponent = class LayoutComponent {
         //     }
         //   });
         // }
-        this.Locations = this.ls.getLocation();
-        this.locationID = this.ls.getSelectedLocation().locationID;
+        //this.Locations = this.ls.getLocation();
+        //this.locationID = this.ls.getSelectedLocation().locationID;
     }
     changeloc(LocObj) {
-        this.locationID = this.ls.selectedLocation().locationID;
+        //this.locationID = this.ls.selectedLocation().locationID;
     }
 };
 LayoutComponent.ctorParameters = () => [
@@ -8925,7 +8927,7 @@ LayoutComponent = __decorate([
         styles: [__importDefault(__webpack_require__(/*! ./layout.component.css */ "./src/app/layout/layout.component.css")).default]
     }),
     __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]
-        /*    , public service: LocationsService*/
+        //, public service: LocationsService
         ,
         _services_local_storage_service__WEBPACK_IMPORTED_MODULE_2__["LocalStorageService"]])
 ], LayoutComponent);
@@ -8990,8 +8992,7 @@ let LoginComponent = class LoginComponent {
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["first"])())
             .subscribe(data => {
             if (data != null) {
-                this.loadLocations();
-                //this.ls.setSelectedBrand(data);           
+                this.router.navigate(["/admin/dashboard"]);
             }
             else {
                 this.ts.showError("Error", "Username or password is not correct.");
@@ -9006,20 +9007,6 @@ let LoginComponent = class LoginComponent {
             username: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
         });
-    }
-    loadLocations() {
-        this.router.navigate(["/admin/dashboard"]);
-        // this.service.getAllLocations(bid).subscribe((res: any) => {
-        //   if(res.length>0){
-        //     this.ls.setLocation(res);
-        //     this.ls.setSelectedLocation(res[0]);
-        //     this.router.navigate(["/admin/dashboard"]);
-        //   }
-        //   else{
-        //     this.ls.setLocation(null);
-        //     this.ls.setSelectedLocation(null);
-        //   }
-        // });
     }
 };
 LoginComponent.ctorParameters = () => [

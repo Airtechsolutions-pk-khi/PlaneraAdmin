@@ -81,6 +81,7 @@ export class AddGalleryComponent implements OnInit {
   }
 
   onSubmit() {
+    debugger
     this.galleryForm.markAllAsTouched();
     this.submitted = true;
     if (this.galleryForm.invalid) { return; }

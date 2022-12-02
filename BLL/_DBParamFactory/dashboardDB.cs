@@ -44,7 +44,7 @@ namespace BAL.Repositories
                 obj.Sales = Convert.ToDouble(_dt.Rows[0]["Sales"].ToString());
                 return obj;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 obj.NetSales = 0;
                 obj.TotalOrders = 0;
@@ -72,7 +72,7 @@ namespace BAL.Repositories
                 obj.Night = Convert.ToDouble(_dt.Rows[3]["Sales"].ToString());
                 return obj;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 obj.Morning = 0;
                 obj.AfterNoon = 0;
@@ -106,7 +106,7 @@ namespace BAL.Repositories
                 rsp.Sales = lstS;
                 rsp.TimeSlot = lstTS;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 rsp.Sales = new List<string>();
                 rsp.TimeSlot = new List<string>();
@@ -136,7 +136,7 @@ namespace BAL.Repositories
                 obj.Sales = Convert.ToDouble(_dt.Rows[0]["Sales"].ToString());
                 return obj;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 obj.NetSales = 0;
                 obj.TotalOrders = 0;
@@ -163,7 +163,7 @@ namespace BAL.Repositories
                 obj.Night = Convert.ToDouble(_dt.Rows[3]["Sales"].ToString());
                 return obj;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 obj.Morning = 0;
                 obj.AfterNoon = 0;
@@ -196,7 +196,7 @@ namespace BAL.Repositories
                 rsp.Sales = lstS;
                 rsp.TimeSlot = lstTS;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 rsp.Sales = new List<string>();
                 rsp.TimeSlot = new List<string>();

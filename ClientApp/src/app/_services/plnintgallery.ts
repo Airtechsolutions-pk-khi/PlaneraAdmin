@@ -133,6 +133,7 @@ export class PlnIntGalleryService {
     };
   }
   insert(data) {
+    debugger
     return this.http.post(`api/planerainterior/insert`, data)
       .pipe(map(res => {
         
