@@ -152,6 +152,7 @@
 
   <ItemGroup>
     <Folder Include="ClientApp\src\app\admin\settings\" />
+    <Folder Include="ClientApp\src\assets\Upload\Gallery\" />
     <Folder Include="Upload\Offers\" />
   </ItemGroup>
 

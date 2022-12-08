@@ -71,6 +71,8 @@ import { AddHomeHrCntComponent } from '././admin/harmanocontract/homepage/add/ad
 
 import { HrRprHomeComponent } from '././admin/harmanorepair/homepage/home.component';
 import { AddHomeHrRprComponent } from '././admin/harmanorepair/homepage/add/addhome.component';
+import { ReadWriteJsonComponent } from './admin/readwritejson/readwritejson/readwritejson.component';
+import { AddReadWriteJsonComponent } from './admin/readwritejson/readwritejson/addreadwritejson/addreadwritejson.component';
 
 @NgModule({
   declarations: [
@@ -116,7 +118,9 @@ import { AddHomeHrRprComponent } from '././admin/harmanorepair/homepage/add/addh
     HrCntHomeComponent,
     AddHomeHrCntComponent,
     HrRprHomeComponent,
-    AddHomeHrRprComponent
+    AddHomeHrRprComponent,
+    ReadWriteJsonComponent,
+    AddReadWriteJsonComponent
 
   ],
   imports: [
@@ -201,6 +205,10 @@ import { AddHomeHrRprComponent } from '././admin/harmanorepair/homepage/add/addh
           { path: 'harmanorepair/homepage', component: HrRprHomeComponent },
           { path: 'harmanorepair/homepage/add', component: AddHomeHrRprComponent },
           { path: 'harmanorepair/homepage/edit/:id', component: AddHomeHrRprComponent },
+
+          { path: 'readwritejson', component: ReadWriteJsonComponent },
+          { path: 'readwritejson/add', component: AddReadWriteJsonComponent },
+          { path: 'readwritejson/edit/:id', component: AddReadWriteJsonComponent },
         ]
       }
     ]),

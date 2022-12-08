@@ -1,0 +1,49 @@
+<h1 class="h3 mb-2 text-gray-800">Planera Interior</h1>
+<p class="mb-4"></p>
+
+<form [formGroup]="jsonreadwriteForm" class="form" (ngSubmit)="onSubmit()">
+  <div class="row">
+
+    <div class="col-xl-12">
+      <div class="card mb-4">
+        <div class="card-header">Add Home</div>
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group col-md-8">
+              <div class="form-group">
+                <label class="small mb-1" for="inputUsername">Key</label>
+                <input type="text" class="form-control" id=key placeholder="" formControlName="key">
+                <!-- <div *ngIf="f.key.invalid && (f.key.dirty || f.key.touched)" class="alert alert-danger">
+                  <div *ngIf="f.key.errors.required">
+                    Key is required.
+                  </div>
+                </div> -->
+              </div>
+              <div class="form-group">
+                <label class="small mb-1" for="inputUsername">Arabic </label>
+                <input type="text" class="form-control" id=ar placeholder="" formControlName="ar">
+                <div *ngIf="f.ar.invalid && (f.ar.dirty || f.ar.touched)" class="alert alert-danger">
+                  <div *ngIf="f.ar.errors.required">
+                    Arabic  is required.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="small mb-1" for="inputUsername">English</label>
+                <input type="text" class="form-control" id=en placeholder="" formControlName="en">
+              </div>
+             
+              <!-- Form Row-->
+              
+            </div>
+           
+          </div>
+         
+          <!-- Save changes button-->
+          <button class="btn btn-primary" type="submit">Save changes</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

@@ -63,7 +63,8 @@ namespace BAL.Repositories
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        _obj = _dt.DataTableToList<GalleryImageBLL>().FirstOrDefault();
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<GalleryImageBLL>>().FirstOrDefault();
+                        //_obj = _dt.DataTableToList<GalleryImageBLL>().FirstOrDefault();
                     }
                 }
                 return _obj;
@@ -176,7 +177,8 @@ namespace BAL.Repositories
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        _obj = _dt.DataTableToList<ServiceBLL>().FirstOrDefault();
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<ServiceBLL>>().FirstOrDefault();
+                        //_obj = _dt.DataTableToList<ServiceBLL>().FirstOrDefault();
                     }
                 }
                 return _obj;
@@ -191,16 +193,17 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[8];
+                SqlParameter[] p = new SqlParameter[9];
 
                 p[0] = new SqlParameter("@Title", data.Title);
                 p[1] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
                 p[2] = new SqlParameter("@Description", data.Description);
                 p[3] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
                 p[4] = new SqlParameter("@ImagePath", data.ImagePath);
-                p[5] = new SqlParameter("@StatusID", data.StatusID);
-                p[6] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
-                p[7] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
+                p[5] = new SqlParameter("@IconImage", data.IconImage);
+                p[6] = new SqlParameter("@StatusID", data.StatusID);
+                p[7] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
+                p[8] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_insertService_PlnInt", p);
 
                 return rtn;
@@ -215,24 +218,23 @@ namespace BAL.Repositories
             try
             {
                 int rtn = 0;
-                SqlParameter[] p = new SqlParameter[8];
+                SqlParameter[] p = new SqlParameter[9];
 
                 p[0] = new SqlParameter("@Title", data.Title);
                 p[1] = new SqlParameter("@ArabicTitle", data.ArabicTitle);
                 p[2] = new SqlParameter("@Description", data.Description);
                 p[3] = new SqlParameter("@ArabicDescription", data.ArabicDescription);
                 p[4] = new SqlParameter("@ImagePath", data.ImagePath);
-                p[5] = new SqlParameter("@StatusID", data.StatusID);
-                p[6] = new SqlParameter("@CompanyID", data.CompanyID);
-                p[7] = new SqlParameter("@DisplayOrder", data.DisplayOrder);
-                p[8] = new SqlParameter("@LastUpdatedDate", data.LastUpdatedDate);
-                p[9] = new SqlParameter("@ServiceID", data.ServiceID);
+                p[5] = new SqlParameter("@IconImage", data.IconImage);
+                p[6] = new SqlParameter("@StatusID", data.StatusID);
+                p[7] = new SqlParameter("@DisplayOrder", data.DisplayOrder);                
+                p[8] = new SqlParameter("@ServiceID", data.ServiceID);
 
                 rtn = (new DBHelper().ExecuteNonQueryReturn)("dbo.sp_updateService_Plnint", p);
 
                 return rtn;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return 0;
             }
@@ -289,7 +291,8 @@ namespace BAL.Repositories
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        _obj = _dt.DataTableToList<HomePageBLL>().FirstOrDefault();
+                        //_obj = _dt.DataTableToList<HomePageBLL>().FirstOrDefault();
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<HomePageBLL>>().FirstOrDefault();
                     }
                 }
                 return _obj;

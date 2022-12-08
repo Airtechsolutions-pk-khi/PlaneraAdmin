@@ -152,7 +152,7 @@ export class ActBahGalleryService {
  
   delete(deleteData) {
     debugger
-    return this.http.post(`api/planerainterior/delete`, deleteData);
+    return this.http.post(`api/activarbahrain/delete`, deleteData);
   }
 
 }

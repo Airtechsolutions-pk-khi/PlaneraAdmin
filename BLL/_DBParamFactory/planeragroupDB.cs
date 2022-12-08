@@ -67,13 +67,14 @@ namespace BAL.Repositories
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        _obj = _dt.DataTableToList<NewsEventBLL>().FirstOrDefault();
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<NewsEventBLL>>().FirstOrDefault();
+                        //_obj = _dt.DataTableToList<NewsEventBLL>().FirstOrDefault();
                     }
                 }
 
                 return _obj;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return null;
             }

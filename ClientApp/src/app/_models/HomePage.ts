@@ -8,3 +8,11 @@ export class HomePage {
   statusID: number;
   displayOrder: number;
 }
+
+export class ReadWriteJson {
+  
+  key: string;
+  ar: string;
+  en: string;
+  
+}

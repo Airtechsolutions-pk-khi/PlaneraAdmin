@@ -107,6 +107,19 @@
           </div>
         </div>
       </li>
+      
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#Content" aria-expanded="true" aria-controls="collapseCompany">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Content Management</span>
+        </a>
+        <div id="Content" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" [routerLink]="['/admin/readwritejson']">Content</a>
+           
+          </div>
+        </div>
+      </li>
       <hr class="sidebar-divider">
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">
@@ -127,8 +140,8 @@
           </button>
           <!-- Topbar Search -->
           <div class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100">
-            <strong>Branch Name</strong> : {{branchname}} |
-            <strong>Email</strong> : {{email}}
+            <strong>Welcome to Planera Group.</strong>  
+            
           </div>
 
           <!-- Topbar Navbar -->

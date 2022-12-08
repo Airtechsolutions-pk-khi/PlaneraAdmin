@@ -74,6 +74,7 @@ export class ActBahGalleryComponent implements OnInit {
   }
 
   Delete(obj) {
+    debugger
     this.service.delete(obj).subscribe((res: any) => {
       if (res != 0) {
         this.ts.showSuccess("Success", "Record deleted successfully.")

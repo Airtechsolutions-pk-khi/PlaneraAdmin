@@ -17,7 +17,7 @@ namespace PlaneraAdmin._Models
             public string Description { get; set; }
             public string ArabicDescription { get; set; }
             public string Image { get; set; }
-            public Nullable<int> StatusID { get; set; }
+            public int? StatusID { get; set; }
             public Nullable<int> DisplayOrder { get; set; }
             public Nullable<int> CompanyID { get; set; }
             public Nullable<DateTime> LastUpdatedDate { get; set; }

@@ -62,7 +62,8 @@ namespace BAL.Repositories
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        _obj = _dt.DataTableToList<GalleryImageBLL>().FirstOrDefault();
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<GalleryImageBLL>>().FirstOrDefault();
+                        //_obj = _dt.DataTableToList<GalleryImageBLL>().FirstOrDefault();
                     }
                 }
                 return _obj;
@@ -173,7 +174,8 @@ namespace BAL.Repositories
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        _obj = _dt.DataTableToList<ServiceBLL>().FirstOrDefault();
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<ServiceBLL>>().FirstOrDefault();
+                        //_obj = _dt.DataTableToList<ServiceBLL>().FirstOrDefault();
                     }
                 }
                 return _obj;
@@ -286,7 +288,8 @@ namespace BAL.Repositories
                 {
                     if (_dt.Rows.Count > 0)
                     {
-                        _obj = _dt.DataTableToList<HomePageBLL>().FirstOrDefault();
+                        _obj = JArray.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(_dt)).ToObject<List<HomePageBLL>>().FirstOrDefault();
+                        //_obj = _dt.DataTableToList<HomePageBLL>().FirstOrDefault();
                     }
                 }
                 return _obj;

@@ -6,12 +6,14 @@ import { LocalStorageService } from 'src/app/_services/local-storage.service';
 import { ToastService } from 'src/app/_services/toastservice';
 import { PlnIntHomePageService } from 'src/app/_services/plninthome.service';
 
+import { HttpClient,HttpErrorResponse } from "@angular/common/http";
+
 @Component({
   selector: 'app-addhome',
   templateUrl: './addhome.component.html',
 })
 export class AddHomePlnIntComponent implements OnInit {
-
+  employeeData:any;
 
   submitted = false;
   homeForm: FormGroup;
@@ -30,7 +32,8 @@ export class AddHomePlnIntComponent implements OnInit {
     private route: ActivatedRoute,
     private ls: LocalStorageService,
     public ts: ToastService,
-    private homeService: PlnIntHomePageService
+    private homeService: PlnIntHomePageService,
+    private httpClient: HttpClient
 
   ) {
     this.createForm();
@@ -38,6 +41,11 @@ export class AddHomePlnIntComponent implements OnInit {
 
   ngOnInit() {
     this.setSelectedGallery();
+
+    this.httpClient.get<any>("assets/translation.json").subscribe((data)=>
+    this.employeeData = data
+  )
+
   }
 
   get f() { return this.homeForm.controls; }

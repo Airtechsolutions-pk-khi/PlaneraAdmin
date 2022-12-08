@@ -4,7 +4,7 @@ import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
 import { switchMap, tap, map } from 'rxjs/operators';
 import { SortColumn, SortDirection } from '../_directives/sortable.directive';
 import { State } from '../_models/State';
-import { HomePage } from '../_models/HomePage';
+import { HomePage, ReadWriteJson } from '../_models/HomePage';
 
 interface SearchHomeResult {
   data: HomePage[];
@@ -68,6 +68,9 @@ export class PlnIntHomePageService {
   }
   getById(id) {
     return this.http.get<HomePage[]>(`api/planerainterior/home/${id}`);
+  }
+  getByIdJson(id) {
+    return this.http.get<any[]>(`api/jsonreadwrite/json/${id}`);
   }
 
   ExportList() {
@@ -142,6 +145,16 @@ export class PlnIntHomePageService {
       }));
   }
 
+  insertjson(data) {
+    debugger
+    return this.http.post(`api/jsonreadwrite/insertjson`, data)
+      .pipe(map(res => {
+
+        console.log(res);
+        return res;
+      }));
+  }
+  
   update(updateData) {
     return this.http.post(`api/planerainterior/updatehome`, updateData)
       .pipe(map(res => {

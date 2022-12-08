@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\PlaneraAdmin\\PlaneraAdmin.csproj": {}
+    "D:\\Project\\PlaneraAdmin\\PlaneraAdmin.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\PlaneraAdmin\\PlaneraAdmin.csproj": {
+    "D:\\Project\\PlaneraAdmin\\PlaneraAdmin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\PlaneraAdmin\\PlaneraAdmin.csproj",
+        "projectUniqueName": "D:\\Project\\PlaneraAdmin\\PlaneraAdmin.csproj",
         "projectName": "PlaneraAdmin",
-        "projectPath": "D:\\Projects\\PlaneraAdmin\\PlaneraAdmin.csproj",
-        "packagesPath": "C:\\Users\\ammad\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\PlaneraAdmin\\obj\\",
+        "projectPath": "D:\\Project\\PlaneraAdmin\\PlaneraAdmin.csproj",
+        "packagesPath": "C:\\Users\\Ammad Raza\\.nuget\\packages\\",
+        "outputPath": "D:\\Project\\PlaneraAdmin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ammad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ammad Raza\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,11 +71,16 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.13, 3.1.13]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -84,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }

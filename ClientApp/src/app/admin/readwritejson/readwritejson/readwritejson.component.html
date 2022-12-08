@@ -1,0 +1,114 @@
+<!-- <style>
+    #employees {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#employees td, #employees th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#employees tr:nth-child(even){background-color: #f2f2f2;}
+
+#employees tr:hover {background-color: #ddd;}
+
+#employees th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: red;
+  color: #fff;
+}
+</style> -->
+
+
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Content Management</h1>
+<p class="mb-4"></p>
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <div class="row">
+            <div class="col-md-5">
+                <h6 class="m-0 font-weight-bold text-orange">Content Page</h6>
+            </div>
+            <!-- <div class=" col-lg-4 input-group mb-3" style="padding-top: 25px;">
+                <div class="input-group-prepend" style="height: 39px;">
+                    <span class="input-group-text"><i class="fa fa-search"></i></span>
+                </div>
+                <input class="form-control search-filter" placeholder="Filter by name" type="text" name="searchTerm" [(ngModel)]="service.searchTerm" />
+            </div> -->
+            <div class="col-lg-4"></div>
+           
+            <div class="col-md-3 form-group text-right">
+                <!-- <button type="submit" class="btn btn-primary mt-4 mr-1" (click)="exportAsXLSX()">
+                    <span translate>Export</span>
+                </button> -->
+                <button [routerLink]="['add']" class="btn btn-primary mt-4 mr-1">
+                    Add 
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="tile-body p-0 table-responsive ">
+            <table class="table table-striped" id="contents">
+                <thead>
+                  <tr class="table-header">
+                   
+                    <th width="20%" sortable="Title"  > Key </th>
+                    <th width="20%" sortable="ArabicTitle" > Arabic  </th>
+                    <th width="20%" sortable="Description"  > English </th>
+                  
+                    <th width="10%">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let content of contentData?.contents  ">
+                     
+                        <td>{{content.key}}</td>
+                        <td>{{content.ar}}</td>
+                        <td>{{content.en}}</td>                
+                        
+                        <td>
+                            <a (click)="Edit(1)"><i class="fas fa-fw fa-edit"></i> </a>
+                            <a (click)="Delete(content)"><i class="fas fa-fw fa-trash-alt"></i> </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <p class="pagination-count">
+                    Showing
+                    <strong>{{(service.pageSize * service.page)-9}}</strong> to
+                    <strong>{{(service.pageSize * service.page) > (total$ | async)!?(total$ | async)!:service.pageSize * service.page}}</strong> of
+                    <strong>{{(total$ | async)!}}</strong> results
+                </p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <ngb-pagination [collectionSize]="(total$ | async)!" class="float-right" [(page)]="service.page" [pageSize]="service.pageSize" [maxSize]="3" [rotate]="true" [boundaryLinks]="true">
+                </ngb-pagination>
+            </div>
+        </div> -->
+    </div>
+</div>
+
+
+
+<!-- <table id="employees">
+	<tr>
+		<th>Key</th>
+		<th>Arabic</th>
+		<th>English</th>
+	</tr>
+	<tr *ngFor="let employee of employeeData?.employees">
+		<td>{{employee.key}}</td>
+		<td>{{employee.ar}}</td>
+		<td>{{employee.en}}</td>
+	</tr>
+</table> -->

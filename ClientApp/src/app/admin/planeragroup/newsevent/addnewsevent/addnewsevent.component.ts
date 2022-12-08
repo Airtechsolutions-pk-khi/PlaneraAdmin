@@ -67,6 +67,7 @@ export class AddnewseventComponent implements OnInit {
     this.f.arabicDescription.setValue(obj.arabicDescription);
     this.f.displayOrder.setValue(obj.displayOrder);
     this.f.statusID.setValue(obj.statusID === 1 ? true : false);
+    
     this.imgComp.imageUrl = obj.image;
   }
 
