@@ -160,3 +160,4 @@ D:\Project\PlaneraAdmin\obj\Debug\netcoreapp3.1\PlaneraAdmin.csproj.CopyComplete
 D:\Project\PlaneraAdmin\obj\Debug\netcoreapp3.1\PlaneraAdmin.dll
 D:\Project\PlaneraAdmin\obj\Debug\netcoreapp3.1\PlaneraAdmin.pdb
 D:\Project\PlaneraAdmin\obj\Debug\netcoreapp3.1\PlaneraAdmin.genruntimeconfig.cache
+D:\Project\PlaneraAdmin\obj\Debug\netcoreapp3.1\PlaneraAdmin.csprojAssemblyReference.cache
