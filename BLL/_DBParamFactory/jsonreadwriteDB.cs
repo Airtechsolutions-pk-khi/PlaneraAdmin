@@ -13,6 +13,7 @@ using static PlaneraAdmin._Models.ServiceViewModel;
 using static PlaneraAdmin._Models.HomeViewModel;
 using System.IO;
 using Newtonsoft.Json;
+using System.Net;
 
 namespace BAL.Repositories
 {
@@ -158,33 +159,50 @@ namespace BAL.Repositories
             return 0;
              
         }
-        public JsonreadwriteBLL GetByKey(int key)
+        public JsonreadwriteBLL GetByKey(string key)
         {
             try
             {
-                string JsonFile = "./translations.json";
-                var json = File.ReadAllText(JsonFile);
                 
                 var _obj = new JsonreadwriteBLL();
-                
-                dynamic jsonObj = JsonConvert.DeserializeObject(json);
+               
 
-                var jObject = JObject.Parse(json);
 
-                
-                JArray contentArrary = (JArray)jObject["content"];
+                string JsonFile = "./translations.json";
+                var json = File.ReadAllText(JsonFile);
 
-                foreach (var company in contentArrary.Where(obj => obj["Key"].Value<int>() == 1))
+
+                //var json = "{\"object\":{\"4711\":{\"type\":\"volume\",\"owner\":\"john doe\",\"time\":1426156658,\"description\":\"Jodel\"},\"0815\":{\"type\":\"fax\",\"owner\":\"John Doe\",\"time\":1422900028,\"description\":\"\",\"page_count\":1,\"status\":\"ok\",\"tag\":[\"342ced30-7c34-11e3-ad00-00259073fd04\",\"342ced33-7c34-11e3-ad00-00259073fd04\"]}},\"status\":\"ok\"}";
+                JObject tags = JObject.Parse(json);
+                JObject objectContainer = tags.Value<JObject>("content");
+                foreach (var tag in objectContainer)
                 {
-                    company["Key"] = !string.IsNullOrEmpty(_obj.Key) ? _obj.Key : "";
-                    company["Ar"] = !string.IsNullOrEmpty(_obj.Ar) ? _obj.Ar : "";
-                    company["En"] = !string.IsNullOrEmpty(_obj.En) ? _obj.En : "";
+                    var property = tag.Key;
+
+                    Console.WriteLine(property);
                 }
 
+                //var _obj = new JsonreadwriteBLL();
 
-                //string id = jsonObj.key.ToString();
+                //dynamic jsonObj = JsonConvert.DeserializeObject(json);
 
-                
+                //var jObject = JObject.Parse(json);
+
+
+                //JArray contentArrary = (JArray)jObject["content"];
+
+
+                //foreach (var company in contentArrary.Where(obj => obj["Key"].ToString().Equals("1")))
+                //{
+                //    company["Key"] = !string.IsNullOrEmpty(_obj.Key) ? _obj.Key : "";
+                //    company["Ar"] = !string.IsNullOrEmpty(_obj.Ar) ? _obj.Ar : "";
+                //    company["En"] = !string.IsNullOrEmpty(_obj.En) ? _obj.En : "";
+                //}
+
+
+
+
+
 
                 return _obj;
             }

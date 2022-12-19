@@ -51,7 +51,7 @@ namespace PlaneraAdmin.Controllers
             return _service.Update(obj);
         }
         [HttpGet("json/{id}")]
-        public JsonreadwriteBLL GetKey(int key = 1)
+        public JsonreadwriteBLL GetKey(string key = "1")
         {
             return _service.GetByKey(key);
         }

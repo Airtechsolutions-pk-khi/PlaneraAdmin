@@ -83,7 +83,7 @@ namespace PlaneraAdmin.BLL._Services
                 return 0;
             }
         }
-        public JsonreadwriteBLL GetByKey(int key)
+        public JsonreadwriteBLL GetByKey(string key)
         {
             try
             {
