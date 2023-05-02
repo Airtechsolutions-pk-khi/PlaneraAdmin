@@ -8,4 +8,4 @@ export class NewsEvent {
   pagename: string;
   statusID: number;
   displayOrder: number;
-}
+} 
